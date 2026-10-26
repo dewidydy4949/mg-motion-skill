@@ -21,7 +21,7 @@ mg-motion/
 
 建议使用 Node.js 22（本次验证版本为 22.17.0）与 npm，并准备可用的本地 Chrome 和支持中文的字体。建议安装 Noto Sans SC；部分手绘模板使用楷体或 Noto Serif SC。渲染引擎锁定 Remotion 4.0.534。换电脑后需重新检查字体、字宽和实际画面。
 
-1. 在有访问权限的账号下克隆私有仓库：
+1. 克隆公开仓库：
 
    ```sh
    git clone https://github.com/dewidydy4949/mg-motion-skill.git
@@ -95,3 +95,7 @@ node scripts/mg.mjs render MG-043 --params work/dialog.json --duration 9 --out o
 | `SHA256SUMS.txt` | 发布附件的 SHA256 校验值 |
 
 示例内容仅用于演示模板，不代表品牌现状或真实测量数据。
+
+## 许可证状态
+
+当前仅公开源码，暂未添加开源许可证。

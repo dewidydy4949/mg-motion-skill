@@ -1,0 +1,12 @@
+import React from 'react';
+import {Svg,Paper,T,Path,Box,Arrow,Tick,Tape,Footer,C,HAND,MONO,useT,ease,ph,base,arr,txt,num,fmt,hash,mix} from '../group-C/base-v1';
+export type Props={duration:number;title:string;steps:{label:string;detail:string;result:string}[];final:string};
+export function validateProps(p:Props){base(p);txt(p.title,'title',14);arr(p.steps,'steps',3,5);p.steps.forEach(e=>{txt(e.label,'label',12);txt(e.detail,'detail',24);txt(e.result,'result',14)});txt(p.final,'final',22);return p}
+export const Template:React.FC<Props>=input=>{const p=validateProps(input),t=useT()/p.duration,n=p.steps.length,u=Math.min(n-.001,Math.max(0,(t-.06)/.82*n)),i=Math.floor(u),q=u-i,e=p.steps[i],done=t>.91;return <Svg><Paper color="#f6f1e6"/><rect x="1330" width="590" height="1080" fill="#eaddc5"/><path d="M1330 0V1080" stroke="#d5c2a4" strokeWidth="6"/>
+{p.steps.map((s,j)=><g key={j}><path d={`M${90+j*230} 110h205`} stroke={j<i||done?'#9b6c4a':'#dbd0be'} strokeWidth="4"/><T x={90+j*230} y={145} size={18} fill="#9d8b70">{String(j+1).padStart(2,'0')}</T></g>)}
+<T x={100} y={285} size={23} fill="#9c7857" font={MONO}>STEP {i+1} / {n}</T><T x={100} y={365} size={55} width={1050} font={HAND}>{e.label}</T><T x={100} y={428} size={29} width={1050} fill="#7f7363">{e.detail}</T>
+<g transform={`translate(420 ${510-18*ease(q,0,.5)})`}><Box x={0} y={0} w={690} h={350} fill="#fffdf8" stroke="#6d675e"/><path d="M0 55h690" stroke="#b7aea0"/>{[0,1,2].map(k=><circle key={k} cx={30+k*27} cy="27" r="6" fill={['#bf7864','#dbc58c','#8eac9b'][k]}/>)}
+{p.steps.map((s,j)=><g key={j} opacity={j<=i?1:0}><rect x="50" y={91+j*43} width={Math.max(1,570*(j<i||done?1:ease(q,.05,.65)))} height="29" fill={j<i||done?'#d2e1d7':'#e9cdb2'}/><T x={68} y={114+j*43} size={21} width={530}>{s.result}</T></g>)}<path d={`M635 ${105+i*43}l-19 -12v25Z`} fill="#9b6c4a" opacity={done?0:1}/></g>
+<T x={1410} y={175} size={49} width={420} weight={700} font={HAND}>{p.title}</T><Path d="M1410 219Q1600 213 1815 220" stroke="#78654e"/>
+{p.steps.map((s,j)=><g key={j}><circle cx="1435" cy={325+j*105} r="15" fill="none" stroke="#9e8c74" strokeWidth="2"/>{(j<i||done)&&<Tick x={1434} y={325+j*105} p={1} color="#8a6444"/>}<T x={1475} y={337+j*105} size={31} width={350} font={HAND}>{s.label}</T>{j===i&&!done&&<path d={`M1370 ${325+j*105}h34m-12 -8l12 8 -12 8`} stroke="#9e714f" fill="none" strokeWidth="3"/>}</g>)}
+<T x={100} y={991} size={32} width={1100} fill="#947354">{done?p.final:'一步操作，对应一次进度更新。'}</T></Svg>};

@@ -1,0 +1,44 @@
+{
+  "durationSeconds": 4.5,
+  "title": "亲自掌控。",
+  "sliders": [
+    {
+      "label": "策划",
+      "values": [
+        35,
+        31,
+        45,
+        83
+      ]
+    },
+    {
+      "label": "导演",
+      "values": [
+        75,
+        61,
+        46,
+        18
+      ]
+    },
+    {
+      "label": "AI",
+      "values": [
+        32,
+        54,
+        78,
+        20
+      ]
+    },
+    {
+      "label": "剪辑",
+      "values": [
+        64,
+        28,
+        17,
+        59
+      ]
+    }
+  ],
+  "showValues": false,
+  "note": ""
+}

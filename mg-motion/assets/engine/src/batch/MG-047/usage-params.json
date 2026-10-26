@@ -1,0 +1,32 @@
+{
+  "duration": 12,
+  "title": "把线索汇聚成一个主题",
+  "subtitle": "示例：给中文 AI 测评建立内容索引，让描述能说清目标页面。",
+  "target": "review.example/video",
+  "sources": [
+    {
+      "name": "视频工具周报",
+      "phrase": "视频生成对比",
+      "relevant": true
+    },
+    {
+      "name": "创作者笔记",
+      "phrase": "中文提示词实测",
+      "relevant": true
+    },
+    {
+      "name": "我的收藏夹",
+      "phrase": "最新实用内容",
+      "relevant": false
+    }
+  ],
+  "tags": [
+    "中文测评",
+    "提示词",
+    "画质",
+    "一致性",
+    "生成速度",
+    "视频"
+  ],
+  "conclusion": "先读描述，再决定是否值得打开"
+}

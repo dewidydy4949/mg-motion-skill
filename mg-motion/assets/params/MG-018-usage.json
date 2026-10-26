@@ -1,0 +1,15 @@
+{
+  "durationSeconds": 6,
+  "label": "选择适合的方案",
+  "prices": [
+    29,
+    59,
+    99,
+    159,
+    299
+  ],
+  "prefix": "¥",
+  "suffix": "/月",
+  "selectedIndex": 2,
+  "note": "演示价格 · 请替换为已核实的产品信息"
+}

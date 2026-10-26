@@ -1,0 +1,11 @@
+{
+  "sourceStart": 18,
+  "sourceEnd": 28,
+  "title": "手绘三层结构图",
+  "parameters": "resources 2–5项，clients 2–4项；edgeLabels 固定两项；三层标题、边界名称与结论独立替换。duration 3–40秒。 title10、subtitle12中文宽度。",
+  "limitations": [
+    "原片为竖屏，重排为左侧解释与右侧纵向结构的横屏画幅，保留逐笔框线与层间箭头节奏。",
+    "只提取图形表达；不继承原片中的代理接入或认证建议。",
+    "拓扑固定三层，不能用参数改成任意网络。"
+  ]
+}

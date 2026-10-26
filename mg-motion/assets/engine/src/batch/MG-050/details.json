@@ -1,0 +1,10 @@
+{
+  "title": "制图线条与蓝图展开",
+  "sourceStart": 6,
+  "sourceEnd": 11,
+  "parameters": "tiles 整数3–7；accent 六位十六进制色；title 32，label 12，caption 30中文宽度；duration 3–40秒。",
+  "limitations": [
+    "参考平面线段展开六边形、重复平铺、蓝底反转；未复刻后续三维旋转物体。",
+    "SVG 几何用于结构隐喻，不能代替真实工程制图。"
+  ]
+}

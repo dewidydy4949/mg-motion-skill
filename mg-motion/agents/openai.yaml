@@ -1,0 +1,4 @@
+interface:
+  display_name: "MG 动效出片"
+  short_description: "按素材和表达目标选择动效模板，替换中文内容、检查画面并输出可修改的视频"
+  default_prompt: "使用 $mg-motion 根据这些素材和文案制作横屏动效片段，优先复用模板，并保留可修改的参数。"

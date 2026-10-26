@@ -1,0 +1,11 @@
+{
+  "title": "设备轮廓与数据边界",
+  "sourceStart": 16.5,
+  "sourceEnd": 18.7,
+  "parameters": "mode为local或sync，控制云端禁用/允许符号与数据路径；lock布尔值控制锁状态；headline12、description32、device10、cloudLabel10、note42中文宽度；duration3–40秒。",
+  "limitations": [
+    "保留原片暖纸底、线绘电脑、中心锁与外围云端禁用符号。",
+    "文案与图标必须依据实际产品能力填写；模板本身不承诺离线、安全或隐私。",
+    "同步示意只展示路径，不执行任何上传。"
+  ]
+}

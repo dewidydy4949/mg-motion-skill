@@ -1,0 +1,29 @@
+{
+  "duration": 12,
+  "title": "思考、调用、读取结果，然后再继续",
+  "initialTokens": 1800,
+  "capacity": 12000,
+  "steps": [
+    {
+      "tool": "检索",
+      "action": "寻找相关实现",
+      "tokens": 600
+    },
+    {
+      "tool": "读取",
+      "action": "查看源文件内容",
+      "tokens": 1800
+    },
+    {
+      "tool": "修改",
+      "action": "补充边界处理",
+      "tokens": 400
+    },
+    {
+      "tool": "测试",
+      "action": "读取验证结果",
+      "tokens": 1200
+    }
+  ],
+  "conclusion": "无需新的工具调用，整理并返回结果。"
+}

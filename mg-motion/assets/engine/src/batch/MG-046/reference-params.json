@@ -1,0 +1,26 @@
+{
+  "duration": 10,
+  "title": "复杂系统",
+  "subtitle": "中间有一层",
+  "topLabel": "输入资源",
+  "resources": [
+    "文档",
+    "图片",
+    "表格",
+    "音频"
+  ],
+  "middle": "统一处理层",
+  "bottomLabel": "输出工具",
+  "clients": [
+    "知识库",
+    "检索应用",
+    "工作台"
+  ],
+  "edgeLabels": [
+    "结构化整理",
+    "统一接口"
+  ],
+  "boundary": "本机处理",
+  "conclusion": "先看清每一层的职责",
+  "note": "连接关系，比工具名称更重要。"
+}

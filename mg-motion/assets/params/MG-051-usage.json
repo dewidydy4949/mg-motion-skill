@@ -1,0 +1,34 @@
+{
+  "duration": 10,
+  "title": "中文内容团队的工作台",
+  "headline": "把制作流程连起来",
+  "description": "从选题检索，到脚本、数据与成片管理。",
+  "center": "内容中枢",
+  "tools": [
+    {
+      "name": "选题",
+      "icon": "search"
+    },
+    {
+      "name": "脚本",
+      "icon": "file"
+    },
+    {
+      "name": "排期",
+      "icon": "calendar"
+    },
+    {
+      "name": "复盘",
+      "icon": "chart"
+    },
+    {
+      "name": "素材",
+      "icon": "file"
+    },
+    {
+      "name": "发布",
+      "icon": "browser"
+    }
+  ],
+  "caption": "工具关系为示例，请按实际能力替换。"
+}

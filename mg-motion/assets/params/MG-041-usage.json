@@ -1,0 +1,50 @@
+{
+  "durationSeconds": 10,
+  "titles": [
+    "一个主题。",
+    "四种表达。",
+    "一周发布。"
+  ],
+  "prompt": "介绍我们本周的新手公开课",
+  "artworkTitle": "新手公开课",
+  "accent": "#86B5CE",
+  "days": [
+    "10月26",
+    "10月27",
+    "10月28",
+    "10月29",
+    "10月30",
+    "10月31",
+    "11月01"
+  ],
+  "cards": [
+    {
+      "platform": "图文社区",
+      "caption": "三步快速上手",
+      "day": 0,
+      "slot": 0,
+      "color": "#2f83b8"
+    },
+    {
+      "platform": "短视频",
+      "caption": "一分钟演示",
+      "day": 2,
+      "slot": 1,
+      "color": "#b26350"
+    },
+    {
+      "platform": "邮件订阅",
+      "caption": "本周课程安排",
+      "day": 4,
+      "slot": 0,
+      "color": "#7273b5"
+    },
+    {
+      "platform": "学习社区",
+      "caption": "课后练习题",
+      "day": 5,
+      "slot": 2,
+      "color": "#427e61"
+    }
+  ]
+}

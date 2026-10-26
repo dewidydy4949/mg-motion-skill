@@ -1,0 +1,151 @@
+import {Props} from './model';
+export const referenceProps:Props={
+  "durationSeconds": 7.5,
+  "title": "创作一次，出现在每个平台。",
+  "days": [
+    "周一",
+    "周二",
+    "周三",
+    "周四",
+    "周五",
+    "周六",
+    "周日"
+  ],
+  "selected": 4,
+  "complete": "已安排至四个渠道",
+  "tasks": [
+    {
+      "label": "短片",
+      "time": "11:30",
+      "day": 0,
+      "slot": 0,
+      "color": "#ff555b"
+    },
+    {
+      "label": "轮播图文",
+      "time": "14:00",
+      "day": 1,
+      "slot": 1,
+      "color": "#ffce00"
+    },
+    {
+      "label": "发布",
+      "time": "18:00",
+      "day": 2,
+      "slot": 2,
+      "color": "#2f88ed"
+    },
+    {
+      "label": "动态",
+      "time": "09:00",
+      "day": 3,
+      "slot": 0,
+      "color": "#191c36"
+    },
+    {
+      "label": "新课程上线",
+      "time": "18:00",
+      "day": 4,
+      "slot": 1,
+      "color": "#ffffff"
+    },
+    {
+      "label": "短片",
+      "time": "10:00",
+      "day": 5,
+      "slot": 2,
+      "color": "#ff555b"
+    }
+  ],
+  "channels": [
+    {
+      "name": "图文社区",
+      "short": "图",
+      "color": "#ff555b"
+    },
+    {
+      "name": "短动态",
+      "short": "文",
+      "color": "#191c36"
+    },
+    {
+      "name": "短视频",
+      "short": "短",
+      "color": "#2f88ed"
+    },
+    {
+      "name": "视频频道",
+      "short": "频",
+      "color": "#ffce00"
+    }
+  ]
+};
+export const usageProps:Props={
+  "durationSeconds": 9,
+  "title": "一周内容，按计划逐步上线。",
+  "days": [
+    "周一26",
+    "周二27",
+    "周三28",
+    "周四29",
+    "周五30",
+    "周六31",
+    "周日01"
+  ],
+  "selected": 3,
+  "complete": "三端内容已排程",
+  "tasks": [
+    {
+      "label": "选题",
+      "time": "09:30",
+      "day": 0,
+      "slot": 0,
+      "color": "#ffce00"
+    },
+    {
+      "label": "录制",
+      "time": "14:00",
+      "day": 1,
+      "slot": 1,
+      "color": "#2f88ed"
+    },
+    {
+      "label": "初剪",
+      "time": "16:00",
+      "day": 2,
+      "slot": 2,
+      "color": "#191c36"
+    },
+    {
+      "label": "工具测评上线",
+      "time": "18:00",
+      "day": 4,
+      "slot": 1,
+      "color": "#ffffff"
+    },
+    {
+      "label": "答疑",
+      "time": "10:00",
+      "day": 6,
+      "slot": 2,
+      "color": "#ff555b"
+    }
+  ],
+  "channels": [
+    {
+      "name": "视频号",
+      "short": "视",
+      "color": "#2f88ed"
+    },
+    {
+      "name": "邮件订阅",
+      "short": "邮",
+      "color": "#191c36"
+    },
+    {
+      "name": "学习社群",
+      "short": "群",
+      "color": "#ffce00"
+    }
+  ]
+};

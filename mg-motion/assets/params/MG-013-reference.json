@@ -1,0 +1,66 @@
+{
+  "badge": "03 · 公平竞技",
+  "title": "同一份数据，",
+  "emphasis": "同一套提示词",
+  "subtitle": "只提供客观事实，局势判断全靠 AI 自己",
+  "sourceName": "prompt · state.json",
+  "codeLines": [
+    "{",
+    "  \"game\": \"gomoku\",",
+    "  \"you\": \"black\",",
+    "  \"board\": [ …15×15, 18 stones… ],",
+    "  \"legalMoves\": [ \"H7\", \"J8\", \"G9\", … ],",
+    "  \"consequences\": {",
+    "    \"J8\": \"makes four (J5–J8)\",",
+    "    \"G9\": \"blocks open three\"",
+    "  },",
+    "  \"goal\": \"WIN\"",
+    "}"
+  ],
+  "models": [
+    {
+      "name": "GPT-6 Sol",
+      "short": "GPT",
+      "color": "#259e88"
+    },
+    {
+      "name": "Claude Opus 5.5",
+      "short": "Opus",
+      "color": "#bb7863"
+    },
+    {
+      "name": "Gemini 3.1 Pro",
+      "short": "Gem",
+      "color": "#5682d7"
+    },
+    {
+      "name": "Kimi K3",
+      "short": "Kimi",
+      "color": "#7261d3"
+    },
+    {
+      "name": "DeepSeek V4 Pro",
+      "short": "DS",
+      "color": "#4e67d6"
+    },
+    {
+      "name": "Jev 1.13",
+      "short": "Jev",
+      "color": "#29a18e"
+    }
+  ],
+  "principles": [
+    {
+      "text": "统一英文提示词，不为任何模型单独优化",
+      "kind": "check"
+    },
+    {
+      "text": "完整局面 + 合法走法 + 每步直接后果",
+      "kind": "check"
+    },
+    {
+      "text": "不评分、不推荐走法",
+      "kind": "cross"
+    }
+  ]
+}

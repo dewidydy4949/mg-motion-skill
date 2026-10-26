@@ -1,0 +1,49 @@
+{
+  "title": "AI 页面动效改写 · 示例",
+  "durationSeconds": 15,
+  "fileName": "hero-animation.ts",
+  "steps": [
+    {
+      "title": "先定义初始状态",
+      "note": "示例将标题放在起始位置，等待进入视口后播放。",
+      "code": [
+        "const initial = {",
+        "  opacity: 0,",
+        "  translateY: 24,",
+        "};"
+      ],
+      "highlight": 2,
+      "result": "淡入标题",
+      "detail": "初始偏移 24 像素",
+      "accent": "#768fbd"
+    },
+    {
+      "title": "平滑进入最终位置",
+      "note": "同一进度同时控制位置与透明度，避免动作割裂。",
+      "code": [
+        "const p = smoothstep(progress);",
+        "const opacity = p;",
+        "const y = 24 * (1 - p);",
+        "title.style.opacity = opacity;"
+      ],
+      "highlight": 0,
+      "result": "统一节奏",
+      "detail": "位置与透明度同步",
+      "accent": "#ba8b62"
+    },
+    {
+      "title": "限制过度的运动",
+      "note": "面向演示的简化代码，不在模板内执行用户代码。",
+      "code": [
+        "const reduced = prefersReducedMotion;",
+        "const travel = reduced ? 0 : 24;",
+        "const duration = reduced ? 0 : 420;",
+        "animate({travel, duration});"
+      ],
+      "highlight": 2,
+      "result": "减少动态",
+      "detail": "保留内容与信息层级",
+      "accent": "#668e8a"
+    }
+  ]
+}

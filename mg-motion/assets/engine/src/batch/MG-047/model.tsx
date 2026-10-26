@@ -1,0 +1,18 @@
+import React from 'react';
+import {Svg,T,Path,C,useT,ease,ph,base,arr,txt,MONO,hash} from '../group-C/base-v1';
+export type Props={duration:number;title:string;subtitle:string;target:string;sources:{name:string;phrase:string;relevant:boolean}[];tags:string[];conclusion:string};
+export function validateProps(p:Props){base(p);txt(p.subtitle,'subtitle',43);txt(p.target,'target',15);txt(p.conclusion,'conclusion',30);arr(p.sources,'sources',3,3);p.sources.forEach(s=>{txt(s.name,'source.name',10);txt(s.phrase,'source.phrase',7);if(typeof s.relevant!=='boolean')throw new Error('relevant必须是布尔值')});arr(p.tags,'tags',3,6);p.tags.forEach(s=>txt(s,'tag',6));return p}
+const bez=(y:number,q:number)=>{const a=1-q;return {x:a*a*a*450+3*a*a*q*650+3*a*q*q*970+q*q*q*1280,y:a*a*a*y+3*a*a*q*(y*.5+300)+3*a*q*q*590+q*q*q*590}};
+export const Template:React.FC<Props>=(input)=>{const p=validateProps(input),t=useT()*11.5/p.duration;return <Svg bg={C.navy}><defs><radialGradient id="sphere"><stop offset="0" stopColor="#FFD9AF"/><stop offset=".5" stopColor="#EF9F6A"/><stop offset="1" stopColor="#C76B3D"/></radialGradient><radialGradient id="halo"><stop offset="0" stopColor="#E38D53" stopOpacity=".35"/><stop offset="1" stopColor="#E38D53" stopOpacity="0"/></radialGradient></defs>
+ <rect width="1920" height="1080" fill="#080E1C"/>{Array.from({length:100},(_,i)=><circle key={i} cx={hash(i+3)*1920} cy={hash(i+99)*1080} r={hash(i+311)*1.5} fill="#7FA0BB" opacity=".12"/>)}
+ <T x={120} y={100} size={23} font={MONO} fill="#7CA8B8">04 / LINKS CARRY MEANING</T><T x={120} y={186} size={59} width={1620} weight={600} fill="#EAF0F8">{p.title}</T><T x={120} y={251} size={31} width={1600} fill="#8697AD">{p.subtitle}</T>
+ {p.sources.map((s,i)=>{const y=385+i*235,prog=ph(t,.7+i*.5,2.2+i*.5),q=ph(t,2+i*.95,4.4+i*.95),pos=bez(y,q);return <g key={i}>
+ <rect x="155" y={y-26} width="282" height="52" rx="26" fill="#121C2C" opacity={ease(t,.2+i*.22,.8+i*.22)}/><T x={297} y={y+9} size={27} width={250} font={MONO} fill="#BCCBDC" anchor="middle" opacity={ease(t,.2+i*.22,.8+i*.22)}>{s.name}</T>
+ <Path d={`M450 ${y}C650 ${y*.5+300} 970 590 1280 590`} p={prog} stroke={s.relevant?'#78CBD2':'#68768C'} width={2.3}/><path d="M1268 582l12 8 -12 8" stroke={s.relevant?'#78CBD2':'#68768C'} fill="none" strokeWidth="2" opacity={prog}/>
+ {q>0&&q<1&&<g transform={`translate(${pos.x},${pos.y-23})`}><rect x="-95" y="-30" width="190" height="45" rx="18" fill="#102837" stroke={s.relevant?'#70C9D5':'#6B7588'}/><T x={0} y={0} size={25} width={174} fill={s.relevant?'#9CE1E7':'#A2ACBC'} anchor="middle">{s.phrase}</T></g>}
+ {!s.relevant&&<T x={155} y={y+71} size={24} fill="#D47190" opacity={ease(t,7.2,8.1)}>这段文字没有描述目标内容</T>}
+ </g>})}
+ <T x={1346} y={322} size={25} font={MONO} fill="#D7A179" anchor="middle">这一页讲什么？</T><circle cx="1340" cy="590" r="180" fill="url(#halo)" opacity={.8+.2*Math.sin(t*.8)}/><circle cx="1340" cy="590" r={57*(.92+.08*ease(t,0,1))} fill="url(#sphere)"/><T x={1340} y={755} size={27} width={400} font={MONO} fill="#D8A181" anchor="middle">{p.target}</T>
+ {p.tags.map((tag,i)=>{const a=-Math.PI*.85+i*(Math.PI*1.7/(p.tags.length-1)),x=1340+Math.cos(a)*285,y=590+Math.sin(a)*227;return <g key={i} opacity={ease(t,3.3+i*.5,4.0+i*.5)}><rect x={x-88} y={y-23} width="176" height="46" rx="23" fill="#102530" stroke="#5C98A9" strokeWidth="1.5"/><T x={x} y={y+9} size={27} width={154} fill="#B8E8EA" anchor="middle">{tag}</T></g>})}
+ <g opacity={ease(t,8.3,9.2)}><rect x="1000" y="916" width="755" height="73" rx="13" fill="#0A1925" stroke="#385260"/><Path d="M1025 952l11 11 20 -25" stroke="#83D9C3" width={3}/><T x={1080} y={964} size={27} width={650} fill="#D4E6EA">{p.conclusion}</T></g>
+ </Svg>};

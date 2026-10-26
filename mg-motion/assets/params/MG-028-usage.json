@@ -1,0 +1,26 @@
+{
+  "durationSeconds": 6,
+  "title": "资料入库前的三种去向",
+  "subtitle": "按实际规则整理，明确下一步。",
+  "results": [
+    {
+      "status": "可入库",
+      "example": "说明完整，版本已确认。",
+      "action": "提交归档",
+      "color": "#62d8b1"
+    },
+    {
+      "status": "待补充",
+      "example": "缺少责任人与有效日期。",
+      "action": "补齐关键信息",
+      "color": "#e3b958"
+    },
+    {
+      "status": "需合并",
+      "example": "多个版本记录相同内容。",
+      "action": "统一保留最新版本",
+      "color": "#f08bcd"
+    }
+  ],
+  "note": "资料处理示意 · 请按实际业务规则填写"
+}

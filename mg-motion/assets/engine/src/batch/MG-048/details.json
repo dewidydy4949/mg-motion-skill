@@ -1,0 +1,10 @@
+{
+  "title": "铅笔连续刻度量表",
+  "sourceStart": 15,
+  "sourceEnd": 29,
+  "parameters": "levels 3–5项，value 严格递增、相邻值间距至少 maximum 的16%且不超过 maximum；label 最多12中文宽度，title 最多32；unit 5，summary 12，note 22。duration 3–40秒。",
+  "limitations": [
+    "提取原片量表填充与分层标签逐次出现的动作，不沿用天气结论。",
+    "纸面手绘风格用 SVG 线条与排线实现；无真实测量功能。"
+  ]
+}

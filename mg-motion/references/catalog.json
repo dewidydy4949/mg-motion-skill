@@ -1,0 +1,1525 @@
+{
+  "version": "1.1.0",
+  "count": 50,
+  "engineSha256": "fef51a2d7d592a30667b92096dd75056d9a9f68bddef1672213532ff1396abdc",
+  "templates": [
+    {
+      "id": "MG-013",
+      "title": "同一输入的多模型对比",
+      "group": "A",
+      "category": "对比",
+      "style": "深色科技 金色强调",
+      "purpose": "提取模型名单、同一数据与同一提示词的横评说明段落，精看选出可独立复用的小段。",
+      "keywords": [],
+      "sourceId": "244",
+      "sourceRange": [
+        21.5,
+        29.0
+      ],
+      "sampleSeconds": 7.5,
+      "usageSeconds": 8.5,
+      "durationKey": null,
+      "fixedDuration": null,
+      "status": "用户已通过",
+      "card": "references/templates/MG-013.md",
+      "preview": "assets/previews/MG-013.jpg",
+      "parameters": {},
+      "limitations": [
+        "无配乐和音效；当前仅验证画面、运动与参数复用。",
+        "展示比较方法和输入分发，不含模型评分或回答结果比较。",
+        "支持 2～6 个模型、2～12 行输入内容和至少 6 秒片长；长文案超限会报错，不能无限塞入。",
+        "参考版模型名称与展示文本来自原片，未作为模型现状或真实性验证。",
+        "线条与粒子轨迹、背景纹理、字体和卡片间距为代码近似重写，未做像素级复现。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/pilots/P01/Comparison.tsx",
+      "modelSha256": "f3f39e545357c83c0c84ef326f58e5f12837b5f02bae6460e4352fde58529b41"
+    },
+    {
+      "id": "MG-016",
+      "title": "超大标题与色块节奏",
+      "group": "A",
+      "category": "开头钩子",
+      "style": "大字海报",
+      "purpose": "提取纯色色块、超粗大字、文字缩放旋转的短开头；复杂方块场景后排。",
+      "keywords": [],
+      "sourceId": "261",
+      "sourceRange": [
+        10.6,
+        15
+      ],
+      "sampleSeconds": 5,
+      "usageSeconds": 6,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-016.md",
+      "preview": "assets/previews/MG-016.jpg",
+      "parameters": "scenes 2～5段；每段1～2行、每行1～16字符；durationSeconds 3～20；颜色HEX；note可选。",
+      "limitations": [
+        "横屏重新排版；标题不自动分页。",
+        "使用系统粗体，英文轮廓与原片不同。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-016/model.tsx",
+      "modelSha256": "ae0fe720fd6d780b776d82346f81fd5f8e22204cc9c83932a4bc3f571e44464e"
+    },
+    {
+      "id": "MG-017",
+      "title": "多模型回答并排",
+      "group": "A",
+      "category": "对比",
+      "style": "浅色产品",
+      "purpose": "提取共同问题输入与三个聊天回答卡片并排的段落。",
+      "keywords": [],
+      "sourceId": "233",
+      "sourceRange": [
+        2.6,
+        5.8
+      ],
+      "sampleSeconds": 7,
+      "usageSeconds": 8,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-017.md",
+      "preview": "assets/previews/MG-017.jpg",
+      "parameters": "answers 2～3项，name≤12字符；body≤150字符且估算不超过6行；title/question≤20字符；durationSeconds 5～20。",
+      "limitations": [
+        "展示回答结构，不评价模型优劣；示例回答不作实测。",
+        "长回答需人工摘要或拆分，不能无限扩展。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-017/model.tsx",
+      "modelSha256": "8526d78f8e8874ac2a7effa107c6629726313ccb566fe3c19a2619d4284d4532"
+    },
+    {
+      "id": "MG-018",
+      "title": "价格滚轮与套餐突出",
+      "group": "A",
+      "category": "价格与套餐",
+      "style": "浅色极简",
+      "purpose": "提取多个价格纵向排列、当前价格突出、上下价格弱化的段落。",
+      "keywords": [],
+      "sourceId": "220",
+      "sourceRange": [
+        13,
+        17
+      ],
+      "sampleSeconds": 5,
+      "usageSeconds": 6,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-018.md",
+      "preview": "assets/previews/MG-018.jpg",
+      "parameters": "prices 3～8项，0～999999；selectedIndex合法整数；prefix≤5、suffix≤8、label≤32字符；durationSeconds 3～20。",
+      "limitations": [
+        "此模板为价格滚轮，不含完整套餐权益表。",
+        "数值在同一轮中排列，不表示实际价格变化。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-018/model.tsx",
+      "modelSha256": "2c8b265ba6d983cb92d68cb1faf725449ed7d969916e2b926c9d366e4833eee3"
+    },
+    {
+      "id": "MG-019",
+      "title": "横向榜单竞速",
+      "group": "A",
+      "category": "排名变化与指标比较",
+      "style": "黑底彩色横条、数值标签、大时间戳",
+      "purpose": "随时间变化的横向条形排名，数值、名次和时间同步更新",
+      "keywords": [],
+      "sourceId": "040",
+      "sourceRange": [
+        15.8,
+        20.5
+      ],
+      "sampleSeconds": 7,
+      "usageSeconds": 8,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-019.md",
+      "preview": "assets/previews/MG-019.jpg",
+      "parameters": "items 3～6项；name≤10字；每项values与periods等长，2～6时点；非负数≤1000000；title≤20字、unit≤6字。",
+      "limitations": [
+        "数据均为演示；正式应用须提供已核实的同量纲序列。",
+        "固定条数，不支持中途新增或删除对象。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-019/model.tsx",
+      "modelSha256": "8f4740ce9906e4a8ff492829a23f43b9571e40efb13194a94d230e59dfeb8e47"
+    },
+    {
+      "id": "MG-020",
+      "title": "产品卖点与数字卡片",
+      "group": "A",
+      "category": "产品介绍与数据",
+      "style": "浅色渐变、圆角白卡、黑色大数字",
+      "purpose": "选择数字卖点与评分卡片段，横屏重排为主标题加数据卡",
+      "keywords": [
+        "成果",
+        "产出",
+        "汇报",
+        "业绩",
+        "指标",
+        "统计"
+      ],
+      "sourceId": "354",
+      "sourceRange": [
+        26.0,
+        29.5
+      ],
+      "sampleSeconds": 6,
+      "usageSeconds": 7,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-020.md",
+      "preview": "assets/previews/MG-020.jpg",
+      "parameters": "stats 2～3项；label≤10字；value 0～1000000；decimals 0～1；suffix≤4字；title≤16、subtitle≤32字。",
+      "limitations": [
+        "数字示例不代表真实下载量或评价。",
+        "单屏2～3数据项；不自动创建图表。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-020/model.tsx",
+      "modelSha256": "c5a8aca94ce087ef906491217d8f012749e9f129d4914501be8d16457a08e277"
+    },
+    {
+      "id": "MG-021",
+      "title": "文档分类与质量评分",
+      "group": "A",
+      "category": "分类筛选与批量处理",
+      "style": "黑白网点、纸张卡片、标签、等级与评分条",
+      "purpose": "多份文档进入分类器，显示A/B/C等级和分数，再汇集到结果容器",
+      "keywords": [],
+      "sourceId": "050",
+      "sourceRange": [
+        0.4,
+        6.4
+      ],
+      "sampleSeconds": 8,
+      "usageSeconds": 9,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-021.md",
+      "preview": "assets/previews/MG-021.jpg",
+      "parameters": "documents 3～5项；name≤10字、grade≤2字、score 0～100；title≤20字、classifier≤8字。",
+      "limitations": [
+        "只展示用户输入的分类与评分，不作真实自动评估。",
+        "首版固定一条输送带，文件数量最多5份。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-021/model.tsx",
+      "modelSha256": "b60cdb74cbadc9f73aa525b91b0eb5053a5c6b74f2c7f044af2154d55e0a2673"
+    },
+    {
+      "id": "MG-022",
+      "title": "阈值警报与达标翻转",
+      "group": "A",
+      "category": "阈值判断与前后对比",
+      "style": "粗黑大字、红绿状态、警示斜纹、印章",
+      "purpose": "当前百分比对比目标阈值，失败红态切到通过绿态，附状态条与结论卡",
+      "keywords": [],
+      "sourceId": "014",
+      "sourceRange": [
+        30.1,
+        34
+      ],
+      "sampleSeconds": 6,
+      "usageSeconds": 7,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-022.md",
+      "preview": "assets/previews/MG-022.jpg",
+      "parameters": "before/after/threshold 0～100；title≤20字；metric、状态文案≤12字；3～20秒。",
+      "limitations": [
+        "横屏改编；不包含原片校园叙事。",
+        "前后状态由数值与阈值判断，允许升或降。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-022/model.tsx",
+      "modelSha256": "07bcfbb8cf950a28231692dbc6d43c9ec1296fae1f421d9dae155b7927b7a3c2"
+    },
+    {
+      "id": "MG-023",
+      "title": "功能要点与素材并列",
+      "group": "A",
+      "category": "功能介绍与重点标注",
+      "style": "黑底橙色强调、大字、截图与头像网格",
+      "purpose": "左侧一条卖点或操作说明，右侧真实素材；局部选择框或扫描线突出目标",
+      "keywords": [],
+      "sourceId": "039",
+      "sourceRange": [
+        13,
+        16.7
+      ],
+      "sampleSeconds": 6,
+      "usageSeconds": 7,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-023.md",
+      "preview": "assets/previews/MG-023.jpg",
+      "parameters": "lines 1～3行、每行≤9字；description≤38字；图片建议1200×760；focus 为0～1比例矩形。",
+      "limitations": [
+        "首版静态图片素材，不含视频解码与录屏控制。",
+        "焦点坐标基于1200:760画幅；其他画幅应先裁切。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-023/model.tsx",
+      "modelSha256": "eee3aed47c4e2c095ba38c9a19af1e4aa11f7d9b9a2c318781627e9830b8e740"
+    },
+    {
+      "id": "MG-024",
+      "title": "动态排行榜与共同目标",
+      "group": "A",
+      "category": "排名与进度",
+      "style": "深色运动科技",
+      "purpose": "优先提取多列选手、排名进度和倒计时的竞赛面板；登山目标段可另作后续变体。",
+      "keywords": [],
+      "sourceId": "278",
+      "sourceRange": [
+        10,
+        20.5
+      ],
+      "sampleSeconds": 8,
+      "usageSeconds": 7,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-024.md",
+      "preview": "assets/previews/MG-024.jpg",
+      "parameters": "racers 3～5人，名称≤7字；periods 2～6项；values 与periods等长，0～target；title≤18字。",
+      "limitations": [
+        "固定赛道，不模仿原片登山段。",
+        "倒计时表示视频演示剩余时间，不代表真实项目期限。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-024/model.tsx",
+      "modelSha256": "469cf08c5c64c0578ba72dc0da4a2ed190365f308e2bd17ec7b030e6755925f9"
+    },
+    {
+      "id": "MG-025",
+      "title": "评论卡片与社交反馈",
+      "group": "A",
+      "category": "反馈与口碑",
+      "style": "高饱和波普",
+      "purpose": "提取蓝底评论卡片叠放、互动计数和爱心装饰的段落。",
+      "keywords": [],
+      "sourceId": "230",
+      "sourceRange": [
+        8.6,
+        10.9
+      ],
+      "sampleSeconds": 7,
+      "usageSeconds": 8,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-025.md",
+      "preview": "assets/previews/MG-025.jpg",
+      "parameters": "comments 3～5条，name≤10字，body≤44字，likes 0～999999整数；标题1～3行、每行≤8字。",
+      "limitations": [
+        "示例评论非真实用户证言。",
+        "不显示账号头像；用姓名首字的颜色圆形替代。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-025/model.tsx",
+      "modelSha256": "4c4e1e704b6c231ba5d99f1770de1b73b61d14378b23f02450015721bc339367"
+    },
+    {
+      "id": "MG-026",
+      "title": "评分进度与通知小组件",
+      "group": "A",
+      "category": "状态与反馈",
+      "style": "彩色产品",
+      "purpose": "从评分星、环形进度、通知堆叠三类状态中挑一类，先做可独立复用的部件。",
+      "keywords": [],
+      "sourceId": "238",
+      "sourceRange": [
+        8.3,
+        10.3
+      ],
+      "sampleSeconds": 6,
+      "usageSeconds": 5,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-026.md",
+      "preview": "assets/previews/MG-026.jpg",
+      "parameters": "from/to 0～100；title≤18字；状态标签≤14字；background/accent六位HEX；3～20秒。",
+      "limitations": [
+        "本版交付为不透明全屏H264，未声称透明叠加。",
+        "展示给定进度区间，不连接实际上传任务。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-026/model.tsx",
+      "modelSha256": "7f2f393007c08fdfc333f8b8aa4ec372b1b28bb17d83496f3297b1df9659e75c"
+    },
+    {
+      "id": "MG-027",
+      "title": "作品矩阵与成果展示墙",
+      "group": "A",
+      "category": "成果展示",
+      "style": "深色产品",
+      "purpose": "提取截图卡片横向陈列、右侧多图矩阵配左侧结论的段落。",
+      "keywords": [],
+      "sourceId": "257",
+      "sourceRange": [
+        29,
+        33.5
+      ],
+      "sampleSeconds": 7,
+      "usageSeconds": 6,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-027.md",
+      "preview": "assets/previews/MG-027.jpg",
+      "parameters": "images 4～6张，每张src与caption≤12字；lines 1～3行、每行≤9字；建议图片800×540以上。",
+      "limitations": [
+        "素材采用contain完整显示；画幅不一致时会保留深色留边。",
+        "演示素材为原创SVG，不带入原参考中的品牌作品。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-027/model.tsx",
+      "modelSha256": "cdd55265c2df1168086c991377449b99c5e79e38c8c9710d11c648cc1cc29cab"
+    },
+    {
+      "id": "MG-028",
+      "title": "分类结果卡片与处理建议",
+      "group": "A",
+      "category": "分类与结果",
+      "style": "紫色产品",
+      "purpose": "提取六种状态结果的卡片网格，每张包含状态、例子和处理建议。",
+      "keywords": [],
+      "sourceId": "279",
+      "sourceRange": [
+        5,
+        7.6
+      ],
+      "sampleSeconds": 7,
+      "usageSeconds": 6,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-028.md",
+      "preview": "assets/previews/MG-028.jpg",
+      "parameters": "results 2～6项；status≤8字，example≤28字，action≤22字；标题≤20字。",
+      "limitations": [
+        "模板不执行真实分类，仅展示输入结果。",
+        "两行网格最多六项，超出数量需另做一屏。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-028/model.tsx",
+      "modelSha256": "05589b56583f3ef1c888d683a9d6119593e91f92c1a0b916650ce42c8ba10278"
+    },
+    {
+      "id": "MG-029",
+      "title": "观点对照与原文高亮",
+      "group": "A",
+      "category": "对比 / 重点解释",
+      "style": "米白编辑排版、黑色引用卡、红色荧光标记",
+      "purpose": "选取原文和改写提问并列、局部文字高亮的一小段；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "283",
+      "sourceRange": [
+        95,
+        105
+      ],
+      "sampleSeconds": 8,
+      "usageSeconds": 7,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-029.md",
+      "preview": "assets/previews/MG-029.jpg",
+      "parameters": "original/revised≤88字且不含换行；highlight≤22字且必须包含于original；批注≤42字，takeaway≤44字。",
+      "limitations": [
+        "单屏短句对照，长文应拆段。",
+        "高亮首个匹配词组，不自动推断哪里有问题。",
+        "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-029/model.tsx",
+      "modelSha256": "eadd61755fcee5c86cc76820df61f1ee6ce8a65ff9d566227f6f7e7c9ba0c925"
+    },
+    {
+      "id": "MG-030",
+      "title": "点阵分布与审计摘要",
+      "group": "A",
+      "category": "数字数据 / 分布解释",
+      "style": "极简白底、巨大黑字、红黑点阵、细线",
+      "purpose": "优先选红黑点阵分布图配大数字的片段；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "412",
+      "sourceRange": [
+        4.8,
+        9.2
+      ],
+      "sampleSeconds": 6.4,
+      "usageSeconds": 7,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-030.md",
+      "preview": "assets/previews/MG-030.jpg",
+      "parameters": "durationSeconds 5.5–20秒；total整数20–240；matched及exceptions是互不重叠的数量，合计不得超出total；lines固定两行，每行≤16中文字宽；header≤38、section≤30、类别名≤12/10。数字与点数同源，不接受另填百分比。",
+      "limitations": [
+        "点位置按固定种子散布；不表现第二段按基础设施聚类的柱形点阵。",
+        "原片173网址/172出版物的计量差别保留为参考文字，图形以172为分母。",
+        "中文样片延长停留，黑点代表可定义第二类别，未推断原片黑点的业务含义。",
+        "本版无配乐或音效。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-030/model.tsx",
+      "modelSha256": "7f96508c01a59d156ec3ab33fa99a439b7ffd95da82d65739bc06d67b327a76f"
+    },
+    {
+      "id": "MG-031",
+      "title": "主题卡片墙与分类揭示",
+      "group": "A",
+      "category": "功能总览 / 多项展示",
+      "style": "柔和彩色卡片、粗黑描边、倾斜网格、贴纸标题",
+      "purpose": "选多主题卡片墙及前景标题牌的一段；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "353",
+      "sourceRange": [
+        7.2,
+        9.7
+      ],
+      "sampleSeconds": 5,
+      "usageSeconds": 6,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-031.md",
+      "preview": "assets/previews/MG-031.jpg",
+      "parameters": "durationSeconds 4.5–18秒；items 6–12项，每项category≤8、label≤11中文字宽，icon整数0–7，color六位HEX；标题两行各≤15中文字宽。图标是8类通用SVG，可按类别选择。",
+      "limitations": [
+        "矩阵为重复铺满的装饰卡片墙，前景标题会遮住部分卡片，不是逐项不遮挡的目录。",
+        "原片照片、3D物体及品牌素材未复制，替换为通用自绘图标。",
+        "横版采用更多列，延长停留供中文阅读，卡片墙最大位移固定以免长片长露底。",
+        "本版无配乐或音效。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-031/model.tsx",
+      "modelSha256": "ab75b43747c01878b440b2a60ed81b3c88c6566a401932819f73b6184ed83347"
+    },
+    {
+      "id": "MG-032",
+      "title": "滚动问题词组与桌面聚焦",
+      "group": "A",
+      "category": "开头钩子 / 界面演示",
+      "style": "背景虚化、滚动词组、应用图标、桌面窗口",
+      "purpose": "优先拆AI工作难点的滚动词组列表；桌面连续镜头作为可选后续段落。",
+      "keywords": [],
+      "sourceId": "376",
+      "sourceRange": [
+        0.8,
+        5.8
+      ],
+      "sampleSeconds": 6,
+      "usageSeconds": 7.5,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-032.md",
+      "preview": "assets/previews/MG-032.jpg",
+      "parameters": "durationSeconds 5–20秒；intro≤30中文字宽；items 3–10项，label≤22中文字宽、color六位HEX、icon整数0–7。backgroundImage可选，必须public内相对图片路径；默认不依赖外部图片。",
+      "limitations": [
+        "原片全屏绘画壁纸未复制，默认使用程序生成的模糊风景色块。",
+        "原片约30个快速词组节选为7项并放慢，支持范围内会在结束前滚到末项。",
+        "桌面多窗口镜头不在本模板范围；无真实应用控制。",
+        "本版无配乐或音效。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-032/model.tsx",
+      "modelSha256": "6f29e74e81e1ee1b97865dad67514a550834ca303e947af70cafe0d3b281a156"
+    },
+    {
+      "id": "MG-033",
+      "title": "订阅档位与价格方案卡",
+      "group": "A",
+      "category": "对比 / 方案选择",
+      "style": "暖白产品风、叠放卡片、橙色重点、细分隔",
+      "purpose": "选价格档位卡及推荐标签展示；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "379",
+      "sourceRange": [
+        50.1,
+        53.8
+      ],
+      "sampleSeconds": 7,
+      "usageSeconds": 8,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-033.md",
+      "preview": "assets/previews/MG-033.jpg",
+      "parameters": "durationSeconds 6–20秒；headline固定3行每行≤9中文字宽；plans 2–3项；selected选择前景卡；price 0–99999，currency≤1中文字宽；name≤16、subtitle≤21、quota≤28、features 2–5条每条≤24、button≤16。时长与调用参数同步。",
+      "limitations": [
+        "只重点展示selected档，后方套餐作为层次背景会局部遮挡；需同时完整比较各档时应使用并排模板。",
+        "价格是显示动画，不接真实计费；参考样片信息未核实，正式发布需换为已核实内容。",
+        "中文改版稍延长节奏，字体与背景纹理为近似重写。",
+        "本版无配乐或音效。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-033/model.tsx",
+      "modelSha256": "1a0a4077a23f3ddc7b10a4ddeafba9540fa63b348e30525f9b4503a9842aaf16"
+    },
+    {
+      "id": "MG-014",
+      "title": "表格重点聚焦",
+      "group": "B",
+      "category": "表格说明与访问范围",
+      "style": "极简白底、淡蓝选列、局部放大、非重点弱化、中文表格",
+      "purpose": "在可配置表格上突出目标列，配合身份/权限说明和局部放大",
+      "keywords": [],
+      "sourceId": "061",
+      "sourceRange": [
+        8,
+        18
+      ],
+      "sampleSeconds": 10,
+      "usageSeconds": 10,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "用户已通过",
+      "card": "references/templates/MG-014.md",
+      "preview": "assets/previews/MG-014.jpg",
+      "parameters": {
+        "columns": "4–7列",
+        "rows": "3–6行",
+        "focus": "1–2个相邻列",
+        "durationSeconds": "8–12秒",
+        "data": "每行与每列文字、标签、对齐、锁标记、提问及结论均可替换"
+      },
+      "limitations": [
+        "这是061的表格聚焦功能试点，不是整条原片复刻；未制作权限类别网格、头像分组和角色权限切换。",
+        "参考样片的姓名与金额取自原片并进行中文转写，未作事实核验；Usage数值为明确的演示数据。",
+        "只完成1920×1080横版和10秒的两组渲染验证，其他时长及边界组合需按使用场景复检。",
+        "短表格输入有数量、宽度和文字边界，不支持任意长文或大表格自动分页。",
+        "依赖系统字体；跨机器需检查中文字体与字宽。无音频设计。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/pilots/P02/model.tsx",
+      "modelSha256": "e45db0cb8ab3aa4231120cb592e4e282b382e420ce8dcf6c1d4a12e7c9cdb3ea"
+    },
+    {
+      "id": "MG-034",
+      "title": "代码与结果同步讲解",
+      "group": "B",
+      "category": "代码教学与效果对照",
+      "style": "深色代码窗、橙色行高亮、浅色结果预览",
+      "purpose": "代码区域与实时结果区域并列或上下排，按步骤高亮代码并切换预览",
+      "keywords": [],
+      "sourceId": "045",
+      "sourceRange": [
+        4,
+        21
+      ],
+      "sampleSeconds": 16,
+      "usageSeconds": 15,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-034.md",
+      "preview": "assets/previews/MG-034.jpg",
+      "parameters": "title≤24字；2–4步骤；每步3–8行代码；每行≤46半角宽度单位（中文计2）；result≤10字，detail≤17字；时长12–24秒。",
+      "limitations": [
+        "演示代码不执行；结果媒体为已有图片或视频。预览两侧卡片有意裁切。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-034/model.tsx",
+      "modelSha256": "f4deea0faa0f95278041ba579a02548b9e65d0daedac1226c887bda92146947b"
+    },
+    {
+      "id": "MG-035",
+      "title": "界面简化前后对照",
+      "group": "B",
+      "category": "前后对比与界面聚焦",
+      "style": "白底产品UI、浅蓝线框、局部淡化、细注释",
+      "purpose": "复杂界面到简化界面的前后对照，突出保留区域并弱化干扰项",
+      "keywords": [],
+      "sourceId": "132",
+      "sourceRange": [
+        1,
+        8
+      ],
+      "sampleSeconds": 11,
+      "usageSeconds": 11,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-035.md",
+      "preview": "assets/previews/MG-035.jpg",
+      "parameters": "title≤24字；actions为4–6项且每项≤6字；subject≤15字；facts为3–6项，标签≤3字、值≤8字；activities为3–5项且每项≤26字；时长9–18秒。",
+      "limitations": [
+        "素材模式在相同画布范围内交叉淡入；自绘界面用于讲解结构，不执行真实业务操作。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-035/model.tsx",
+      "modelSha256": "012a4931c85bc8f39180bad3f7e6072939bd20c300c4b6741b50275c03f6ef81"
+    },
+    {
+      "id": "MG-036",
+      "title": "鼠标聚焦与界面标注",
+      "group": "B",
+      "category": "聚焦放大 / 界面演示",
+      "style": "蓝白强对比、超大功能词、选择框、真实界面窗口",
+      "purpose": "选鼠标框选、高亮重点或界面窗口展示段；具体动作和秒段待定位。",
+      "keywords": [],
+      "sourceId": "314",
+      "sourceRange": [
+        0,
+        4
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 12,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-036.md",
+      "preview": "assets/previews/MG-036.jpg",
+      "parameters": "title≤24字；3–4步骤；word≤6字、hint≤24字；focus 为归一化 x/y/w/h 且矩形必须在画面内；时长9–24秒。",
+      "limitations": [
+        "逐段切换主题；内置文字用于展示动作，使用真实界面时应按截图坐标设置 focus。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-036/model.tsx",
+      "modelSha256": "064d7d27a6b29a9af8ef730ad97e097b10d443e9252610e68fe35de4fbed9126"
+    },
+    {
+      "id": "MG-037",
+      "title": "手机操作与步骤说明卡",
+      "group": "B",
+      "category": "手机教程与操作说明",
+      "style": "蓝灰纹理底、白色说明卡、黑色手机框",
+      "purpose": "手机截图或录屏外框与顶部步骤卡同步切换，突出点击区域和完成状态",
+      "keywords": [],
+      "sourceId": "016",
+      "sourceRange": [
+        3,
+        10.4
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 15,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-037.md",
+      "preview": "assets/previews/MG-037.jpg",
+      "parameters": "title≤24字；appName≤12字；3–4步；步骤标题≤16字、说明≤48字；手机标题≤10字、2–4行且每行≤10字；按钮≤9字、反馈≤12字；tap为归一化坐标；时长10–24秒。",
+      "limitations": [
+        "画面只演示操作，不连接业务系统；点击坐标需要与替换素材的内容对应。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-037/model.tsx",
+      "modelSha256": "c498c1fe2a4fc74534bdc4d22e701fb975a6e7d65b20cc9019604be6fda2c6d0"
+    },
+    {
+      "id": "MG-038",
+      "title": "提示词生成图片并落入版面",
+      "group": "B",
+      "category": "界面演示 / 输入输出",
+      "style": "浅色对话侧栏、内容预览、浮动图片卡、柔和阴影",
+      "purpose": "选输入要求、生成结果图片、图片进入文档三个连续状态；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "382",
+      "sourceRange": [
+        9,
+        20
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 14,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-038.md",
+      "preview": "assets/previews/MG-038.jpg",
+      "parameters": "title≤24字；prompt≤72字；文档标题≤15字、正文≤60字；结果反馈≤16字；art=landscape或blocks；时长10–20秒；accent为六位HEX。",
+      "limitations": [
+        "演示已有结果素材的工作流，不连接图像生成服务；图片按16:9区域裁切或contain显示。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-038/model.tsx",
+      "modelSha256": "4d5784fdd697a80e313662676576139fa6d575eae05639688079db7a1e205df1"
+    },
+    {
+      "id": "MG-039",
+      "title": "日历定位与周期进度",
+      "group": "B",
+      "category": "日程时间与周期进度",
+      "style": "深色仪表盘、橙色高亮、紧凑信息层级",
+      "purpose": "一周日期条定位到某日，再展示日期、周数、年度进度和下一节点",
+      "keywords": [],
+      "sourceId": "015",
+      "sourceRange": [
+        6.4,
+        25.6
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 14,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-039.md",
+      "preview": "assets/previews/MG-039.jpg",
+      "parameters": "title≤24字；date与milestoneDate为1970–2100范围内的真实YYYY-MM-DD日期；下一节点不早于选中日期；milestoneLabel≤22字；时长10–24秒；accent为六位HEX。",
+      "limitations": [
+        "采用UTC日历计算，周一为每周首日，周数采用ISO 8601规则；年度进度计入选中当天，不处理时区小时。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-039/model.tsx",
+      "modelSha256": "75fa59551cdafc05d31fa05eb6819a15f88803d403b06b3821cdcd6fcb00dbfa"
+    },
+    {
+      "id": "MG-040",
+      "title": "执行流水线与状态列表",
+      "group": "B",
+      "category": "步骤流程",
+      "style": "浅色科技",
+      "purpose": "提取 PLAN、BUILD、VERIFY、SHIP 连线卡片，以及左侧中心图标配右侧执行状态条的结构。",
+      "keywords": [],
+      "sourceId": "224",
+      "sourceRange": [
+        4.4,
+        7.8
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 14,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-040.md",
+      "preview": "assets/previews/MG-040.jpg",
+      "parameters": "title≤24字；taskLabel≤26字；completionNote≤36字；3–5阶段，每阶段code≤10个大写字母、数字、空格或横线，label≤6字、description≤28字；时长10–24秒；accent为六位HEX。",
+      "limitations": [
+        "用于解释顺序流程，阶段均分时长；状态为演示数据，不连接真实任务执行器。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-040/model.tsx",
+      "modelSha256": "6c21e3ee70cf119e169320f575e4538a32c4c99631a3dcf7463ed73301b6f766"
+    },
+    {
+      "id": "MG-041",
+      "title": "一份内容到多平台发布",
+      "group": "B",
+      "category": "工作流演示",
+      "style": "浅色产品",
+      "purpose": "提取输入一句需求、多种内容卡片展开、排入日历的转换流程。",
+      "keywords": [],
+      "sourceId": "271",
+      "sourceRange": [
+        0,
+        8
+      ],
+      "sampleSeconds": 8,
+      "usageSeconds": 10,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-041.md",
+      "preview": "assets/previews/MG-041.jpg",
+      "parameters": "durationSeconds 6–20秒；titles恰好3项、每项≤14字宽；prompt≤28；artworkTitle≤12；cards 3–6项，platform≤6、caption≤9，day为0–6整数、slot为0–2整数且位置不重复；days恰好7项、每项≤4；image可选public内相对路径；accent和card.color用#RRGGBB。",
+      "limitations": [
+        "保留三阶段流程、扇形展开和日历落位；不含原片后续已发布/增长曲线/品牌片尾。",
+        "原片餐饮摄影用原创SVG餐盘示意代替，可通过image参数换成自有图片；没有复制照片或平台logo。",
+        "发布平台使用通用中文标签；只演示预设排期，不提交真实平台。",
+        "视频无音轨；抽帧自检并不替代库主人的最终验收。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-041/model.tsx",
+      "modelSha256": "570c782b9a8717645bd1d89c6c91d67c2a09a6474fb90c4a535151b1a1e5d210"
+    },
+    {
+      "id": "MG-042",
+      "title": "逐词朗读与原文聚焦",
+      "group": "B",
+      "category": "聚焦放大 / 文字讲解",
+      "style": "奶油纸底、衬线正文、浅黄色高亮、简洁手机样机",
+      "purpose": "选一段正文局部高亮/朗读定位，将文本、分词和时间信息参数化；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "374",
+      "sourceRange": [
+        28,
+        36
+      ],
+      "sampleSeconds": 8,
+      "usageSeconds": 10,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-042.md",
+      "preview": "assets/previews/MG-042.jpg",
+      "parameters": "durationSeconds 6–30秒；label≤8字宽、title≤16、chapter≤18、context≤115、translation≤36、action≤12；tokens 2–18项、每项text≤10，合计≤40字宽。at是从片头起的秒数，必须严格递增，范围0.8至durationSeconds−1.2。marked控制持久浅黄色词语高亮。",
+      "limitations": [
+        "保留奶油纸底、衬线正文、左右同步强调与手机播放栏；中文排版与原片法语字形不同。",
+        "时间由tokens.at显式给出，不做自动分词或语音对齐；视频没有音轨。",
+        "手机正文为受限长度预览，超出字数需分镜；已读词逐项变深，重点词持续高亮。",
+        "视频无音轨；抽帧自检并不替代库主人的最终验收。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-042/model.tsx",
+      "modelSha256": "b7b304097006bffe72ec92dab1b3de1b454cba89802896c86ed205725b97147c"
+    },
+    {
+      "id": "MG-043",
+      "title": "手机对话与 AI 回复展示",
+      "group": "B",
+      "category": "对话演示",
+      "style": "暖色产品",
+      "purpose": "提取手机框中的问答气泡与回复逐步出现的单段演示。",
+      "keywords": [],
+      "sourceId": "280",
+      "sourceRange": [
+        0,
+        5.8
+      ],
+      "sampleSeconds": 7,
+      "usageSeconds": 9,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-043.md",
+      "preview": "assets/previews/MG-043.jpg",
+      "parameters": "durationSeconds 6–25秒；title和emphasis各≤9字宽，subtitle≤32、contact≤9、note≤20。messages 2–4条，从me开始与other交替；正文各≤31字宽且总气泡计算高度≤480px，前两条≤260px。at递增、至少相隔0.65秒、范围1.3至durationSeconds−1。超出空间请缩短或拆下一镜头。",
+      "limitations": [
+        "原片竖屏改为左标题、右手机；保留暖底、红色下划线、蓝灰气泡、输入中与键盘开合。",
+        "删除原片卡通人物及品牌符号，手机为本地CSS绘制的通用框。",
+        "只支持短对话，不自动滚动或分页；支持范围通过高度校验明确限制。",
+        "视频无音轨；抽帧自检并不替代库主人的最终验收。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-043/model.tsx",
+      "modelSha256": "d6daa8660008ce128afc17145c35047d3aba439f816da5751b392a22646bd250"
+    },
+    {
+      "id": "MG-044",
+      "title": "日历排程与内容发布卡",
+      "group": "B",
+      "category": "步骤流程 / 时间安排",
+      "style": "浅色产品界面、彩色便签、圆角周历",
+      "purpose": "周视图中不同日期的内容卡、连线和选中状态；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "301",
+      "sourceRange": [
+        22,
+        25.8
+      ],
+      "sampleSeconds": 7.5,
+      "usageSeconds": 9,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-044.md",
+      "preview": "assets/previews/MG-044.jpg",
+      "parameters": "durationSeconds 6–20秒；title≤23字宽、complete≤12；days恰好7项、每项≤4。tasks 3–7项、每天最多一项；day为0–6整数、slot为0–2整数；普通label≤7字宽、选中label≤10、time≤5；selected为有效任务索引。channels 2–4项、name≤7、short≤2；颜色均#RRGGBB。",
+      "limitations": [
+        "参考22–25.8秒按中文阅读需求放慢为7.5秒，保留便签落位、选中列、扇出连线和黄色流动节点。",
+        "平台使用通用名称与文字标记；不执行真实发布。",
+        "首版每天最多一条任务，每条最多一个预置时段，复杂日程请分镜。",
+        "视频无音轨；抽帧自检并不替代库主人的最终验收。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-044/model.tsx",
+      "modelSha256": "1c046d9994506d82f8305823d8bb7f26d67c8e0f695eaca289107a6dab8a6e13"
+    },
+    {
+      "id": "MG-015",
+      "title": "手绘 Agent 操作",
+      "group": "C",
+      "category": "步骤流程 / Agent演示",
+      "style": "纸纹手绘 · 黄色强调 · 浏览器填表与设置完成",
+      "purpose": "选Agent接入、表单逐步填充和完成发布的结构；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "391",
+      "sourceRange": [
+        10,
+        21.5
+      ],
+      "sampleSeconds": 11.5,
+      "usageSeconds": 11.5,
+      "durationKey": null,
+      "fixedDuration": 11.5,
+      "status": "用户已通过",
+      "card": "references/templates/MG-015.md",
+      "preview": "assets/previews/MG-015.jpg",
+      "parameters": {},
+      "limitations": [
+        "固定3个表单字段、2个设置项；清单支持1～3项，不是任意表单生成器。",
+        "主插图和三张缩略图为通用SVG，首版不支持外部图片参数。",
+        "中文字体与原英文画笔字不同，线条较规整；当前字宽估算对大量宽英文字符仍需预览。",
+        "无音轨，未复制原片音乐和音效。",
+        "参考样片中的价格来自原片且未核实；活动报名内容仅为虚构复用验证。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/pilots/P03/AgentForm.tsx",
+      "modelSha256": "de9f7582a2755f9b713b97415d1784bfbc4a41e0b55e16c4142f31ca1745c71b"
+    },
+    {
+      "id": "MG-045",
+      "title": "纸张拼贴成长时间线",
+      "group": "C",
+      "category": "时间线",
+      "style": "纸张拼贴、人物抠图、手写年份、便签和涂鸦",
+      "purpose": "选相邻两三个年份的照片/插图与里程碑卡片组织方式；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "358",
+      "sourceRange": [
+        28,
+        37
+      ],
+      "sampleSeconds": 9,
+      "usageSeconds": 10,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-045.md",
+      "preview": "assets/previews/MG-045.jpg",
+      "parameters": "events 固定两项；年份、标签、数字、单位、字幕可替换。person 最多10字；portraitSrc 可选自有图片，默认原创人物插画。duration 3–40秒。",
+      "limitations": [
+        "保留年份胶带、人物与手机地图、翻页擦除、地球与计数便签的结构；原人物照片替换为原创 SVG 人物。",
+        "取两个相邻年份，不复刻完整51秒广告。地图和地球为装饰示意，不代表真实地理数据。",
+        "无原音频；title 为素材管理名称，主要屏幕文本由 events 提供。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-045/model.tsx",
+      "modelSha256": "9d9b68beddf10aa16f3583ee4dfd9573cd8faaf70bc65e6bffb12a98cfc78ba0"
+    },
+    {
+      "id": "MG-046",
+      "title": "手绘三层结构图",
+      "group": "C",
+      "category": "架构层级与操作流程",
+      "style": "白底、黑色手绘框、蓝色重点、黄色荧光",
+      "purpose": "资源层—中间层—客户端关系图，以及编号方框和箭头组成的步骤链",
+      "keywords": [],
+      "sourceId": "017",
+      "sourceRange": [
+        18,
+        28
+      ],
+      "sampleSeconds": 10,
+      "usageSeconds": 12,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-046.md",
+      "preview": "assets/previews/MG-046.jpg",
+      "parameters": "resources 2–5项，clients 2–4项；edgeLabels 固定两项；三层标题、边界名称与结论独立替换。duration 3–40秒。 title10、subtitle12中文宽度。",
+      "limitations": [
+        "原片为竖屏，重排为左侧解释与右侧纵向结构的横屏画幅，保留逐笔框线与层间箭头节奏。",
+        "只提取图形表达；不继承原片中的代理接入或认证建议。",
+        "拓扑固定三层，不能用参数改成任意网络。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-046/model.tsx",
+      "modelSha256": "e685bed155c1aa3732d19a2299a138469543c836937d3db6d767abaef1287a75"
+    },
+    {
+      "id": "MG-047",
+      "title": "语义连线与关键词汇聚",
+      "group": "C",
+      "category": "概念解释 / 关系网络",
+      "style": "深色科技底、细曲线、光点、标签卡片",
+      "purpose": "选页面卡片连线或多个节点向中心汇聚中的一段；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "328",
+      "sourceRange": [
+        58,
+        69.5
+      ],
+      "sampleSeconds": 11.5,
+      "usageSeconds": 12,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-047.md",
+      "preview": "assets/previews/MG-047.jpg",
+      "parameters": "sources 固定3项，每项含 name/phrase/relevant；tags 3–6项；relevant 控制线色与无关提示。duration 3–40秒。 name10、phrase7、target15、tag6中文宽度。",
+      "limitations": [
+        "保留深色背景、三条弧线、沿线移动标签、暖色目标球与关键词环绕；品牌域名替换为示例域名。",
+        "仅演示语义关系，不计算搜索排名或自动提取关键词。",
+        "标签按参数顺序展开，词条集合由使用者提供。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-047/model.tsx",
+      "modelSha256": "fd637274853bbca0744c90a6586b0ea75245f17e12e60fd443ac00a8099732af"
+    },
+    {
+      "id": "MG-048",
+      "title": "铅笔连续刻度量表",
+      "group": "C",
+      "category": "数字数据 / 概念解释",
+      "style": "米色纸张、铅笔线、稀疏红蓝强调",
+      "purpose": "优先选温度计式量表或正负柱图中的一个短段；地图作为后续独立候选。",
+      "keywords": [],
+      "sourceId": "302",
+      "sourceRange": [
+        15,
+        29
+      ],
+      "sampleSeconds": 10,
+      "usageSeconds": 11,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-048.md",
+      "preview": "assets/previews/MG-048.jpg",
+      "parameters": "levels 3–5项，value 严格递增、相邻值间距至少 maximum 的16%且不超过 maximum；label 最多12中文宽度，title 最多32；unit 5，summary 12，note 22。duration 3–40秒。",
+      "limitations": [
+        "提取原片量表填充与分层标签逐次出现的动作，不沿用天气结论。",
+        "纸面手绘风格用 SVG 线条与排线实现；无真实测量功能。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-048/model.tsx",
+      "modelSha256": "425fb90c73e340c55c7832c08889c4944c63b8cfd90bf64d0e29bc8be9e1381e"
+    },
+    {
+      "id": "MG-049",
+      "title": "操作示意与固定勾选清单",
+      "group": "C",
+      "category": "步骤流程 / 进度反馈",
+      "style": "米色编辑版式、细线手绘、固定侧栏、勾选记号",
+      "purpose": "保留主画面操作示意与侧边清单联动、当前步骤箭头和完成勾选；不复刻调酒液体。",
+      "keywords": [
+        "整理",
+        "流程",
+        "步骤",
+        "教程",
+        "清单",
+        "进度"
+      ],
+      "sourceId": "355",
+      "sourceRange": [
+        3,
+        19
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 13,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-049.md",
+      "preview": "assets/previews/MG-049.jpg",
+      "parameters": "steps 3–5项，label 12、detail 24、result 14中文宽度；title 14，final 22；duration 3–40秒。清单、主画面和顶部进度共享当前步骤。",
+      "limitations": [
+        "保留原片固定侧栏、当前箭头和逐步勾选，主操作改为文档构建示意。",
+        "不包含调酒、液体物理或真实软件自动化；完成状态仅是动画数据。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-049/model.tsx",
+      "modelSha256": "9052666b724cd8f512ca0bb7871f3710ed2d2bb3172bbce3cd618bb7f9c8715a"
+    },
+    {
+      "id": "MG-050",
+      "title": "制图线条与蓝图展开",
+      "group": "C",
+      "category": "形状转场与结构图",
+      "style": "纸面制图、蓝图线框、青色扫描线",
+      "purpose": "只拆平面线条成形、几何形状扩张遮罩和蓝图数据面板；不整条复刻三维物体",
+      "keywords": [],
+      "sourceId": "001",
+      "sourceRange": [
+        6,
+        11
+      ],
+      "sampleSeconds": 9,
+      "usageSeconds": 10,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-050.md",
+      "preview": "assets/previews/MG-050.jpg",
+      "parameters": "tiles 整数3–7；accent 六位十六进制色；title 32，label 12，caption 30中文宽度；duration 3–40秒。",
+      "limitations": [
+        "参考平面线段展开六边形、重复平铺、蓝底反转；未复刻后续三维旋转物体。",
+        "SVG 几何用于结构隐喻，不能代替真实工程制图。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-050/model.tsx",
+      "modelSha256": "bf2bd8ea561200e47ef6b4961358dcab00b11b4b934805668f3b3884dc97c60f"
+    },
+    {
+      "id": "MG-051",
+      "title": "能力中心与工具辐射图",
+      "group": "C",
+      "category": "能力地图与工具关系",
+      "style": "深棕黑底、米白衬线大字、细线图标",
+      "purpose": "中心对象连接浏览器、文件、终端等外围工具的辐射图，并配左右分栏说明",
+      "keywords": [],
+      "sourceId": "013",
+      "sourceRange": [
+        32,
+        35.5
+      ],
+      "sampleSeconds": 9,
+      "usageSeconds": 10,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-051.md",
+      "preview": "assets/previews/MG-051.jpg",
+      "parameters": "tools 6–8项，每项 name 最多6中文宽度，icon 为 browser/file/terminal/mail/chart/calendar/design/search；headline 10、description 27、center 7；duration 3–40秒。",
+      "limitations": [
+        "提取原片左右分栏、暖暗底、圆形中心和辐射工具节点。",
+        "工具连线是可配置示意；不代表自动获得权限或实际软件集成。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-051/model.tsx",
+      "modelSha256": "df0b135153d510b6c8ee971a815a9024e0d966f80f75296adc09d33124a6681a"
+    },
+    {
+      "id": "MG-052",
+      "title": "多源卡片与统一结果",
+      "group": "C",
+      "category": "信息聚合与多工具连接",
+      "style": "浅灰白底、蓝紫卡片、弧形连线、柔和阴影",
+      "purpose": "多个输入卡片汇聚到一个结果节点，配合标题、指标和轻量卡片图表",
+      "keywords": [],
+      "sourceId": "029",
+      "sourceRange": [
+        24,
+        28.5
+      ],
+      "sampleSeconds": 9,
+      "usageSeconds": 10,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-052.md",
+      "preview": "assets/previews/MG-052.jpg",
+      "parameters": "items 固定3项，value 为0–99999；name10、detail19、tag8中文宽度。结果由三项 value 求和；unit4、result12、note35；duration3–40秒。",
+      "limitations": [
+        "保留原片三张来源卡、蓝紫色带、弧形连线与下方汇总节点。",
+        "动画只求和传入数值，不抓取第三方数据；卡片人物改为序号图形。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-052/model.tsx",
+      "modelSha256": "eb8c72d84f9fcb0eb634d14eedb0b29b26a2b8163be2b69bd86281f80116ab88"
+    },
+    {
+      "id": "MG-053",
+      "title": "霓虹节点年表与图标讲史",
+      "group": "C",
+      "category": "时间线与版本演进",
+      "style": "暗色网格、霓虹年份、SVG线稿、底部节点线",
+      "purpose": "年份或版本号、事件图标、简短说明与底部进度节点同步呈现",
+      "keywords": [],
+      "sourceId": "064",
+      "sourceRange": [
+        2,
+        11
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 13,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-053.md",
+      "preview": "assets/previews/MG-053.jpg",
+      "parameters": "events3–5项，year4.5、label18、detail32中文宽度，icon为network/build/chart/device/rocket，color六位HEX；duration3–40秒。",
+      "limitations": [
+        "原片为竖版；横版重排为左侧年份与说明、右侧事件线稿，保留底部持久节点轴。",
+        "年份与事件全部可替换；演示项目时间不构成真实历史断言。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-053/model.tsx",
+      "modelSha256": "b7736e8de479234682ee7f3a4bb8684b4430ddb8f0d7641564e314d198533db9"
+    },
+    {
+      "id": "MG-054",
+      "title": "像素矩阵缺失与逐格恢复",
+      "group": "C",
+      "category": "组成拆解与纠错解释",
+      "style": "黑底米白卡、像素网格、蓝橙分区",
+      "purpose": "字符串到数据块、矩阵分区、局部受损和恢复的可视化模块",
+      "keywords": [],
+      "sourceId": "005",
+      "sourceRange": [
+        57,
+        66
+      ],
+      "sampleSeconds": 10,
+      "usageSeconds": 11,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-054.md",
+      "preview": "assets/previews/MG-054.jpg",
+      "parameters": "grid整数12–20，missing为5–35的整数百分比，seed1–99999；labels固定3项、每项16中文宽度；message22、note34；duration3–40秒。损失数量取格数×百分比的四舍五入值。",
+      "limitations": [
+        "提取原片矩阵、色块分区、局部空缺、百分比与扫描边框的平面表达。",
+        "为通用数据演示，使用确定性示意矩阵及预设副本恢复；不输出可扫描二维码，也不实现Reed–Solomon。",
+        "当前缺失数与画面空格共享同一状态计算。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-054/model.tsx",
+      "modelSha256": "530b533f49fd08951f3035ca0154d92703375cb18dc07605ffb6894800cd58d3"
+    },
+    {
+      "id": "MG-055",
+      "title": "Agent循环与上下文累计",
+      "group": "C",
+      "category": "工作机制与资源占用",
+      "style": "暗色技术界面、彩色节点、工具日志、分段容量条",
+      "purpose": "模型—工具—上下文的循环关系，配合工具调用记录和上下文占用条",
+      "keywords": [],
+      "sourceId": "131",
+      "sourceRange": [
+        19,
+        25
+      ],
+      "sampleSeconds": 12,
+      "usageSeconds": 13,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-055.md",
+      "preview": "assets/previews/MG-055.jpg",
+      "parameters": "steps3–6项，tool8、action24中文宽度；initialTokens≥0，capacity100–1000000，各步骤tokens≥1且累计≤capacity；conclusion34；duration3–40秒。",
+      "limitations": [
+        "保留原片模型—执行工具—上下文的循环、右侧日志和底部容量条。",
+        "调用顺序为参数驱动的演示，不连接真实Agent；tokens为示例输入而非实测。",
+        "阶段完成后才追加日志与容量，确保两处累计一致。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-055/model.tsx",
+      "modelSha256": "a50b68a0cbcea49fe5ac47b11cd664f8a4132ae1ff3e12a40096d59c0f0990ce"
+    },
+    {
+      "id": "MG-056",
+      "title": "彩色词元阵列与等待转化",
+      "group": "C",
+      "category": "概念解释",
+      "style": "浅色产品",
+      "purpose": "提取等待响应到彩色词元标签阵列的段落，精看确认实际动作与起止点。",
+      "keywords": [],
+      "sourceId": "219",
+      "sourceRange": [
+        0,
+        13
+      ],
+      "sampleSeconds": 10,
+      "usageSeconds": 11,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-056.md",
+      "preview": "assets/previews/MG-056.jpg",
+      "parameters": "tokens6–24项、每项最多4中文宽度；columns整数6–10，rows整数6–9；prompt30，waiting/ready18，note35；duration3–40秒。",
+      "limitations": [
+        "提取原片等待骨架、短词元色签阵列、中央统计卡的状态转换；横向流动改为逐项展开，保证中文可读。",
+        "画面数量等于网格项数，不代表实际模型token计数、吞吐量或时延。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-056/model.tsx",
+      "modelSha256": "80def4f30a748944d2a528e9616cfc4af7fa9ebfa0874daab859391e78afdad8"
+    },
+    {
+      "id": "MG-057",
+      "title": "设备轮廓与数据边界",
+      "group": "C",
+      "category": "概念解释",
+      "style": "暖色纸张产品",
+      "purpose": "提取设备轮廓、锁标记、云端或服务器禁用符号与短句说明的段落。",
+      "keywords": [],
+      "sourceId": "274",
+      "sourceRange": [
+        16.5,
+        18.7
+      ],
+      "sampleSeconds": 8,
+      "usageSeconds": 9,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-057.md",
+      "preview": "assets/previews/MG-057.jpg",
+      "parameters": "mode为local或sync，控制云端禁用/允许符号与数据路径；lock布尔值控制锁状态；headline12、description32、device10、cloudLabel10、note42中文宽度；duration3–40秒。",
+      "limitations": [
+        "保留原片暖纸底、线绘电脑、中心锁与外围云端禁用符号。",
+        "文案与图标必须依据实际产品能力填写；模板本身不承诺离线、安全或隐私。",
+        "同步示意只展示路径，不执行任何上传。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-057/model.tsx",
+      "modelSha256": "3177d2fecc35c1298c24b633ae0784a716b46cc956ad0f46249feffb5bf3be3a"
+    },
+    {
+      "id": "MG-058",
+      "title": "容量消耗与离散回补机制",
+      "group": "C",
+      "category": "概念解释 / 动态数据",
+      "style": "黑底、等宽文字、蓝色格条、红绿日志、阶梯曲线",
+      "purpose": "选容量从充足到耗尽再恢复的完整小段；条格、数值、事件和曲线共享输入时间线。",
+      "keywords": [],
+      "sourceId": "381",
+      "sourceRange": [
+        0,
+        12
+      ],
+      "sampleSeconds": 14,
+      "usageSeconds": 15,
+      "durationKey": "duration",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-058.md",
+      "preview": "assets/previews/MG-058.jpg",
+      "parameters": "capacity整数3–20；refillRate0.5–8次/秒，每次补1格；simSeconds6–20；requests3–60项按at排序，cost为1到capacity整数；title32、note38中文宽度；duration3–40秒。",
+      "limitations": [
+        "保留原片格条、容量数字、红绿请求日志及阶梯曲线；横向重排以保证中文阅读。",
+        "采用离散令牌桶模拟。同刻先补充、后按数组顺序处理请求；拒绝不扣容量，容量上限被严格保持。",
+        "duration仅控制播放速度，simSeconds控制模拟时间；图、值、日志均来自simulate同一状态。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-058/model.tsx",
+      "modelSha256": "95b07b5a46533f528b9aa2c13b8f7d787bcce86740732e47da7fad175379d208"
+    },
+    {
+      "id": "MG-059",
+      "title": "白板层级树与拆分示意",
+      "group": "C",
+      "category": "概念解释",
+      "style": "白板、手写标注、细线、红蓝局部强调",
+      "purpose": "选树状层级或方块分组拆分段，将节点、分支和标签参数化；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "303",
+      "sourceRange": [
+        220,
+        238
+      ],
+      "sampleSeconds": 18,
+      "usageSeconds": 14,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-059.md",
+      "preview": "assets/previews/MG-059.jpg",
+      "parameters": "durationSeconds 12–26；title≤24字宽；levels固定3项/每项≤3；summary 1–3行/每行≤24；leaves为空或8项/每项≤2；notes 0–3条/每条≤20；footnote≤54。",
+      "limitations": [
+        "固定三层完整二叉树、八个叶节点；不支持任意树形拓扑。",
+        "原片的科学内容仅用于内部参考，未验证。",
+        "中文使用楷体/衬线回退；白板及笔为原创SVG，未复制视频素材。",
+        "保留原片左侧树图和留白；右侧说明是可选复用能力。",
+        "运行时副本缺少 library/index.json，npm run check 索引阶段未通过；最终集成由主任务检查。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-059/model.tsx",
+      "modelSha256": "fc6e304ac732b25f82adbe90098ebfff19fa4127a588318366895bc390c44c8e"
+    },
+    {
+      "id": "MG-060",
+      "title": "套色关系图与控制滑杆",
+      "group": "C",
+      "category": "对比 / 参数解释",
+      "style": "孔版印刷颗粒、粉蓝黄套色、纸底、粗字",
+      "purpose": "选双圆关系或一组滑杆中的一个短段，优先滑杆数值与标签配合。",
+      "keywords": [],
+      "sourceId": "362",
+      "sourceRange": [
+        39.65,
+        43.5
+      ],
+      "sampleSeconds": 4.5,
+      "usageSeconds": 7,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-060.md",
+      "preview": "assets/previews/MG-060.jpg",
+      "parameters": "durationSeconds 4–15；title≤15字宽；sliders 2–5项/label≤6；每项values为3–6个0–100数值；showValues布尔值；note为空或≤40字宽。",
+      "limitations": [
+        "孔版颗粒使用重复SVG散点蒙版近似，不是原片扫描纹理。",
+        "示例的控制值按画面位置近似提取，不代表软件实际参数。",
+        "首版仅表现滑杆；未混入24–28秒双圆关系图。",
+        "运行时副本缺少 library/index.json，npm run check 索引阶段未通过；最终集成由主任务检查。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-060/model.tsx",
+      "modelSha256": "0fa11003027a4b9391c7dd1e14f50b178dc353750aa2bdb89e80d992b28edf49"
+    },
+    {
+      "id": "MG-061",
+      "title": "多节点任务接管与故障恢复",
+      "group": "C",
+      "category": "步骤流程 / 系统原理",
+      "style": "漫画式粗描边、彩色状态卡、连线、进度条",
+      "purpose": "选共享任务由A移交B、失败与恢复的状态演示；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "365",
+      "sourceRange": [
+        31.8,
+        40.5
+      ],
+      "sampleSeconds": 8.7,
+      "usageSeconds": 11,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-061.md",
+      "preview": "assets/previews/MG-061.jpg",
+      "parameters": "durationSeconds 8–18；title≤18字宽，subtitle≤48；nodes固定3项/每项≤2；failedIndex/successorIndex为不同的0–2整数；leaseSeconds 3–60；eventTimes固定3项/每项≤5；bucketTitle/channelTitle≤8；footnote≤48。",
+      "limitations": [
+        "固定三节点，表现一个节点失效和另一个接管的有限状态序列。",
+        "显示数值为动画说明，不是真实计时器、分布式锁或可运行后端。",
+        "原片英文和部分控制标签中文化；保留结构和状态次序，不逐像素复刻。",
+        "运行时副本缺少 library/index.json，npm run check 索引阶段未通过；最终集成由主任务检查。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-061/model.tsx",
+      "modelSha256": "c33be5adf4af712ce7679dc0822ccbf747697fda735c01c879d5bfc505d6f60c"
+    },
+    {
+      "id": "MG-062",
+      "title": "顶部年份轴与里程碑票卡",
+      "group": "C",
+      "category": "时间线 / 多项列表",
+      "style": "漫画粗字、顶部刻度轴、年份票卡、浅色纸底",
+      "purpose": "选顶部年份定位和里程碑列表段，保留标记移动与按年份组织信息；具体秒段待定位。",
+      "keywords": [],
+      "sourceId": "375",
+      "sourceRange": [
+        33.4,
+        38.5
+      ],
+      "sampleSeconds": 8,
+      "usageSeconds": 9,
+      "durationKey": "durationSeconds",
+      "fixedDuration": null,
+      "status": "已自检，待最终验收",
+      "card": "references/templates/MG-062.md",
+      "preview": "assets/previews/MG-062.jpg",
+      "parameters": "durationSeconds 6–20；titleLines 1–3行/每行≤8字宽；tickets 3–7项/年份1900–2100升序/name≤18/detail≤27；showAxis布尔值；stamp≤8；summaryValue≤11/summaryLabel≤20；footnote≤52。",
+      "limitations": [
+        "票卡参考33.4–38.5秒；可选年份轴借鉴同片6–22秒的刻度机制，参考版关闭。",
+        "原片竖版，横版采用左标题/右列表；没有复制场馆建筑、人物海报或品牌素材。",
+        "参考版数字直接取自原片且未核实；不作为市场事实发布。",
+        "运行时副本缺少 library/index.json，npm run check 索引阶段未通过；最终集成由主任务检查。"
+      ],
+      "version": "1.0.0",
+      "modelSource": "src/batch/MG-062/model.tsx",
+      "modelSha256": "09348ffea0841f7498036bd933451bd6a25838092fe116a0f0e9555417a0cac0"
+    }
+  ]
+}

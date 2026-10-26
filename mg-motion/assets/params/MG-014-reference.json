@@ -1,0 +1,126 @@
+{
+  "title": "团队通讯录",
+  "viewLabel": "表格",
+  "durationSeconds": 10,
+  "focus": [
+    "salary",
+    "review"
+  ],
+  "question": "谁能看见\n薪资？",
+  "closing": "由你决定，谁能看见。",
+  "footnote": "参考片数据的中文转写 · 未作事实核验",
+  "dimOpacity": 0.22,
+  "columns": [
+    {
+      "id": "name",
+      "label": "姓名",
+      "width": 270,
+      "icon": "person"
+    },
+    {
+      "id": "team",
+      "label": "团队",
+      "width": 245,
+      "icon": "team"
+    },
+    {
+      "id": "role",
+      "label": "职位",
+      "width": 300,
+      "icon": "briefcase"
+    },
+    {
+      "id": "salary",
+      "label": "薪资",
+      "width": 270,
+      "icon": "money",
+      "align": "right",
+      "locked": true
+    },
+    {
+      "id": "review",
+      "label": "评语",
+      "width": 320,
+      "icon": "star",
+      "locked": true
+    },
+    {
+      "id": "start",
+      "label": "入职日期",
+      "width": 275,
+      "icon": "calendar"
+    }
+  ],
+  "rows": [
+    {
+      "id": "maya",
+      "cells": {
+        "name": "Maya Chen",
+        "team": {
+          "text": "人事",
+          "tag": "rose"
+        },
+        "role": "人事伙伴",
+        "salary": "$140,000",
+        "review": "第一季度晋升",
+        "start": "2021-03-04"
+      }
+    },
+    {
+      "id": "dev",
+      "cells": {
+        "name": "Dev Okafor",
+        "team": {
+          "text": "研发",
+          "tag": "blue"
+        },
+        "role": "资深工程师",
+        "salary": "$230,000",
+        "review": "年度表现优秀",
+        "start": "2019-01-09"
+      }
+    },
+    {
+      "id": "priya",
+      "cells": {
+        "name": "Priya Nair",
+        "team": {
+          "text": "财务",
+          "tag": "green"
+        },
+        "role": "财务主管",
+        "salary": "$190,000",
+        "review": "超出预期",
+        "start": "2020-08-17"
+      }
+    },
+    {
+      "id": "sam",
+      "cells": {
+        "name": "Sam Rivera",
+        "team": {
+          "text": "设计",
+          "tag": "violet"
+        },
+        "role": "设计师",
+        "salary": "$160,000",
+        "review": "进展顺利",
+        "start": "2022-06-06"
+      }
+    },
+    {
+      "id": "ari",
+      "cells": {
+        "name": "Ari Levin",
+        "team": {
+          "text": "研发",
+          "tag": "blue"
+        },
+        "role": "工程师",
+        "salary": "$175,000",
+        "review": "需要支持",
+        "start": "2023-11-13"
+      }
+    }
+  ]
+}

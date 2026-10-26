@@ -1,0 +1,11 @@
+{
+  "title": "Agent循环与上下文累计",
+  "sourceStart": 19,
+  "sourceEnd": 25,
+  "parameters": "steps3–6项，tool8、action24中文宽度；initialTokens≥0，capacity100–1000000，各步骤tokens≥1且累计≤capacity；conclusion34；duration3–40秒。",
+  "limitations": [
+    "保留原片模型—执行工具—上下文的循环、右侧日志和底部容量条。",
+    "调用顺序为参数驱动的演示，不连接真实Agent；tokens为示例输入而非实测。",
+    "阶段完成后才追加日志与容量，确保两处累计一致。"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "duration": 12,
+  "title": "内容生产",
+  "subtitle": "从素材到成片",
+  "topLabel": "内容来源",
+  "resources": [
+    "文字脚本",
+    "自有照片",
+    "屏幕录制"
+  ],
+  "middle": "剪辑与审校",
+  "bottomLabel": "交付渠道",
+  "clients": [
+    "中文教程",
+    "产品测评"
+  ],
+  "edgeLabels": [
+    "导入与整理",
+    "渲染与导出"
+  ],
+  "boundary": "制作工作区",
+  "conclusion": "中间层负责一致性",
+  "note": "每一条箭头，都对应实际的交接。"
+}

@@ -1,0 +1,16 @@
+{
+  "durationSeconds": 6.4,
+  "header": "样本审计 · 2026 年 8 月 4 日",
+  "sampleLabel": "173 个网址",
+  "section": "01 · 真实基础设施",
+  "lines": [
+    "列表中的网站",
+    "共用托管基础设施"
+  ],
+  "total": 172,
+  "matched": 140,
+  "exceptions": 4,
+  "matchedLabel": "共用托管",
+  "exceptionLabel": "特别标记",
+  "footnote": "参考412原片数据，未核实；仅用于内部样片比较。"
+}

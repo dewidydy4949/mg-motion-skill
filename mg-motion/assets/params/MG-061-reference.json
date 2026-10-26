@@ -1,0 +1,21 @@
+{
+  "durationSeconds": 8.7,
+  "title": "主节点离线",
+  "subtitle": "B 发现租约已过期，接管任务。同一时刻，只有一个节点胜出。",
+  "nodes": [
+    "A",
+    "B",
+    "C"
+  ],
+  "failedIndex": 0,
+  "successorIndex": 1,
+  "leaseSeconds": 10,
+  "eventTimes": [
+    "8:00",
+    "19:59",
+    "20:00"
+  ],
+  "bucketTitle": "共享存储",
+  "channelTitle": "事件频道",
+  "footnote": "按参考机制做的动画示意；技术结论未在本项目中验证"
+}

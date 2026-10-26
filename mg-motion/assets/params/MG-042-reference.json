@@ -1,0 +1,46 @@
+{
+  "durationSeconds": 8,
+  "label": "轻读",
+  "title": "听它朗读出来。",
+  "chapter": "第一章 · 朗读",
+  "tokens": [
+    {
+      "text": "一个",
+      "at": 1.4,
+      "marked": false
+    },
+    {
+      "text": "年轻女孩",
+      "at": 2,
+      "marked": false
+    },
+    {
+      "text": "和她的",
+      "at": 2.8,
+      "marked": false
+    },
+    {
+      "text": "父亲",
+      "at": 3.5,
+      "marked": false
+    },
+    {
+      "text": "以及",
+      "at": 4.2,
+      "marked": false
+    },
+    {
+      "text": "继母",
+      "at": 4.8,
+      "marked": true
+    },
+    {
+      "text": "住在一起。",
+      "at": 5.6,
+      "marked": false
+    }
+  ],
+  "context": "继母有两个女儿，她们总是把家务留给女孩。清晨，她打扫房间、整理衣物，再去厨房准备晚餐。尽管生活并不轻松，女孩始终保持着温柔和善意。",
+  "translation": "重点词保留在原文中，朗读进度逐步向前。",
+  "action": "讨论这段文字"
+}

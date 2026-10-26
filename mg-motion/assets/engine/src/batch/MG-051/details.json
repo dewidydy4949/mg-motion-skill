@@ -1,0 +1,10 @@
+{
+  "title": "能力中心与工具辐射图",
+  "sourceStart": 32,
+  "sourceEnd": 35.5,
+  "parameters": "tools 6–8项，每项 name 最多6中文宽度，icon 为 browser/file/terminal/mail/chart/calendar/design/search；headline 10、description 27、center 7；duration 3–40秒。",
+  "limitations": [
+    "提取原片左右分栏、暖暗底、圆形中心和辐射工具节点。",
+    "工具连线是可配置示意；不代表自动获得权限或实际软件集成。"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "duration": 13,
+  "title": "中文教程项目的迭代节点",
+  "events": [
+    {
+      "year": "V1.0",
+      "label": "建立基础课程目录",
+      "detail": "用统一语言描述功能和操作目标。",
+      "icon": "network",
+      "color": "#5894ff"
+    },
+    {
+      "year": "V1.5",
+      "label": "补充可复用动效",
+      "detail": "让抽象信息以图形和节奏呈现。",
+      "icon": "build",
+      "color": "#c892fa"
+    },
+    {
+      "year": "V2.0",
+      "label": "完成多场景验证",
+      "detail": "把桌面演示、移动观看和中文阅读连起来。",
+      "icon": "device",
+      "color": "#54dbad"
+    }
+  ]
+}

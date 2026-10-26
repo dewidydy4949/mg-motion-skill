@@ -1,0 +1,49 @@
+{
+  "durationSeconds": 8,
+  "titleLines": [
+    "此刻，每个传奇",
+    "都想加入"
+  ],
+  "tickets": [
+    {
+      "year": 2023,
+      "name": "U2",
+      "detail": "开幕演出 · 40 场"
+    },
+    {
+      "year": 2024,
+      "name": "PHISH",
+      "detail": "4 夜即兴演出"
+    },
+    {
+      "year": 2024,
+      "name": "DEAD & COMPANY",
+      "detail": "48 场演出"
+    },
+    {
+      "year": 2024,
+      "name": "EAGLES",
+      "detail": "72 场演出"
+    },
+    {
+      "year": 2025,
+      "name": "KENNY CHESNEY",
+      "detail": "25 场演出"
+    },
+    {
+      "year": 2025,
+      "name": "BACKSTREET BOYS",
+      "detail": "53 场演出"
+    },
+    {
+      "year": 2026,
+      "name": "NO DOUBT",
+      "detail": "18 场演出"
+    }
+  ],
+  "showAxis": false,
+  "stamp": "ADMIT ONE",
+  "summaryValue": "$420.5M",
+  "summaryLabel": "2024 · 场馆票房纪录",
+  "footnote": "演出名称、年份及数字来自参考原片，未核实，仅供内部样片对照"
+}

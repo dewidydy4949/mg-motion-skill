@@ -1,0 +1,42 @@
+{
+  "duration": 9,
+  "title": "把能力连接到工作",
+  "headline": "从理解，到执行",
+  "description": "一个入口，连接日常使用的多种工具。",
+  "center": "工作助手",
+  "tools": [
+    {
+      "name": "文档",
+      "icon": "file"
+    },
+    {
+      "name": "邮件",
+      "icon": "mail"
+    },
+    {
+      "name": "日历",
+      "icon": "calendar"
+    },
+    {
+      "name": "数据",
+      "icon": "chart"
+    },
+    {
+      "name": "终端",
+      "icon": "terminal"
+    },
+    {
+      "name": "文件",
+      "icon": "file"
+    },
+    {
+      "name": "浏览器",
+      "icon": "browser"
+    },
+    {
+      "name": "设计",
+      "icon": "design"
+    }
+  ],
+  "caption": "按顺序绘制连线，再展示工具之间的协作。"
+}

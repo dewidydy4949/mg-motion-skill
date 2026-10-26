@@ -1,0 +1,16 @@
+{
+  "durationSeconds": 5,
+  "label": "正在计算账单…",
+  "prices": [
+    49,
+    89,
+    149,
+    228,
+    328,
+    612
+  ],
+  "prefix": "-$",
+  "suffix": "/月",
+  "selectedIndex": 4,
+  "note": "参考数字 · 非实际报价"
+}

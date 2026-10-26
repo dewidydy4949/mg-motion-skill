@@ -1,0 +1,1273 @@
+{
+  "schemaVersion": 1,
+  "templates": [
+    {
+      "id": "MG-013",
+      "intent": "展示同一份输入向多个模型或方案分发，说明公平比较的方法。",
+      "keywords": [
+        "同一输入",
+        "多模型",
+        "输入分发",
+        "比较原则",
+        "提示词",
+        "same input",
+        "model comparison",
+        "fan out"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 6,
+        "max": 120,
+        "key": null,
+        "behavior": "由镜头外层durationSeconds控制；组件至少6秒，Skill外层上限120秒。主体约5.4秒完成，延长主要增加停留，连线粒子持续运动。"
+      },
+      "capacity": "模型2–6项；输入2–12行、每行≤27中文字宽；主标题合计≤24中文字宽；底部原则1–3条且受总宽校验。",
+      "avoid": "不展示回答正文、评分表或性能排名；无外部头像、截图或录屏槽位。"
+    },
+    {
+      "id": "MG-014",
+      "intent": "在一张小型数据表中圈出并放大一至两列，用问题引导观众关注关键字段，再回到整表。",
+      "keywords": [
+        "表格重点",
+        "相邻列聚焦",
+        "字段放大",
+        "数据解读",
+        "权限字段",
+        "table focus",
+        "column highlight",
+        "spreadsheet zoom"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 8,
+        "max": 12,
+        "key": "durationSeconds",
+        "behavior": "以 frame/(fps*durationSeconds) 驱动，圈选、放大、提问和回表的全部阶段按总时长同比缩放。"
+      },
+      "capacity": "4–7 列、3–6 行，行列 id 各自唯一；聚焦 1–2 个相邻且不重复的列；标题与结尾各≤22 汉字宽，提问≤3 行且每行≤10 汉字宽；单元格为单行文字，按列宽校验最小字号。",
+      "avoid": "大表自动分页、任意多列或不相邻列同时聚焦、长段落单元格、图片单元格。"
+    },
+    {
+      "id": "MG-015",
+      "intent": "用手绘浏览器、铅笔填写和勾选动作演示 Agent 完成三字段表单及两项配置验证。",
+      "keywords": [
+        "Agent填表",
+        "自动录入",
+        "手绘浏览器",
+        "授权配置",
+        "勾选清单",
+        "form filling",
+        "pencil animation",
+        "setup validation"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 11.5,
+        "max": 11.5,
+        "key": null,
+        "behavior": "固定11.5秒；无时长参数，描线、填写、圈选和完成动作按绝对秒数定义。"
+      },
+      "capacity": "fields固定3项，label≤7/value≤15中文宽度；features 1–3项/每项≤10；settings固定2项，label≤8/value≤15；tabs固定2项/每项≤5；title≤24、subtitle≤23、button≤6、complete≤4。",
+      "avoid": "任意字段数或复杂表单、真实网页自动操作、外部截图/图片/视频替换；主图和三张缩略图均为内置SVG示意。"
+    },
+    {
+      "id": "MG-016",
+      "intent": "用连续大字与色块硬切呈现短口号、章节开场或节奏钩子。",
+      "keywords": [
+        "超大标题",
+        "大字海报",
+        "色块硬切",
+        "口号",
+        "章节开场",
+        "kinetic typography",
+        "bold title",
+        "title sequence"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "总时长均分给2–5个场景；每段标题入场与斜线使用固定秒数，短时长多场景需检查末段动作。"
+      },
+      "capacity": "场景2–5段；每段1–2行、每行1–16字符；可改底色、字色、强调色和斜线开关。",
+      "avoid": "不适合长段落、复杂数据说明或图片展示；不自动拆分标题。"
+    },
+    {
+      "id": "MG-017",
+      "intent": "在同一问题下并排展示两到三个模型的短回答。",
+      "keywords": [
+        "回答并排",
+        "模型回答",
+        "同题对比",
+        "逐字回答",
+        "提示词结果",
+        "side by side answers",
+        "LLM responses",
+        "answer comparison"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 5,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "面板使用固定入场时间；正文逐字时长随总时长增加，全部回答在结尾前完成。"
+      },
+      "capacity": "回答2–3项；名称≤12字符，正文≤150字符且按列宽估算≤6行；标题与问题各≤20字符，输入提示≤28字符。",
+      "avoid": "不适合长回答全文、真实界面录屏或量化成绩排名。"
+    },
+    {
+      "id": "MG-018",
+      "intent": "让多个候选价格纵向滚动，最后突出指定价位。",
+      "keywords": [
+        "价格滚轮",
+        "价位选择",
+        "价格突出",
+        "套餐价格",
+        "数字轮播",
+        "price wheel",
+        "price picker",
+        "selected price"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "约0.45秒开始滚动，滚动时长随片长变化，在结束前约1.1秒停在selectedIndex。"
+      },
+      "capacity": "价格3–8项、每项0–999999；选中下标须合法；前缀≤5字符、单位≤8字符、说明≤32字符。",
+      "avoid": "不适合完整套餐权益比较；价格序列不表示时间上的价格走势。"
+    },
+    {
+      "id": "MG-019",
+      "intent": "用横条长度与名次变化展示多个对象在连续时点的同量纲指标。",
+      "keywords": [
+        "横条竞速",
+        "动态榜单",
+        "排名变化",
+        "时间序列",
+        "指标比较",
+        "bar chart race",
+        "ranking timeline",
+        "metric trend"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "约0.6秒开始时序插值，结束前约1秒到达末时点；横条与排名同步，换位标签短暂弱化。"
+      },
+      "capacity": "对象3–6项、名称≤10字符；时点2–6个、名称≤10字符；各数值数组等长且0–1000000；标题≤20字符、单位≤6字符。",
+      "avoid": "不适合不同单位混排、负值或中途增删对象。"
+    },
+    {
+      "id": "MG-020",
+      "intent": "用两到三张大数字卡突出产品指标或成果摘要。",
+      "keywords": [
+        "大数字卡",
+        "产品指标",
+        "成果摘要",
+        "下载量",
+        "数据卖点",
+        "stat cards",
+        "product metrics",
+        "KPI highlights"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "入场和数字滚动使用固定秒数，最迟约2.55秒完成计数；延长主要增加停留，卡片持续轻浮动。"
+      },
+      "capacity": "指标2–3项；值0–1000000、小数位0或1、后缀≤4字符、标签≤10字符；标题≤16字符、副标题≤32字符。",
+      "avoid": "不适合趋势曲线、分布结构或多于三项的密集数据表。"
+    },
+    {
+      "id": "MG-021",
+      "intent": "演示一批文档经过分类器后获得等级和评分并汇集。",
+      "keywords": [
+        "文档分类",
+        "质量评分",
+        "批量处理",
+        "输送带",
+        "文件筛选",
+        "document scoring",
+        "classification pipeline",
+        "batch processing"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "输送时段按片长与文档数均分，最后文档约在结束前1.5秒归位；扫描线和输送带装饰继续运动。"
+      },
+      "capacity": "文档3–5项；文件名≤10字符、等级≤2字符、评分0–100；标题≤20字符、分类器名≤8字符。",
+      "avoid": "不解析真实文档，不执行分类评分；纸张是代码示意，不能接入PDF页面或图片。"
+    },
+    {
+      "id": "MG-022",
+      "intent": "展示百分比前后变化与阈值的关系，用红绿状态说明是否达标。",
+      "keywords": [
+        "阈值",
+        "达标",
+        "警报",
+        "合格线",
+        "前后百分比",
+        "threshold",
+        "pass fail",
+        "percentage change"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "数值在片长约38%–63%间由before过渡到after；颜色和状态按当前值是否达到threshold变化。"
+      },
+      "capacity": "before、after、threshold均为0–100；标题≤20字符，指标名与两种状态标签各≤12字符。",
+      "avoid": "不适合非百分比指标、多条时间序列或不依赖阈值的任意状态切换。"
+    },
+    {
+      "id": "MG-023",
+      "intent": "把短功能说明与一张真实截图或图片并列，并框选图中重点区域。",
+      "keywords": [
+        "截图讲解",
+        "图片标注",
+        "焦点框",
+        "功能要点",
+        "素材并列",
+        "screenshot callout",
+        "image focus",
+        "feature highlight"
+      ],
+      "mediaSlots": [
+        {
+          "path": "imageSrc",
+          "types": [
+            "image"
+          ],
+          "binding": "asset",
+          "note": "实际通过Img显示静态图片；支持通用asset映射、图片URL或data:image。建议1200:760画幅，focus为容器内归一化矩形；其他比例宜先裁切。"
+        }
+      ],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "图片约在前22%片长入场；焦点框于28%–48%揭示，扫描线在78%后停止，结尾保留重点。"
+      },
+      "capacity": "图片1张；标题1–3行、每行≤9字符；说明≤38字符、类别≤18字符；focus各值0–1且矩形不越界。",
+      "avoid": "不支持视频录屏、多个图片轮播或自动识别图片重点。"
+    },
+    {
+      "id": "MG-024",
+      "intent": "让多个对象沿独立赛道向共同目标推进，突出当前及最终领先者。",
+      "keywords": [
+        "共同目标",
+        "进度竞赛",
+        "赛道排行",
+        "领先者",
+        "目标达成",
+        "goal race",
+        "progress leaderboard",
+        "shared target"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "时序推进占片长约12%–84%，剩余部分展示最终领先者；倒计时是演示剩余时间。"
+      },
+      "capacity": "对象3–5项、名称≤7字符；时点2–6个、名称≤8字符；目标大于0且≤1000000，数值数组等长且0–target。",
+      "avoid": "不适合没有共同目标的独立量纲，也不表示真实项目倒计时。"
+    },
+    {
+      "id": "MG-025",
+      "intent": "逐张呈现短评论与互动数，用滚动卡片展示社交反馈。",
+      "keywords": [
+        "评论卡片",
+        "用户反馈",
+        "口碑摘录",
+        "点赞数",
+        "评论滚动",
+        "testimonial cards",
+        "social feedback",
+        "comment feed"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "卡片入场按片长比例错峰；超过3条时在30%–75%片长内滚动到后续评论，爱心装饰持续移动。"
+      },
+      "capacity": "评论3–5条；作者≤10字符、正文≤44字符、点赞0–999999整数；标题1–3行、每行≤8字符；副标题≤24字符。",
+      "avoid": "无真实头像或评论截图槽位；不适合长评全文或把演示评论当作真实证言。"
+    },
+    {
+      "id": "MG-026",
+      "intent": "用圆环呈现进度区间，到100%时转为完成勾号。",
+      "keywords": [
+        "圆环进度",
+        "完成通知",
+        "进度百分比",
+        "完成勾号",
+        "状态组件",
+        "progress ring",
+        "completion check",
+        "status widget"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "数值在12%–70%片长内变化；仅to=100时在73%–85%转为勾号，否则保留数值状态。"
+      },
+      "capacity": "from、to均0–100；标题≤18字符，处理中与完成标签各≤14字符；背景及强调色为六位HEX。",
+      "avoid": "不连接真实上传任务；不是透明叠加组件，不适合多指标并排。"
+    },
+    {
+      "id": "MG-027",
+      "intent": "用四到六张真实图片组成成果矩阵，并配合简短结论。",
+      "keywords": [
+        "作品矩阵",
+        "成果展示墙",
+        "图片网格",
+        "作品集",
+        "多图展示",
+        "portfolio grid",
+        "image gallery",
+        "showcase wall"
+      ],
+      "mediaSlots": [
+        {
+          "path": "images[].src",
+          "types": [
+            "image"
+          ],
+          "binding": "asset",
+          "note": "每张素材经Img静态显示，支持通用asset映射、图片URL或data:image；contain完整显示，画幅不同时有深色留边，建议800×540以上。"
+        }
+      ],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "矩阵整体约在前30%片长归位，各图错峰入场，6张时最迟约44%完成，之后保持。"
+      },
+      "capacity": "图片4–6张、每张标题≤12字符；主标题1–3行、每行≤9字符，副标题≤40字符；4图两列、5–6图三列。",
+      "avoid": "不支持视频素材或单图焦点讲解；不适合在缩略图中阅读密集文字。"
+    },
+    {
+      "id": "MG-028",
+      "intent": "在结果网格中逐项说明分类状态、具体例子和处理建议。",
+      "keywords": [
+        "分类结果",
+        "处理建议",
+        "状态网格",
+        "案例分类",
+        "结果卡片",
+        "classification results",
+        "action recommendations",
+        "result grid"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "结果卡与建议按片长比例错峰显现，6项时最后建议约在68%片长完成，之后保持。"
+      },
+      "capacity": "结果2–6项；状态≤8字符、例子≤28字符、建议≤22字符；标题≤20字符、副标题≤36字符。",
+      "avoid": "不执行自动分类，不适合层级树、长文本证据或超过六项的一屏结果。"
+    },
+    {
+      "id": "MG-029",
+      "intent": "左右对照短原文与改写，标出原文词组并解释修改理由。",
+      "keywords": [
+        "原文改写",
+        "观点对照",
+        "原文高亮",
+        "文字批注",
+        "改写要点",
+        "before after text",
+        "text annotation",
+        "rewrite comparison"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "两段文字、高亮与批注按片长比例依次揭示，结论约在70%–85%片长出现，结尾保持。"
+      },
+      "capacity": "原文及改写各≤88字符且无换行；高亮≤22字符并须是原文子串；两侧批注各≤42字符，结论≤44字符。",
+      "avoid": "不自动找错或生成改写；仅高亮首个匹配词组，不适合长文、图片批注或逐词朗读。"
+    },
+    {
+      "id": "MG-030",
+      "intent": "用点阵和大百分比解释样本中两个互斥类别及剩余部分的组成。",
+      "keywords": [
+        "点阵分布",
+        "样本组成",
+        "占比",
+        "审计摘要",
+        "异常计数",
+        "dot matrix",
+        "sample distribution",
+        "proportion",
+        "点阵",
+        "样本比例"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 5.5,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "点阵、百分比及第二类别使用固定秒数揭示，约4.2秒完成；延长只增加最终结果停留。"
+      },
+      "capacity": "总数20–240整数；matched、exceptions均非负整数且合计≤total；含义固定2行、每行≤16中文字宽；百分比由matched/total计算。",
+      "avoid": "不适合相互重叠的分类、连续时间走势、分组柱形图或另填一个与点数无关的百分比。"
+    },
+    {
+      "id": "MG-031",
+      "intent": "用铺满背景的分类卡片墙和前景大标题强调主题或功能种类丰富。",
+      "keywords": [
+        "分类卡片墙",
+        "主题丰富",
+        "功能总览",
+        "倾斜矩阵",
+        "贴纸标题",
+        "category wall",
+        "topic cards",
+        "feature overview"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 4.5,
+        "max": 18,
+        "key": "durationSeconds",
+        "behavior": "标题约0.65秒弹入；卡片墙按片长缓慢平移，位移上限180像素，结束前1秒停止平移。"
+      },
+      "capacity": "条目6–12项；分类≤8、标签≤11中文字宽；图标仅0–7内置编号；前景两行标题各≤15中文字宽。",
+      "avoid": "前景会遮住部分卡片，不适合逐项完整阅读的目录；不支持外部照片、logo或自定义图标文件。"
+    },
+    {
+      "id": "MG-032",
+      "intent": "在虚化背景上依次滚动多个痛点或问题词组，最后聚焦末项。",
+      "keywords": [
+        "问题词组",
+        "痛点开场",
+        "滚筒列表",
+        "滚动选项",
+        "焦点虚化",
+        "pain point hook",
+        "scrolling phrases",
+        "focus list"
+      ],
+      "mediaSlots": [
+        {
+          "path": "backgroundImage",
+          "types": [
+            "image"
+          ],
+          "binding": "public-relative",
+          "note": "可选背景图，经staticFile与Img读取，cover并强烈虚化；仅接受引擎public内相对路径，不接受URL、绝对路径或..。不能走通用asset映射。"
+        }
+      ],
+      "duration": {
+        "min": 5,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "约1.05秒开始滚动，结束点为max(3.85秒,片长−1.4秒)；末项停驻后加问号，背景轻微缩放持续。"
+      },
+      "capacity": "词组3–10项、每项≤22中文字宽；引导句≤30中文字宽；图标仅0–7内置编号；背景路径≤200中文字宽。",
+      "avoid": "不适合真实桌面操作、录屏演示或同时清晰显示全部词条；背景图不适合承载需阅读的细节。"
+    },
+    {
+      "id": "MG-033",
+      "intent": "从两到三个套餐中突出一档推荐方案，说明价格、额度与权益。",
+      "keywords": [
+        "订阅套餐",
+        "推荐档位",
+        "价格方案",
+        "套餐权益",
+        "试用价格",
+        "pricing plan",
+        "subscription tier",
+        "featured plan"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 6,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "价格、权益与按钮按固定秒数揭示，按钮约3.7秒完整显示；延长主要增加最终推荐卡停留。"
+      },
+      "capacity": "套餐2–3档，仅selected完整展示；价格0–99999，货币≤1、单位≤7中文字宽；权益2–5条各≤24中文字宽；标题固定3行各≤9中文字宽。",
+      "avoid": "不适合同时完整横评所有套餐权益；后方卡会遮挡，无真实计费或外部产品素材槽位。"
+    },
+    {
+      "id": "MG-034",
+      "intent": "逐段展示代码输入和关键行强调，同时切换右侧结果卡，讲清代码与输出之间的对应关系。",
+      "keywords": [
+        "代码讲解",
+        "代码逐字输入",
+        "代码高亮",
+        "结果同步",
+        "输出轮播",
+        "code walkthrough",
+        "syntax highlight",
+        "live result cards"
+      ],
+      "mediaSlots": [
+        {
+          "path": "steps[].media",
+          "types": [
+            "image",
+            "video"
+          ],
+          "note": "对象含 src/type，可选 fit/startFrom；src 直接传给 Img/OffthreadVideo，接受 mg-static 解析后的 URL。每步结果卡可用素材，未填时绘制 result/detail 卡；相邻结果卡也会露出。视频静音，从当前步骤起点播放，startFrom 按帧计。",
+          "binding": "asset"
+        }
+      ],
+      "duration": {
+        "min": 12,
+        "max": 24,
+        "key": "durationSeconds",
+        "behavior": "总时长均分给 2–4 个步骤；打字、强调和轮播主要按每步时长设置，入场仍含 0.1/0.2/0.7 秒等固定局部时间。"
+      },
+      "capacity": "2–4 步，每步 3–8 行代码；每行≤45 字符且≤46 半角宽度单位（中文计 2）；步骤标题≤20、结果≤10、详情≤17 字符；highlight 为有效行索引。",
+      "avoid": "真实代码执行、长文件滚动、完整多列编辑器、要求每张结果卡始终完整展示的排版。"
+    },
+    {
+      "id": "MG-035",
+      "intent": "用按钮合并、线框和前后界面淡化对照，说明复杂工作台如何收敛为一个主要操作。",
+      "keywords": [
+        "界面简化",
+        "按钮收敛",
+        "主操作",
+        "产品改版",
+        "前后对照",
+        "UI simplification",
+        "before after UI",
+        "primary action"
+      ],
+      "mediaSlots": [
+        {
+          "path": "beforeMedia",
+          "types": [
+            "image",
+            "video"
+          ],
+          "note": "对象含 src/type，可选 fit/startFrom；src 接受 mg-static 解析后的 URL，替换浏览器框内的改版前内容。视频静音，自镜头起点播放，startFrom 按帧计。",
+          "binding": "asset"
+        },
+        {
+          "path": "afterMedia",
+          "types": [
+            "image",
+            "video"
+          ],
+          "note": "对象含 src/type，可选 fit/startFrom；src 接受 mg-static 解析后的 URL，在同一视口淡入改版后内容。视频从镜头起点计时，隐藏期间仍推进；非从淡入时刻重播。模板的按钮和线框仍叠加在素材之上。",
+          "binding": "asset"
+        }
+      ],
+      "duration": {
+        "min": 9,
+        "max": 18,
+        "key": "durationSeconds",
+        "behavior": "以 time()/durationSeconds 驱动；弱化背景、线框、按钮合并与前后淡入阶段均随总时长同比缩放。"
+      },
+      "capacity": "4–6 个原始操作，每项≤6 字符；主操作≤8；主体≤15；资料 3–6 项（标签≤3、值≤8）；动态 3–5 条，每条≤26；前后说明各≤42 字符。",
+      "avoid": "多页面跳转、真实交互操作、任意位置的元素自动变形、需要独立布局的左右分屏对比。"
+    },
+    {
+      "id": "MG-036",
+      "intent": "围绕界面中的指定区域依次演示鼠标点击、虚线引导、局部模糊或放大，并配短提示。",
+      "keywords": [
+        "鼠标聚焦",
+        "点击涟漪",
+        "界面标注",
+        "局部模糊",
+        "截图放大",
+        "cursor spotlight",
+        "click ripple",
+        "UI annotation",
+        "focus rectangle",
+        "鼠标点击",
+        "放大界面",
+        "界面教程",
+        "点击演示"
+      ],
+      "mediaSlots": [
+        {
+          "path": "steps[].media",
+          "types": [
+            "image",
+            "video"
+          ],
+          "note": "对象含 src/type，可选 fit/startFrom；src 接受 mg-static 解析后的 URL；素材铺满 1920×1080 舞台，focus 为全画面归一化区域，需匹配裁切后的内容。视频静音，在所属步骤起点播放，startFrom 按帧计。",
+          "binding": "asset"
+        }
+      ],
+      "duration": {
+        "min": 9,
+        "max": 24,
+        "key": "durationSeconds",
+        "behavior": "总时长均分 3–4 步，每步内部动作由归一化局部时间驱动，随总时长同比缩放。"
+      },
+      "capacity": "3–4 步；word≤6、hint≤24 字符；action 为 click/guide/blur/zoom，theme 为 light/dark/blue；focus 的 x/y/w/h 均为 0–1，宽高>0.02 且区域必须在画面内。 接入media时隐藏模板title/word，说明用hint承载，画面标题由素材自身保留。",
+      "avoid": "自动识别截图控件、自由鼠标轨迹、多焦点同时讲解、把装饰性模糊用于可靠隐私遮挡。 外部素材已有鼠标时会和模板强制指针同时显示；步骤固定均分，不能直接参数化成不等长步骤。需精确对齐已有操作节奏时，在项目副本调整指针显示和步骤时长，或换模板。"
+    },
+    {
+      "id": "MG-037",
+      "intent": "在手机画面旁同步切换步骤说明，展示点击位置、完成反馈和整体操作进度。",
+      "keywords": [
+        "手机教程",
+        "操作步骤卡",
+        "点击指引",
+        "移动应用演示",
+        "完成反馈",
+        "mobile walkthrough",
+        "phone tutorial",
+        "tap indicator"
+      ],
+      "mediaSlots": [
+        {
+          "path": "steps[].media",
+          "types": [
+            "image",
+            "video"
+          ],
+          "note": "对象含 src/type，可选 fit/startFrom；src 接受 mg-static 解析后的 URL，替换每步手机屏幕内容，仍叠加手机外壳、点击圈和完成反馈。tap 按屏幕区域归一化设置；视频静音，从该步骤起点播放，startFrom 按帧计。",
+          "binding": "asset"
+        }
+      ],
+      "duration": {
+        "min": 10,
+        "max": 24,
+        "key": "durationSeconds",
+        "behavior": "总时长均分 3–4 步，每步入场、点击和完成反馈按该步时长比例执行。"
+      },
+      "capacity": "3–4 步；appName≤12；步骤标题≤16、note≤48、screenTitle≤10；rows 每步 2–4 条且每条≤10；button≤9、feedback≤12 字符；tap.x 为 0.05–0.95，tap.y 为 0.12–0.9。",
+      "avoid": "桌面宽屏界面、大量连续滚动内容、自动从录屏识别点击、真实应用控制。"
+    },
+    {
+      "id": "MG-038",
+      "intent": "展示提示词输入、单幅视觉结果出现，再沿弧线飞入文档版面的创作流程。",
+      "keywords": [
+        "提示词生成图片",
+        "图片插入文档",
+        "生成结果展示",
+        "飞入版面",
+        "创作助手",
+        "prompt to image",
+        "image to document",
+        "curved image transition"
+      ],
+      "mediaSlots": [
+        {
+          "path": "media",
+          "types": [
+            "image",
+            "video"
+          ],
+          "note": "对象含 src/type，可选 fit/startFrom；src 接受 mg-static 解析后的 URL，替换生成结果并随同一视觉内容飞入文档；结果框近 16:9，可选 contain/cover。视频静音，从总时长 27% 的结果出现点播放，startFrom 按帧计。",
+          "binding": "asset"
+        }
+      ],
+      "duration": {
+        "min": 10,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "以 time()/durationSeconds 驱动；提示词输入、结果揭示、飞入和落位全部按总时长比例执行。"
+      },
+      "capacity": "单个提示词和单个结果；prompt≤72、documentTitle≤15、documentBody≤60、resultLabel≤16 字符；无素材时 art 仅 landscape/blocks 两种矢量画面。",
+      "avoid": "真正调用图片生成服务、多张图片挑选、完整文档分页或复杂编辑器操作。"
+    },
+    {
+      "id": "MG-039",
+      "intent": "从一周日期扫描到某个指定日，再展示其 ISO 周数、年度进度和距离下一里程碑的天数。",
+      "keywords": [
+        "日期定位",
+        "星期扫描",
+        "年度进度",
+        "ISO周数",
+        "里程碑倒计时",
+        "calendar date lock",
+        "year progress",
+        "ISO week",
+        "milestone countdown"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 10,
+        "max": 24,
+        "key": "durationSeconds",
+        "behavior": "扫描、星期特写和统计卡由归一化总时间驱动，按总时长同比缩放；日期统计来自输入日期，并非当前播放时间。"
+      },
+      "capacity": "一个日期和一个下一节点；日期为真实 YYYY-MM-DD，年份 1970–2100，milestoneDate 不早于 date；milestoneLabel≤22、title≤24 字符；采用 UTC 日历、周一开周及 ISO 周年。",
+      "avoid": "月历排程、多任务安排、小时级时区换算、按实时日期自动更新的看板。"
+    },
+    {
+      "id": "MG-040",
+      "intent": "把一个任务拆成顺序执行的阶段卡，逐项展示进行中、完成进度和最终完成提示。",
+      "keywords": [
+        "执行流水线",
+        "阶段进度",
+        "顺序工作流",
+        "完成状态",
+        "任务流程卡",
+        "execution pipeline",
+        "workflow stages",
+        "sequential status"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 10,
+        "max": 24,
+        "key": "durationSeconds",
+        "behavior": "入场、执行和完成提示随总时长缩放；3–5 个阶段在总时长约 13%–82% 的区间均匀顺序推进。"
+      },
+      "capacity": "3–5 阶段；code≤10 且只含大写字母、数字、空格或横线；label≤6、description≤28；taskLabel≤26、completionNote≤36、title≤24 字符。",
+      "avoid": "分支或并行依赖图、失败与重试状态、不同阶段自定义耗时、读取真实任务执行状态。"
+    },
+    {
+      "id": "MG-041",
+      "intent": "把一个内容需求变成单份主视觉，再展开为多个发布形式并落到一周排程中。",
+      "keywords": [
+        "一稿多发",
+        "多平台内容",
+        "内容复用",
+        "发布形式",
+        "内容周历",
+        "content repurposing",
+        "multi-platform publishing",
+        "one-to-many content"
+      ],
+      "mediaSlots": [
+        {
+          "path": "image",
+          "types": [
+            "image"
+          ],
+          "note": "仅接受 engine/public 内相对图片路径，供主视觉、全部平台卡和周历缩略图共同复用；使用 staticFile(image)，固定 cover。当前 asset() 拒绝 http/https/data 等 URL；通用 assets 的 asset:→mg-static:→URL 解析后会校验失败，因此此槽当前不兼容通用 assets 映射，需要先加适配或手动放入 public 后传相对路径。不可填视频或为各卡指定不同素材。",
+          "binding": "public-relative"
+        }
+      ],
+      "duration": {
+        "min": 6,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "以 frame/fps*8/durationSeconds 驱动，输入、主视觉、多卡扇出和周历排程整段同比缩放。"
+      },
+      "capacity": "titles 必须 3 项且各≤14 汉字宽；prompt≤28、artworkTitle≤12；cards 3–6 项，platform≤6、caption≤9；days 必须 7 项且各≤4；day 为 0–6、slot 为 0–2 的整数，每个 day/slot 组合最多一项。",
+      "avoid": "不同平台需要不同图片、多视频素材混排、自动改写或真正发布、超出一周的内容日历。"
+    },
+    {
+      "id": "MG-042",
+      "intent": "把短句按显式词组时间逐段强调，并在手机阅读页中同步聚焦原文与补充解释。",
+      "keywords": [
+        "逐词朗读",
+        "原文聚焦",
+        "词组高亮",
+        "阅读讲解",
+        "双语学习",
+        "word-by-word reading",
+        "timed text highlight",
+        "reading app demo"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 6,
+        "max": 30,
+        "key": "durationSeconds",
+        "behavior": "tokens[].at 是镜头内绝对秒数，不随 durationSeconds 自动缩放；各 at 须在 0.8 至 durationSeconds−1.2 秒内严格递增。改长总时长主要增加尾部停留并改变播放进度条，词组时间需独立调整。"
+      },
+      "capacity": "2–18 个词组，各≤10 且总计≤40 汉字宽；label≤8、title≤16、chapter≤18、context≤115、translation≤36、action≤12 汉字宽；文字须非空单行。",
+      "avoid": "自动语音生成或语音对齐、长文连续滚动、未分词的整段自动节奏、视频或音频素材嵌入。"
+    },
+    {
+      "id": "MG-043",
+      "intent": "用手机中的交替对话气泡、输入键盘和正在回复提示，展示一次简短的问答或助手服务过程。",
+      "keywords": [
+        "手机对话",
+        "AI回复展示",
+        "消息气泡",
+        "输入键盘",
+        "正在输入",
+        "chat conversation",
+        "typing indicator",
+        "messaging app demo",
+        "手机问答",
+        "问答",
+        "聊天",
+        "对话气泡",
+        "突出回复",
+        "回复"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 6,
+        "max": 25,
+        "key": "durationSeconds",
+        "behavior": "messages[].at 为绝对秒数，不随总时长缩放；须在 1.3 至 durationSeconds−1 秒内，相邻消息至少间隔 0.65 秒。键盘或输入提示在下一条消息前 0.8 秒触发；延长时长主要增加尾部停留。"
+      },
+      "capacity": "2–4 条消息，从 me 开始并与 other 交替；每条≤31 汉字宽，还须满足气泡高度总计≤480px、前两条含间距≤260px；title/emphasis/contact 各≤9、subtitle≤32、note≤20 汉字宽。",
+      "avoid": "长对话自动滚动、多人群聊、图片或语音消息、真实调用聊天模型或收发信息。"
+    },
+    {
+      "id": "MG-044",
+      "intent": "把内容任务落入七列周历，再突出其中一项并沿连接线分发到多个发布渠道。",
+      "keywords": [
+        "内容排程",
+        "周历任务",
+        "渠道分发",
+        "发布计划",
+        "日历便签",
+        "content scheduling",
+        "calendar workflow",
+        "channel distribution"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 6,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "以 frame/fps*7.5/durationSeconds 驱动，任务落入、渠道出现和连线同比缩放；连接线上的黄色流转点在后段循环，直至镜头结束。"
+      },
+      "capacity": "days 必须 7 项；tasks 3–7 项且每天最多一项，day 为 0–6、slot 为 0–2 整数；selected 为有效任务索引；普通任务≤7、选中任务≤10、time≤5 汉字宽；channels 2–4 项，name≤7、short≤2；title≤23、complete≤12。",
+      "avoid": "每天多任务、月历或跨周排程、内容缩略图、真实渠道发布、复杂时间冲突和依赖管理。"
+    },
+    {
+      "id": "MG-045",
+      "intent": "以人物与手机地图、地球和增长数字的两幕纸张拼贴表现从个人起步到规模扩展。",
+      "keywords": [
+        "人物成长",
+        "两年对比",
+        "地图扩张",
+        "数字增长",
+        "纸张拼贴",
+        "growth timeline",
+        "portrait collage",
+        "global expansion"
+      ],
+      "mediaSlots": [
+        {
+          "path": "portraitSrc",
+          "types": [
+            "image"
+          ],
+          "binding": "asset",
+          "note": "可选首幕人物图片，以Img按contain显示；通用asset:绑定经调用层映射为HTTP(S)绝对URL后可用；模型也接受data地址或public内相对路径。校验为非空单行字符串且≤500中文宽度单位；省略则使用内置SVG人物，不支持视频。"
+        }
+      ],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "整段按9秒基准等比缩放，两幕各占一半；数字增长、图钉展开和中间擦除同步随总时长变化。"
+      },
+      "capacity": "events固定2项；year≤5、label≤14、caption≤40、unit≤6中文宽度，count为0–99999999；person≤10；title≤32仅作管理名称，不显示在画面。",
+      "avoid": "三项以上成长事件、真实地理路径或地图数据、自由布局的图片相册、视频素材拼贴。"
+    },
+    {
+      "id": "MG-046",
+      "intent": "逐笔连接资源层、中间能力层和客户端层，并强调中间层的边界与结论。",
+      "keywords": [
+        "三层架构",
+        "资源客户端",
+        "中间层",
+        "边界框",
+        "手绘结构图",
+        "three-tier architecture",
+        "layer diagram",
+        "resource gateway"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "三层框线、上下箭头、边界和结论按10秒基准整体缩放，末段保留完成结构。"
+      },
+      "capacity": "resources 2–5项/每项≤8中文宽度；clients 2–4项/每项≤10；edgeLabels固定2项/每项≤10；title≤10、subtitle≤12；层名和boundary≤10，conclusion/note≤25。",
+      "avoid": "任意节点网络、超过三层的架构、树形分叉或多条跨层依赖；不展示真实连接或认证行为。"
+    },
+    {
+      "id": "MG-047",
+      "intent": "让三条来源短语沿弧线汇向同一目标，并用环绕标签解释相关与无关的语义关系。",
+      "keywords": [
+        "语义连线",
+        "关键词汇聚",
+        "相关性",
+        "来源到目标",
+        "弧线标签",
+        "semantic links",
+        "keyword convergence",
+        "relevance diagram"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "按11.5秒基准缩放连线绘制、短语沿线移动、标签环绕出现和结论入场。"
+      },
+      "capacity": "sources固定3项，name≤10/phrase≤7中文宽度，relevant为布尔值；tags 3–6项/每项≤6；title≤32、subtitle≤43、target≤15、conclusion≤30。",
+      "avoid": "自动提取关键词、真实搜索排名计算、多目标网络、自由数量来源；标签和相关性须由参数提供。"
+    },
+    {
+      "id": "MG-048",
+      "intent": "用铅笔量表的连续上升填充与逐层标记表达目标、阶段或能力等级的增长。",
+      "keywords": [
+        "连续刻度",
+        "温度计量表",
+        "阶段阈值",
+        "目标增长",
+        "铅笔排线",
+        "progress scale",
+        "threshold gauge",
+        "thermometer chart"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "量表从零依次过渡到各level，按10秒基准整体缩放；末段显示最终值和总结卡。"
+      },
+      "capacity": "levels 3–5项；maximum为1–100000；value递增且≤maximum，第一值及后续相邻间距至少为maximum的16%；label≤12、title≤32、unit≤5、summary≤12、note≤22中文宽度。",
+      "avoid": "下降或往返数值序列、密集阈值、多指标并排比较、实时测量；量表只按给定阶段上升。"
+    },
+    {
+      "id": "MG-049",
+      "intent": "让左侧操作结果、顶部步骤进度和右侧固定清单同步推进，解释一个顺序工作流程。",
+      "keywords": [
+        "固定侧栏清单",
+        "逐步勾选",
+        "操作流程",
+        "结果累计",
+        "步骤进度",
+        "step checklist",
+        "workflow walkthrough",
+        "document construction"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "总时长的6%–88%按步骤数均分推进；91%后显示全部完成和最终说明，改变duration缩放整体播放速度。"
+      },
+      "capacity": "steps 3–5项，每项label≤12/detail≤24/result≤14中文宽度；title≤14、final≤22；步骤标签在主画面和侧栏复用。",
+      "avoid": "分支或循环流程、真实软件操作录像、每步不同图片/视频、动态增删清单结构。"
+    },
+    {
+      "id": "MG-050",
+      "intent": "把一条线展开为六边形单元，再复制成几何结构并切换蓝图底色，解释结构从无到有。",
+      "keywords": [
+        "线条展开",
+        "六边形平铺",
+        "蓝图构建",
+        "几何复制",
+        "制图扫描线",
+        "blueprint reveal",
+        "hexagon unfold",
+        "geometric structure"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "按9秒基准缩放线段展开、单元复制、底色扩散、内部线条和标注出现。"
+      },
+      "capacity": "tiles为3–7整数；accent为六位HEX色；title≤32、caption≤30中文宽度；label按使用卡建议≤12，校验虽允许20但12以上未重新验证视觉边界；几何形状固定为六边形。",
+      "avoid": "真实CAD或工程图、任意多边形拓扑、三维物体旋转、自定义图片纹理；只有单元数和强调色可改。"
+    },
+    {
+      "id": "MG-051",
+      "intent": "围绕一个中心能力展开工具节点和向外传递的脉冲，说明系统能够调用哪些工具。",
+      "keywords": [
+        "能力中心",
+        "工具辐射",
+        "Agent工具箱",
+        "中心节点",
+        "脉冲连线",
+        "capability hub",
+        "tool ecosystem",
+        "hub and spoke"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "以9秒基准整体缩放工具节点、连线和向外脉冲的顺序；中心光环持续摆动。"
+      },
+      "capacity": "tools 6–8项，name≤6中文宽度；icon仅browser/file/terminal/mail/chart/calendar/design/search；title≤18、headline≤10、description≤27、center≤7、caption≤28。",
+      "avoid": "少于6个工具、任意网络拓扑、外部Logo或工具截图、真实权限授予；图标为内置路径枚举。"
+    },
+    {
+      "id": "MG-052",
+      "intent": "把三张来源卡的数值沿连线汇入统一结果卡，表达多源汇总与总量计算。",
+      "keywords": [
+        "三源汇总",
+        "数值求和",
+        "统一结果卡",
+        "多源聚合",
+        "弧线汇流",
+        "data aggregation",
+        "three-source total",
+        "many sources one view"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "按9秒基准缩放三卡入场、连线汇聚、总数增长和说明出现；汇总值由三项value相加。"
+      },
+      "capacity": "items固定3项，value为0–99999；name≤10/detail≤19/tag≤8中文宽度；title≤32、subtitle≤30、unit≤4、result≤12、note≤35。",
+      "avoid": "任意数量来源、平均值或复杂统计、各卡不同单位、人物头像或截图替换、自动抓取第三方数据。"
+    },
+    {
+      "id": "MG-053",
+      "intent": "沿持续显示的节点轴逐个切换年份、事件说明与霓虹线稿图标，讲述版本或事件演进。",
+      "keywords": [
+        "霓虹年表",
+        "版本历史",
+        "事件节点轴",
+        "年份切换",
+        "线稿讲史",
+        "neon timeline",
+        "release history",
+        "milestone sequence"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "总时长的4%–94%按events数量均分，每项淡入和描线后切换；最后一项保留，轴节点等距排列而非按年份差比例排列。"
+      },
+      "capacity": "events 3–5项；year为≤4.5中文宽度的文字，label≤18/detail≤32；icon仅network/build/chart/device/rocket；color为六位HEX；title≤32。",
+      "avoid": "按真实时间间隔比例绘制的时间轴、任意外部事件照片、同时显示所有事件长文、真实历史数据自动生成。"
+    },
+    {
+      "id": "MG-054",
+      "intent": "用像素矩阵的局部缺失、百分比变化和逐格恢复说明数据块丢失与恢复的过程。",
+      "keywords": [
+        "像素矩阵",
+        "数据缺失",
+        "逐格恢复",
+        "丢失百分比",
+        "扫描重建",
+        "matrix recovery",
+        "missing data blocks",
+        "pixel reconstruction"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "按10秒基准整体缩放矩阵出现、3–4.5秒阶段的缺失和6.1–8.5秒阶段的恢复；缺失数量与百分比共享确定性状态。"
+      },
+      "capacity": "grid为12–20整数，矩阵为grid×grid；missing为5–35整数百分比，实际损失数四舍五入；seed为1–99999；labels固定3项/每项≤16，title≤32、message≤22、note≤34中文宽度。",
+      "avoid": "可扫描二维码、真实纠错算法、任意图片的像素修复、真实损坏文件恢复；矩阵为确定性示意色块。"
+    },
+    {
+      "id": "MG-055",
+      "intent": "展示模型、工具执行和上下文之间的调用循环，并同步累计工具日志和上下文容量消耗。",
+      "keywords": [
+        "Agent循环",
+        "工具调用日志",
+        "上下文累计",
+        "token容量",
+        "模型工具上下文",
+        "agent loop",
+        "context window",
+        "tool call cost"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "总时长的8%–86%按steps均分，每步经历模型、工具、上下文三阶段；步骤完成后追加tokens，最后14%显示完成结论。"
+      },
+      "capacity": "steps 3–6项，tool≤8/action≤24中文宽度；capacity为100–1000000，initialTokens为0到capacity；每步tokens为1到capacity且累计不得超过capacity；title≤32、conclusion≤34。",
+      "avoid": "真实Agent执行、自动测量token、超容量溢出或截断演示、任意节点循环、分支并发调用。"
+    },
+    {
+      "id": "MG-056",
+      "intent": "从提示词等待状态切换到彩色词元阵列和中央计数卡，解释输出从等待到形成的变化。",
+      "keywords": [
+        "词元色签",
+        "等待骨架屏",
+        "输出形成",
+        "彩色阵列",
+        "网格计数",
+        "token stream",
+        "loading to output",
+        "token grid"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "按10秒基准缩放等待、阵列展开及统计卡出现；等待数字显示基准时间，最终数量是rows×columns，均不代表实际模型时延或token量。"
+      },
+      "capacity": "tokens 6–24项/每项≤4中文宽度，循环填充网格；columns为6–10整数、rows为6–9整数；title≤32、prompt≤30、waiting/ready≤18、note≤35。",
+      "avoid": "真实文本分词、吞吐量或延迟评测、长文逐字生成、任意数量网格、截图或视频填充格子。"
+    },
+    {
+      "id": "MG-057",
+      "intent": "用电脑、锁与外围云端符号展示本地处理或授权同步的数据边界状态。",
+      "keywords": [
+        "本地处理",
+        "授权同步",
+        "设备数据边界",
+        "云端禁用",
+        "锁状态",
+        "local processing",
+        "device privacy",
+        "cloud sync"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "按8秒基准缩放电脑描线、锁图标、云端符号及说明入场；sync模式后段显示沿路径循环移动的数据点。"
+      },
+      "capacity": "mode仅local或sync；lock为布尔值；title≤18、headline≤12、description≤32、device/cloudLabel≤10、note≤42中文宽度。",
+      "avoid": "真实隐私或安全验证、真实上传、任意多设备架构、设备实拍或屏幕截图；本地/同步模式是参数示意。"
+    },
+    {
+      "id": "MG-058",
+      "intent": "用容量格条、请求日志与阶梯曲线解释令牌桶如何消耗额度、拒绝请求并逐格回补。",
+      "keywords": [
+        "令牌桶",
+        "容量回补",
+        "请求限流",
+        "额度耗尽",
+        "阶梯曲线",
+        "token bucket",
+        "rate limiting",
+        "request rejection"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 3,
+        "max": 40,
+        "key": "duration",
+        "behavior": "duration控制播放速度，前90%映射simSeconds模拟时间，最后10%停留；simSeconds独立限定6–20秒，同刻先补充再按数组顺序处理请求。"
+      },
+      "capacity": "capacity为3–20整数，refillRate为0.5–8次/模拟秒且每次补1格；requests 3–60项按at非递减排序，at在0到simSeconds内，cost为1到capacity整数；title≤32、note≤38；日志显示最近6条。",
+      "avoid": "连续流体模型、并发队列等待或优先级调度、真实服务限流统计、无限条日志同时展示。"
+    },
+    {
+      "id": "MG-059",
+      "intent": "逐笔画出固定二叉层级树及八个叶节点，解释任务拆分、分类层次或共享分支关系。",
+      "keywords": [
+        "白板层级树",
+        "二叉树",
+        "任务拆分",
+        "八个叶节点",
+        "逐笔分支",
+        "binary tree",
+        "hierarchy diagram",
+        "task decomposition"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 12,
+        "max": 26,
+        "key": "durationSeconds",
+        "behavior": "按18秒基准整体缩放层级线、14条分支、叶节点和总结的绘制顺序；末段保留完整白板。"
+      },
+      "capacity": "levels固定3项/每项≤3中文宽度；leaves为空或固定8项/每项≤2；summary 1–3行/每行≤24，notes 0–3项/每项≤20；title≤24、footnote≤54。",
+      "avoid": "任意树形拓扑、不对称分支、自由节点数、超过三层的自定义层级、每个叶节点的长说明。"
+    },
+    {
+      "id": "MG-060",
+      "intent": "让多根套色印刷滑杆沿给定数值连续移动，表达参数调节、能力权重或控制程度的变化。",
+      "keywords": [
+        "控制滑杆",
+        "参数调节",
+        "权重变化",
+        "孔版印刷",
+        "连续数值",
+        "parameter sliders",
+        "risograph controls",
+        "weight adjustment"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 4,
+        "max": 15,
+        "key": "durationSeconds",
+        "behavior": "前段淡入，8%–84%按各滑杆的控制点序列插值移动，最后16%停留最终值；总时长改变时全部阶段按比例缩放。"
+      },
+      "capacity": "sliders 2–5项，label≤6中文宽度；每项values为3–6个0–100有限数值；showValues为布尔值；title≤15，note为空或≤40。",
+      "avoid": "交互式拖动、双圆集合关系图、负值或超过100的刻度、不同刻度范围的多指标、外部纹理素材。"
+    },
+    {
+      "id": "MG-061",
+      "intent": "演示一个节点离线后租约过期、另一节点取得持有权并继续提交事件的故障接管过程。",
+      "keywords": [
+        "故障接管",
+        "租约过期",
+        "节点离线",
+        "任务持有者",
+        "恢复事件",
+        "failover",
+        "lease expiry",
+        "task ownership"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 8,
+        "max": 18,
+        "key": "durationSeconds",
+        "behavior": "按8.7秒基准缩放耗尽、过期、接管和恢复事件；leaseSeconds仅改变显示的演示租约长度，不与实际播放秒数一比一对应。"
+      },
+      "capacity": "nodes固定3项/每项≤2中文宽度；failedIndex和successorIndex为不同的0–2整数；leaseSeconds为3–60；eventTimes固定3项/每项≤5；title≤18、subtitle≤48、面板名≤8、footnote≤48。",
+      "avoid": "任意节点数、多个同时失效或反复故障、真实分布式锁实现、可运行调度系统、长节点名称。"
+    },
+    {
+      "id": "MG-062",
+      "intent": "用按年份排列并交替飞入的票卡、可选年份轴和总结印章展示项目里程碑或发布历程。",
+      "keywords": [
+        "里程碑票卡",
+        "顶部年份轴",
+        "项目历程",
+        "发布阶段",
+        "总结印章",
+        "milestone tickets",
+        "year timeline",
+        "release milestones"
+      ],
+      "mediaSlots": [],
+      "duration": {
+        "min": 6,
+        "max": 20,
+        "key": "durationSeconds",
+        "behavior": "按8秒基准缩放票卡错峰飞入、旋转回弹和5秒处总结入场；showAxis开启时定位点随票卡顺序在实际年份区间内移动。"
+      },
+      "capacity": "tickets 3–7项，year为1900–2100整数且非递减，可重复年份；name≤18/detail≤27中文宽度；titleLines 1–3行/每行≤8；stamp≤8、summaryValue≤11、summaryLabel≤20、footnote≤52。",
+      "avoid": "日历排程、按月日的精细时间轴、外部人物海报或票面图片、7项以上事件、无限长度事件详情。"
+    }
+  ]
+}

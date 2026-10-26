@@ -1,0 +1,10 @@
+{
+  "title": "彩色词元阵列与等待转化",
+  "sourceStart": 0,
+  "sourceEnd": 13,
+  "parameters": "tokens6–24项、每项最多4中文宽度；columns整数6–10，rows整数6–9；prompt30，waiting/ready18，note35；duration3–40秒。",
+  "limitations": [
+    "提取原片等待骨架、短词元色签阵列、中央统计卡的状态转换；横向流动改为逐项展开，保证中文可读。",
+    "画面数量等于网格项数，不代表实际模型token计数、吞吐量或时延。"
+  ]
+}

@@ -1,0 +1,3883 @@
+{
+  "MG-013": {
+    "reference": {
+      "badge": "03 · 公平竞技",
+      "title": "同一份数据，",
+      "emphasis": "同一套提示词",
+      "subtitle": "只提供客观事实，局势判断全靠 AI 自己",
+      "sourceName": "prompt · state.json",
+      "codeLines": [
+        "{",
+        "  \"game\": \"gomoku\",",
+        "  \"you\": \"black\",",
+        "  \"board\": [ …15×15, 18 stones… ],",
+        "  \"legalMoves\": [ \"H7\", \"J8\", \"G9\", … ],",
+        "  \"consequences\": {",
+        "    \"J8\": \"makes four (J5–J8)\",",
+        "    \"G9\": \"blocks open three\"",
+        "  },",
+        "  \"goal\": \"WIN\"",
+        "}"
+      ],
+      "models": [
+        {
+          "name": "GPT-6 Sol",
+          "short": "GPT",
+          "color": "#259e88"
+        },
+        {
+          "name": "Claude Opus 5.5",
+          "short": "Opus",
+          "color": "#bb7863"
+        },
+        {
+          "name": "Gemini 3.1 Pro",
+          "short": "Gem",
+          "color": "#5682d7"
+        },
+        {
+          "name": "Kimi K3",
+          "short": "Kimi",
+          "color": "#7261d3"
+        },
+        {
+          "name": "DeepSeek V4 Pro",
+          "short": "DS",
+          "color": "#4e67d6"
+        },
+        {
+          "name": "Jev 1.13",
+          "short": "Jev",
+          "color": "#29a18e"
+        }
+      ],
+      "principles": [
+        {
+          "text": "统一英文提示词，不为任何模型单独优化",
+          "kind": "check"
+        },
+        {
+          "text": "完整局面 + 合法走法 + 每步直接后果",
+          "kind": "check"
+        },
+        {
+          "text": "不评分、不推荐走法",
+          "kind": "cross"
+        }
+      ]
+    },
+    "usage": {
+      "badge": "01 · 对比方法",
+      "title": "同一段资料，",
+      "emphasis": "比较不同回答",
+      "subtitle": "先统一输入和要求，再观察内容是否准确、清晰",
+      "sourceName": "brief · 会议摘要任务",
+      "codeLines": [
+        "{",
+        "  \"资料\": \"一段会议记录\",",
+        "  \"任务\": \"提炼关键决定与待办\",",
+        "  \"输出要求\": [",
+        "    \"保留事实，不补充未知信息\",",
+        "    \"列出负责人和截止时间\",",
+        "    \"缺少的信息标为待确认\"",
+        "  ],",
+        "  \"篇幅\": \"不超过 200 字\"",
+        "}"
+      ],
+      "models": [
+        {
+          "name": "模型 A",
+          "short": "A",
+          "color": "#27b69b",
+          "detail": "同一资料 · 同一要求"
+        },
+        {
+          "name": "模型 B",
+          "short": "B",
+          "color": "#bc896c",
+          "detail": "同一资料 · 同一要求"
+        },
+        {
+          "name": "模型 C",
+          "short": "C",
+          "color": "#7087e2",
+          "detail": "同一资料 · 同一要求"
+        }
+      ],
+      "principles": [
+        {
+          "text": "检查事实是否保留",
+          "kind": "check"
+        },
+        {
+          "text": "观察表达是否清晰",
+          "kind": "check"
+        },
+        {
+          "text": "不预设优胜结果",
+          "kind": "cross"
+        }
+      ],
+      "demoLabel": "复用验证 · 内容为演示任务，未展示模型实测结果"
+    },
+    "referenceDuration": 7.5,
+    "usageDuration": 8.5,
+    "durationKey": null,
+    "fixedDuration": null,
+    "minDuration": 6
+  },
+  "MG-016": {
+    "reference": {
+      "durationSeconds": 5,
+      "accent": "#ff591c",
+      "scenes": [
+        {
+          "lines": [
+            "AFTER",
+            "EFFECTS"
+          ],
+          "background": "#eeeadd",
+          "ink": "#0c0c0d",
+          "strike": true
+        },
+        {
+          "lines": [
+            "KEY",
+            "FRAMES"
+          ],
+          "background": "#2d32ee",
+          "ink": "#eeeadd",
+          "strike": true
+        },
+        {
+          "lines": [
+            "JUST",
+            "CODE."
+          ],
+          "background": "#0b0c0e",
+          "ink": "#eeeadd"
+        },
+        {
+          "lines": [
+            "OPUS",
+            "5.5"
+          ],
+          "background": "#0b0c0e",
+          "ink": "#eeeadd"
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 6,
+      "accent": "#ff591c",
+      "note": "文字演示 · 可替换为自己的主题",
+      "scenes": [
+        {
+          "lines": [
+            "繁琐",
+            "操作"
+          ],
+          "background": "#eeeadd",
+          "ink": "#0c0c0d",
+          "strike": true
+        },
+        {
+          "lines": [
+            "反复",
+            "调整"
+          ],
+          "background": "#2d32ee",
+          "ink": "#eeeadd",
+          "strike": true
+        },
+        {
+          "lines": [
+            "清楚",
+            "表达"
+          ],
+          "background": "#0b0c0e",
+          "ink": "#eeeadd"
+        },
+        {
+          "lines": [
+            "开始",
+            "创作"
+          ],
+          "background": "#eeeadd",
+          "ink": "#0b0c0e"
+        }
+      ]
+    },
+    "referenceDuration": 5,
+    "usageDuration": 6,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-017": {
+    "reference": {
+      "durationSeconds": 7,
+      "title": "同时问它们。",
+      "question": "规划产品发布",
+      "inputHint": "输入同一个问题，查看不同回答",
+      "note": "参考文案译写 · 非模型实测",
+      "answers": [
+        {
+          "name": "GPT-5",
+          "color": "#21b28e",
+          "body": "这是一个四周发布计划。\n第一周：开放候补名单，放出短演示。\n第二周：邀请早期用户体验。"
+        },
+        {
+          "name": "Claude",
+          "color": "#c87d72",
+          "body": "先确定产品面向谁。\n选定一个受众、一项承诺、一个渠道，让早期用户讲述体验。"
+        },
+        {
+          "name": "Gemini",
+          "color": "#5877d9",
+          "body": "阶段一：用预告页面和候补名单积累期待。\n阶段二：在发布渠道上线，再分享成果。"
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 8,
+      "title": "比较两种表达。",
+      "question": "把会议结论整理清楚",
+      "inputHint": "相同资料与要求，观察内容差异",
+      "note": "两列复用验证 · 回答为演示文本",
+      "answers": [
+        {
+          "name": "方案 A",
+          "color": "#21b28e",
+          "body": "按事项整理：\n确认发布范围。\n列出负责人。\n未确定的日期保留为待确认。"
+        },
+        {
+          "name": "方案 B",
+          "color": "#5877d9",
+          "body": "按行动整理：\n先核对需求，再安排任务。\n每项行动写明责任人。\n单独汇总待确认的问题。"
+        }
+      ]
+    },
+    "referenceDuration": 7,
+    "usageDuration": 8,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-018": {
+    "reference": {
+      "durationSeconds": 5,
+      "label": "正在计算账单…",
+      "prices": [
+        49,
+        89,
+        149,
+        228,
+        328,
+        612
+      ],
+      "prefix": "-$",
+      "suffix": "/月",
+      "selectedIndex": 4,
+      "note": "参考数字 · 非实际报价"
+    },
+    "usage": {
+      "durationSeconds": 6,
+      "label": "选择适合的方案",
+      "prices": [
+        29,
+        59,
+        99,
+        159,
+        299
+      ],
+      "prefix": "¥",
+      "suffix": "/月",
+      "selectedIndex": 2,
+      "note": "演示价格 · 请替换为已核实的产品信息"
+    },
+    "referenceDuration": 5,
+    "usageDuration": 6,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-019": {
+    "reference": {
+      "durationSeconds": 7,
+      "title": "多对象，动态排序",
+      "unit": "分",
+      "periods": [
+        "第一轮",
+        "第二轮",
+        "第三轮",
+        "最终轮"
+      ],
+      "note": "演示数据 · 非真实模型排名",
+      "items": [
+        {
+          "name": "方案 A",
+          "color": "#ff876f",
+          "values": [
+            36,
+            61,
+            73,
+            89
+          ]
+        },
+        {
+          "name": "方案 B",
+          "color": "#49d6c1",
+          "values": [
+            52,
+            58,
+            82,
+            83
+          ]
+        },
+        {
+          "name": "方案 C",
+          "color": "#ab8aff",
+          "values": [
+            44,
+            68,
+            77,
+            94
+          ]
+        },
+        {
+          "name": "方案 D",
+          "color": "#e8d662",
+          "values": [
+            30,
+            50,
+            65,
+            76
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 8,
+      "title": "季度交付任务变化",
+      "unit": "件",
+      "periods": [
+        "一季度",
+        "二季度",
+        "三季度",
+        "四季度"
+      ],
+      "note": "团队与数据均为演示",
+      "items": [
+        {
+          "name": "设计组",
+          "color": "#ff876f",
+          "values": [
+            18,
+            39,
+            61,
+            72
+          ]
+        },
+        {
+          "name": "研发组",
+          "color": "#49d6c1",
+          "values": [
+            30,
+            47,
+            55,
+            80
+          ]
+        },
+        {
+          "name": "内容组",
+          "color": "#ab8aff",
+          "values": [
+            23,
+            40,
+            66,
+            84
+          ]
+        }
+      ]
+    },
+    "referenceDuration": 7,
+    "usageDuration": 8,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-020": {
+    "reference": {
+      "durationSeconds": 6,
+      "title": "让成果，一眼看见",
+      "subtitle": "产品关键指标 · 示例数据",
+      "note": "仅演示数值呈现方式",
+      "stats": [
+        {
+          "value": 4.4,
+          "decimals": 1,
+          "suffix": "★",
+          "label": "平均评分",
+          "color": "#e9b95b"
+        },
+        {
+          "value": 100,
+          "decimals": 0,
+          "suffix": "万+",
+          "label": "累计下载",
+          "color": "#6579be"
+        },
+        {
+          "value": 26,
+          "decimals": 0,
+          "suffix": "K+",
+          "label": "用户反馈",
+          "color": "#6da995"
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 7,
+      "title": "把团队进展讲清楚",
+      "subtitle": "本期项目回顾 · 可替换为自己的数据",
+      "note": "演示数据 · 请以实际项目记录为准",
+      "stats": [
+        {
+          "value": 12,
+          "decimals": 0,
+          "suffix": "项",
+          "label": "完成项目",
+          "color": "#6579be"
+        },
+        {
+          "value": 96,
+          "decimals": 0,
+          "suffix": "%",
+          "label": "按期交付",
+          "color": "#6da995"
+        },
+        {
+          "value": 4.8,
+          "decimals": 1,
+          "suffix": "分",
+          "label": "内部满意度",
+          "color": "#e9b95b"
+        }
+      ]
+    },
+    "referenceDuration": 6,
+    "usageDuration": 7,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-021": {
+    "reference": {
+      "durationSeconds": 8,
+      "title": "每份文档，都有去向",
+      "classifier": "文档分类器",
+      "note": "分级与评分均为演示",
+      "documents": [
+        {
+          "name": "研究提案",
+          "grade": "A",
+          "score": 94
+        },
+        {
+          "name": "会议记录",
+          "grade": "B",
+          "score": 81
+        },
+        {
+          "name": "待补资料",
+          "grade": "C",
+          "score": 65
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 9,
+      "title": "资料入库前，先做检查",
+      "classifier": "质量检查",
+      "note": "示例规则 · 并非真实审核结果",
+      "documents": [
+        {
+          "name": "项目说明",
+          "grade": "优",
+          "score": 96
+        },
+        {
+          "name": "产品手册",
+          "grade": "良",
+          "score": 88
+        },
+        {
+          "name": "历史草稿",
+          "grade": "待补",
+          "score": 62
+        },
+        {
+          "name": "常见问答",
+          "grade": "优",
+          "score": 93
+        }
+      ]
+    },
+    "referenceDuration": 8,
+    "usageDuration": 9,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-022": {
+    "reference": {
+      "durationSeconds": 6,
+      "title": "跨过目标线，状态翻转",
+      "metric": "完成率",
+      "before": 68,
+      "after": 86,
+      "threshold": 75,
+      "beforeLabel": "需要继续推进",
+      "afterLabel": "已超过目标",
+      "note": "演示数据 · 状态由阈值自动判断"
+    },
+    "usage": {
+      "durationSeconds": 7,
+      "title": "本周交付，是否达标",
+      "metric": "按时交付比例",
+      "before": 72,
+      "after": 94,
+      "threshold": 90,
+      "beforeLabel": "仍有任务延误",
+      "afterLabel": "目标已经完成",
+      "note": "示例业务数据 · 请替换为真实记录"
+    },
+    "referenceDuration": 6,
+    "usageDuration": 7,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-023": {
+    "reference": {
+      "durationSeconds": 6,
+      "kicker": "01 / 功能聚焦",
+      "lines": [
+        "找到重点",
+        "快速确认"
+      ],
+      "description": "真实素材配说明，焦点跟随内容。",
+      "imageSrc": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221200%22%20height%3D%22760%22%20viewBox%3D%220%200%201200%20760%22%3E%3Crect%20width%3D%221200%22%20height%3D%22760%22%20rx%3D%2225%22%20fill%3D%22%23191c22%22/%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%221200%22%20height%3D%2275%22%20fill%3D%22%23242830%22/%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%23f37777%22/%3E%3Ccircle%20cx%3D%2265%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%23dfc568%22/%3E%3Ccircle%20cx%3D%2295%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%2372c5a0%22/%3E%3Ctext%20x%3D%22145%22%20y%3D%2247%22%20fill%3D%22%23d6d8dc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2226%22%3EFocus%20workspace%3C/text%3E%3Crect%20x%3D%2232%22%20y%3D%22110%22%20width%3D%22220%22%20height%3D%22615%22%20rx%3D%2212%22%20fill%3D%22%2322262e%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22145%22%20width%3D%22155%22%20height%3D%2218%22%20rx%3D%228%22%20fill%3D%22%23606873%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22200%22%20width%3D%22150%22%20height%3D%2242%22%20rx%3D%228%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22275%22%20width%3D%22130%22%20height%3D%2215%22%20rx%3D%227%22%20fill%3D%22%2358606b%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22325%22%20width%3D%22150%22%20height%3D%2215%22%20rx%3D%227%22%20fill%3D%22%2358606b%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22112%22%20width%3D%22870%22%20height%3D%22120%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Ctext%20x%3D%22330%22%20y%3D%22185%22%20fill%3D%22white%22%20font-family%3D%22sans-serif%22%20font-size%3D%2238%22%3EFocus%20workspace%3C/text%3E%3Crect%20x%3D%22290%22%20y%3D%22270%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22294%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22294%22%20width%3D%22350%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22319%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22297%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22375%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22399%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22399%22%20width%3D%22320%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22424%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22402%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22480%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22504%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22504%22%20width%3D%22290%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22529%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22507%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22585%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22609%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%23f47e3f%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22609%22%20width%3D%22260%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22634%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22612%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%23f47e3f%22/%3E%3C/svg%3E",
+      "focus": {
+        "x": 0.24,
+        "y": 0.35,
+        "w": 0.73,
+        "h": 0.11
+      },
+      "accent": "#ff813d",
+      "note": "界面为原创示意素材，可替换为自己的截图"
+    },
+    "usage": {
+      "durationSeconds": 7,
+      "kicker": "02 / 审阅流程",
+      "lines": [
+        "查看状态",
+        "逐项核对",
+        "确认结果"
+      ],
+      "description": "用选择框标出本次需要检查的区域。",
+      "imageSrc": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221200%22%20height%3D%22760%22%20viewBox%3D%220%200%201200%20760%22%3E%3Crect%20width%3D%221200%22%20height%3D%22760%22%20rx%3D%2225%22%20fill%3D%22%23191c22%22/%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%221200%22%20height%3D%2275%22%20fill%3D%22%23242830%22/%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%23f37777%22/%3E%3Ccircle%20cx%3D%2265%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%23dfc568%22/%3E%3Ccircle%20cx%3D%2295%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%2372c5a0%22/%3E%3Ctext%20x%3D%22145%22%20y%3D%2247%22%20fill%3D%22%23d6d8dc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2226%22%3EReview%20dashboard%3C/text%3E%3Crect%20x%3D%2232%22%20y%3D%22110%22%20width%3D%22220%22%20height%3D%22615%22%20rx%3D%2212%22%20fill%3D%22%2322262e%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22145%22%20width%3D%22155%22%20height%3D%2218%22%20rx%3D%228%22%20fill%3D%22%23606873%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22200%22%20width%3D%22150%22%20height%3D%2242%22%20rx%3D%228%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22275%22%20width%3D%22130%22%20height%3D%2215%22%20rx%3D%227%22%20fill%3D%22%2358606b%22/%3E%3Crect%20x%3D%2260%22%20y%3D%22325%22%20width%3D%22150%22%20height%3D%2215%22%20rx%3D%227%22%20fill%3D%22%2358606b%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22112%22%20width%3D%22870%22%20height%3D%22120%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Ctext%20x%3D%22330%22%20y%3D%22185%22%20fill%3D%22white%22%20font-family%3D%22sans-serif%22%20font-size%3D%2238%22%3EReview%20dashboard%3C/text%3E%3Crect%20x%3D%22290%22%20y%3D%22270%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22294%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22294%22%20width%3D%22350%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22319%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22297%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22375%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22399%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22399%22%20width%3D%22320%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22424%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22402%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22480%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22504%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22504%22%20width%3D%22290%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22529%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22507%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22585%22%20width%3D%22870%22%20height%3D%2282%22%20rx%3D%2212%22%20fill%3D%22%23252a34%22/%3E%3Crect%20x%3D%22320%22%20y%3D%22609%22%20width%3D%2233%22%20height%3D%2233%22%20rx%3D%226%22%20fill%3D%22%2357bca5%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22609%22%20width%3D%22260%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23a6adb9%22/%3E%3Crect%20x%3D%22385%22%20y%3D%22634%22%20width%3D%22225%22%20height%3D%229%22%20rx%3D%224%22%20fill%3D%22%23535c6a%22/%3E%3Crect%20x%3D%221015%22%20y%3D%22612%22%20width%3D%22105%22%20height%3D%2227%22%20rx%3D%2212%22%20fill%3D%22%2357bca5%22/%3E%3C/svg%3E",
+      "focus": {
+        "x": 0.24,
+        "y": 0.63,
+        "w": 0.73,
+        "h": 0.11
+      },
+      "accent": "#59d1b3",
+      "note": "中文讲解复用验证 · 界面为示意素材"
+    },
+    "referenceDuration": 6,
+    "usageDuration": 7,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-024": {
+    "reference": {
+      "durationSeconds": 8,
+      "title": "同一目标，各自追赶",
+      "unit": "步",
+      "target": 8000,
+      "periods": [
+        "起步",
+        "追赶",
+        "冲刺",
+        "终点"
+      ],
+      "racers": [
+        {
+          "name": "选手甲",
+          "color": "#ef5680",
+          "values": [
+            2100,
+            4500,
+            6200,
+            7600
+          ]
+        },
+        {
+          "name": "选手乙",
+          "color": "#9576f1",
+          "values": [
+            1800,
+            4700,
+            6100,
+            7400
+          ]
+        },
+        {
+          "name": "选手丙",
+          "color": "#c5fa35",
+          "values": [
+            1700,
+            4100,
+            6500,
+            8000
+          ]
+        },
+        {
+          "name": "选手丁",
+          "color": "#46b8e8",
+          "values": [
+            1500,
+            3500,
+            5500,
+            7100
+          ]
+        }
+      ],
+      "note": "竞赛数据为演示，不表示真实运动记录"
+    },
+    "usage": {
+      "durationSeconds": 7,
+      "title": "三个小组的任务进度",
+      "unit": "项",
+      "target": 100,
+      "periods": [
+        "第一天",
+        "第二天",
+        "第三天"
+      ],
+      "racers": [
+        {
+          "name": "产品组",
+          "color": "#ef5680",
+          "values": [
+            20,
+            60,
+            90
+          ]
+        },
+        {
+          "name": "研发组",
+          "color": "#c5fa35",
+          "values": [
+            30,
+            55,
+            100
+          ]
+        },
+        {
+          "name": "设计组",
+          "color": "#46b8e8",
+          "values": [
+            15,
+            70,
+            95
+          ]
+        }
+      ],
+      "note": "项目进度示意 · 数值由输入时间序列驱动"
+    },
+    "referenceDuration": 8,
+    "usageDuration": 7,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-025": {
+    "reference": {
+      "durationSeconds": 7,
+      "lines": [
+        "让反馈",
+        "被看见"
+      ],
+      "subtitle": "评论、提问与共鸣，连续呈现。",
+      "comments": [
+        {
+          "name": "用户甲",
+          "body": "这个演示把步骤讲清楚了。",
+          "likes": 128,
+          "color": "#f575aa"
+        },
+        {
+          "name": "用户乙",
+          "body": "想看看同样的方法还能用在哪些地方。",
+          "likes": 86,
+          "color": "#8576e7"
+        },
+        {
+          "name": "用户丙",
+          "body": "结构很清晰，已经收藏。",
+          "likes": 240,
+          "color": "#e0b950"
+        },
+        {
+          "name": "用户丁",
+          "body": "希望下一期介绍更多实际案例。",
+          "likes": 76,
+          "color": "#69b8aa"
+        }
+      ],
+      "note": "评论与互动量均为演示，发布前请替换为获准使用的内容"
+    },
+    "usage": {
+      "durationSeconds": 8,
+      "lines": [
+        "听见团队",
+        "的声音"
+      ],
+      "subtitle": "一次项目回顾，汇集不同建议。",
+      "comments": [
+        {
+          "name": "设计同事",
+          "body": "把需求写成清单，沟通会更顺畅。",
+          "likes": 12,
+          "color": "#f575aa"
+        },
+        {
+          "name": "研发同事",
+          "body": "希望每个任务补充明确的验收条件。",
+          "likes": 18,
+          "color": "#8576e7"
+        },
+        {
+          "name": "运营同事",
+          "body": "本周的交付节奏比上周更清楚了。",
+          "likes": 9,
+          "color": "#69b8aa"
+        }
+      ],
+      "note": "团队反馈为演示文案，不代表真实评价"
+    },
+    "referenceDuration": 7,
+    "usageDuration": 8,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-026": {
+    "reference": {
+      "durationSeconds": 6,
+      "title": "正在上传，直到完成",
+      "processingLabel": "文件上传中",
+      "completeLabel": "上传完成",
+      "from": 0,
+      "to": 100,
+      "background": "#15bd8b",
+      "accent": "#8054ee",
+      "note": "独立全屏状态组件 · 进度为演示"
+    },
+    "usage": {
+      "durationSeconds": 5,
+      "title": "素材准备进度",
+      "processingLabel": "正在整理素材",
+      "completeLabel": "素材准备完成",
+      "from": 25,
+      "to": 84,
+      "background": "#2685cb",
+      "accent": "#ee8b40",
+      "note": "未达到100%时保持进度，不显示完成勾号"
+    },
+    "referenceDuration": 6,
+    "usageDuration": 5,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-027": {
+    "reference": {
+      "durationSeconds": 7,
+      "lines": [
+        "一次创作",
+        "多种可能"
+      ],
+      "subtitle": "把系列作品排成矩阵，让整体风格一眼可见。",
+      "images": [
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23694ca1%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2001%3C/text%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff66%22%20stroke-width%3D%2235%22/%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22105%22%20fill%3D%22none%22%20stroke%3D%22%23ffffffbb%22%20stroke-width%3D%228%22/%3E%3Cpath%20d%3D%22M200%20490L430%20170L660%20490%22%20fill%3D%22%23ffffff18%22%20stroke%3D%22%23ffffff88%22%20stroke-width%3D%223%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EOrbit%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "轨道与几何"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%239b594d%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2002%3C/text%3E%3Crect%20x%3D%22330%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff50%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22393%22%20y%3D%22220%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff57%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22456%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff64%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22519%22%20y%3D%22220%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff71%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22582%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff78%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EFold%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "折叠与结构"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23216f83%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2003%3C/text%3E%3Cpath%20d%3D%22M60%20380Q200%20140%20340%20320T760%20180%22%20stroke%3D%22%23ffffffaa%22%20stroke-width%3D%2240%22%20fill%3D%22none%22/%3E%3Cpath%20d%3D%22M20%20460Q180%20220%20320%20400T740%20260%22%20stroke%3D%22%23ffffff44%22%20stroke-width%3D%2210%22%20fill%3D%22none%22/%3E%3Ccircle%20cx%3D%22610%22%20cy%3D%22170%22%20r%3D%2285%22%20fill%3D%22%23ffffff44%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EFlow%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "曲线与流动"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%233d6561%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2004%3C/text%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff66%22%20stroke-width%3D%2235%22/%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22105%22%20fill%3D%22none%22%20stroke%3D%22%23ffffffbb%22%20stroke-width%3D%228%22/%3E%3Cpath%20d%3D%22M200%20490L430%20170L660%20490%22%20fill%3D%22%23ffffff18%22%20stroke%3D%22%23ffffff88%22%20stroke-width%3D%223%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3ESphere%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "空间与秩序"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23765994%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2005%3C/text%3E%3Crect%20x%3D%22330%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff50%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22393%22%20y%3D%22220%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff57%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22456%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff64%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22519%22%20y%3D%22220%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff71%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22582%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff78%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3ELayer%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "层叠与光影"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%239b7644%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2006%3C/text%3E%3Cpath%20d%3D%22M60%20380Q200%20140%20340%20320T760%20180%22%20stroke%3D%22%23ffffffaa%22%20stroke-width%3D%2240%22%20fill%3D%22none%22/%3E%3Cpath%20d%3D%22M20%20460Q180%20220%20320%20400T740%20260%22%20stroke%3D%22%23ffffff44%22%20stroke-width%3D%2210%22%20fill%3D%22none%22/%3E%3Ccircle%20cx%3D%22610%22%20cy%3D%22170%22%20r%3D%2285%22%20fill%3D%22%23ffffff44%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EWave%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "节奏与波纹"
+        }
+      ],
+      "note": "画面为原创示意作品，支持替换为自己的图片"
+    },
+    "usage": {
+      "durationSeconds": 6,
+      "lines": [
+        "团队成果",
+        "集中展示"
+      ],
+      "subtitle": "四项视觉探索，用统一画廊呈现。",
+      "images": [
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23366e89%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2001%3C/text%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff66%22%20stroke-width%3D%2235%22/%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22105%22%20fill%3D%22none%22%20stroke%3D%22%23ffffffbb%22%20stroke-width%3D%228%22/%3E%3Cpath%20d%3D%22M200%20490L430%20170L660%20490%22%20fill%3D%22%23ffffff18%22%20stroke%3D%22%23ffffff88%22%20stroke-width%3D%223%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EDiscover%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "方案一：探索"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23956245%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2002%3C/text%3E%3Crect%20x%3D%22330%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff50%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22393%22%20y%3D%22220%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff57%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22456%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff64%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22519%22%20y%3D%22220%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff71%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Crect%20x%3D%22582%22%20y%3D%22160%22%20width%3D%2298%22%20height%3D%22230%22%20rx%3D%2225%22%20fill%3D%22%23ffffff78%22%20transform%3D%22rotate%2818%20480%20270%29%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EBuild%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "方案二：构建"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%236e4b94%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2003%3C/text%3E%3Cpath%20d%3D%22M60%20380Q200%20140%20340%20320T760%20180%22%20stroke%3D%22%23ffffffaa%22%20stroke-width%3D%2240%22%20fill%3D%22none%22/%3E%3Cpath%20d%3D%22M20%20460Q180%20220%20320%20400T740%20260%22%20stroke%3D%22%23ffffff44%22%20stroke-width%3D%2210%22%20fill%3D%22none%22/%3E%3Ccircle%20cx%3D%22610%22%20cy%3D%22170%22%20r%3D%2285%22%20fill%3D%22%23ffffff44%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EConnect%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "方案三：连接"
+        },
+        {
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22540%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23477f6a%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23111322%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22540%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2245%22%20y%3D%2262%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff99%22%3ESTUDIO%20/%20EXPLORATION%2004%3C/text%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff66%22%20stroke-width%3D%2235%22/%3E%3Ccircle%20cx%3D%22530%22%20cy%3D%22280%22%20r%3D%22105%22%20fill%3D%22none%22%20stroke%3D%22%23ffffffbb%22%20stroke-width%3D%228%22/%3E%3Cpath%20d%3D%22M200%20490L430%20170L660%20490%22%20fill%3D%22%23ffffff18%22%20stroke%3D%22%23ffffff88%22%20stroke-width%3D%223%22/%3E%3Ctext%20x%3D%2244%22%20y%3D%22470%22%20font-family%3D%22Arial%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EGrow%3C/text%3E%3Ctext%20x%3D%2246%22%20y%3D%22505%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%23ffffffaa%22%3EA%20visual%20concept%20in%20motion%3C/text%3E%3C/svg%3E",
+          "caption": "方案四：生长"
+        }
+      ],
+      "note": "四素材复用验证 · 图片标题与素材均可替换"
+    },
+    "referenceDuration": 7,
+    "usageDuration": 6,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-028": {
+    "reference": {
+      "durationSeconds": 7,
+      "title": "每种结果，都有下一步",
+      "subtitle": "状态、例子和处理建议，成组展示。",
+      "results": [
+        {
+          "status": "有效",
+          "example": "资料完整，可直接使用。",
+          "action": "进入下一流程",
+          "color": "#62d8b1"
+        },
+        {
+          "status": "待核实",
+          "example": "来源尚未确认。",
+          "action": "补充来源信息",
+          "color": "#c4a3ff"
+        },
+        {
+          "status": "需抽检",
+          "example": "大部分合格，仍需复核。",
+          "action": "抽样检查质量",
+          "color": "#e3b958"
+        },
+        {
+          "status": "重复",
+          "example": "发现相似或重复内容。",
+          "action": "合并保留一份",
+          "color": "#f08bcd"
+        },
+        {
+          "status": "未知",
+          "example": "现有证据不足以判断。",
+          "action": "转交人工处理",
+          "color": "#9aa9cf"
+        },
+        {
+          "status": "无效",
+          "example": "关键字段不符合要求。",
+          "action": "退回补充材料",
+          "color": "#ee7b85"
+        }
+      ],
+      "note": "分类结果为演示，不代表真实审核结论"
+    },
+    "usage": {
+      "durationSeconds": 6,
+      "title": "资料入库前的三种去向",
+      "subtitle": "按实际规则整理，明确下一步。",
+      "results": [
+        {
+          "status": "可入库",
+          "example": "说明完整，版本已确认。",
+          "action": "提交归档",
+          "color": "#62d8b1"
+        },
+        {
+          "status": "待补充",
+          "example": "缺少责任人与有效日期。",
+          "action": "补齐关键信息",
+          "color": "#e3b958"
+        },
+        {
+          "status": "需合并",
+          "example": "多个版本记录相同内容。",
+          "action": "统一保留最新版本",
+          "color": "#f08bcd"
+        }
+      ],
+      "note": "资料处理示意 · 请按实际业务规则填写"
+    },
+    "referenceDuration": 7,
+    "usageDuration": 6,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-029": {
+    "reference": {
+      "durationSeconds": 8,
+      "title": "问题里的预设，先找出来",
+      "leftLabel": "原始提问",
+      "rightLabel": "中性改写",
+      "original": "为什么这份报告忽略了明显的成本问题？",
+      "highlight": "忽略了明显的成本问题",
+      "revised": "这份报告如何讨论成本？哪些信息尚未提供？",
+      "leftNote": "提问提前写入了“忽略”的判断。",
+      "rightNote": "先询问信息，再评估证据。",
+      "takeaway": "删除预设结论，让回答回到可检查的信息。",
+      "note": "提示词对照示例，不引用真实产品回答"
+    },
+    "usage": {
+      "durationSeconds": 7,
+      "title": "把笼统要求，改成可执行任务",
+      "leftLabel": "原始要求",
+      "rightLabel": "具体任务",
+      "original": "帮我写一个非常优秀的项目总结。",
+      "highlight": "非常优秀",
+      "revised": "按成果、问题、下一步三部分整理总结，每部分列出两项。",
+      "leftNote": "评价词没有说明需要什么内容。",
+      "rightNote": "结构和条数让交付目标更清楚。",
+      "takeaway": "用明确的结构与要求，替换模糊的评价词。",
+      "note": "中文业务复用验证 · 文案可全部替换"
+    },
+    "referenceDuration": 8,
+    "usageDuration": 7,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-030": {
+    "reference": {
+      "durationSeconds": 6.4,
+      "header": "样本审计 · 2026 年 8 月 4 日",
+      "sampleLabel": "173 个网址",
+      "section": "01 · 真实基础设施",
+      "lines": [
+        "列表中的网站",
+        "共用托管基础设施"
+      ],
+      "total": 172,
+      "matched": 140,
+      "exceptions": 4,
+      "matchedLabel": "共用托管",
+      "exceptionLabel": "特别标记",
+      "footnote": "参考412原片数据，未核实；仅用于内部样片比较。"
+    },
+    "usage": {
+      "durationSeconds": 7,
+      "header": "AI 质检 · 演示数据",
+      "sampleLabel": "100 条测试记录",
+      "section": "01 · 本轮检查结果",
+      "lines": [
+        "回答通过基础检查",
+        "仍需人工复核边界"
+      ],
+      "total": 100,
+      "matched": 72,
+      "exceptions": 8,
+      "matchedLabel": "基础通过",
+      "exceptionLabel": "优先复核",
+      "footnote": "虚构样本，仅用于说明点阵的计数和分类机制。"
+    },
+    "referenceDuration": 6.4,
+    "usageDuration": 7,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-031": {
+    "reference": {
+      "durationSeconds": 5,
+      "title": "主题丰富",
+      "emphasis": "一览无余",
+      "items": [
+        {
+          "category": "体育",
+          "label": "足球世界杯",
+          "icon": 0,
+          "color": "#c5ed92"
+        },
+        {
+          "category": "历史",
+          "label": "王室人物",
+          "icon": 1,
+          "color": "#edb0cd"
+        },
+        {
+          "category": "科学",
+          "label": "天文学",
+          "icon": 2,
+          "color": "#aabbef"
+        },
+        {
+          "category": "体育",
+          "label": "奥林匹克",
+          "icon": 3,
+          "color": "#b0b9ee"
+        },
+        {
+          "category": "自然",
+          "label": "世界高山",
+          "icon": 4,
+          "color": "#c2dcf0"
+        },
+        {
+          "category": "文化",
+          "label": "希腊神话",
+          "icon": 6,
+          "color": "#f4c58c"
+        },
+        {
+          "category": "艺术",
+          "label": "印象派",
+          "icon": 5,
+          "color": "#c7afe7"
+        },
+        {
+          "category": "流行文化",
+          "label": "表情与符号",
+          "icon": 7,
+          "color": "#ffe59b"
+        }
+      ],
+      "footnote": "参考353结构与类别的中文转写；图标为自绘替代。"
+    },
+    "usage": {
+      "durationSeconds": 6,
+      "title": "把创作流程",
+      "emphasis": "装进你的工具箱",
+      "items": [
+        {
+          "category": "创作",
+          "label": "文字与脚本",
+          "icon": 5,
+          "color": "#c7afe7"
+        },
+        {
+          "category": "视觉",
+          "label": "图片与封面",
+          "icon": 4,
+          "color": "#c2dcf0"
+        },
+        {
+          "category": "效率",
+          "label": "表格与数据",
+          "icon": 0,
+          "color": "#c5ed92"
+        },
+        {
+          "category": "自动化",
+          "label": "Agent 工作流",
+          "icon": 7,
+          "color": "#ffe59b"
+        },
+        {
+          "category": "表达",
+          "label": "演示与讲解",
+          "icon": 6,
+          "color": "#f4c58c"
+        },
+        {
+          "category": "发布",
+          "label": "视频与音频",
+          "icon": 3,
+          "color": "#edb0cd"
+        }
+      ],
+      "footnote": "虚构工具分类，仅展示替换文字、图标、颜色后的效果。"
+    },
+    "referenceDuration": 5,
+    "usageDuration": 6,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-032": {
+    "reference": {
+      "durationSeconds": 6,
+      "intro": "在 AI 时代，难的是",
+      "items": [
+        {
+          "label": "选对模型",
+          "color": "#737366",
+          "icon": 0
+        },
+        {
+          "label": "写好提示词",
+          "color": "#46636e",
+          "icon": 5
+        },
+        {
+          "label": "管理上下文",
+          "color": "#765da2",
+          "icon": 6
+        },
+        {
+          "label": "检查 Agent 的修改",
+          "color": "#989386",
+          "icon": 7
+        },
+        {
+          "label": "评估输出结果",
+          "color": "#529778",
+          "icon": 3
+        },
+        {
+          "label": "在应用之间切换",
+          "color": "#b34f6a",
+          "icon": 1
+        },
+        {
+          "label": "管理你的桌面",
+          "color": "#438dbb",
+          "icon": 4
+        }
+      ],
+      "footnote": "参考376开头词组的中文节选；背景和图标均为代码生成。"
+    },
+    "usage": {
+      "durationSeconds": 7.5,
+      "intro": "做工具测评，最花时间的是",
+      "items": [
+        {
+          "label": "准备相同的测试输入",
+          "color": "#57829b",
+          "icon": 5
+        },
+        {
+          "label": "保存每一次模型输出",
+          "color": "#6a9c7b",
+          "icon": 0
+        },
+        {
+          "label": "核对细节与异常情况",
+          "color": "#b78a49",
+          "icon": 3
+        },
+        {
+          "label": "把结论讲清楚",
+          "color": "#9778a8",
+          "icon": 7
+        }
+      ],
+      "footnote": "虚构内容制作流程，用于验证不同条数与中文词组。"
+    },
+    "referenceDuration": 6,
+    "usageDuration": 7.5,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-033": {
+    "reference": {
+      "durationSeconds": 7,
+      "headline": [
+        "简单，",
+        "透明的",
+        "价格方案。"
+      ],
+      "summary": "试用7天，此后每月4.99美元，随时取消。",
+      "assurances": [
+        "已购额度不过期",
+        "未用额度可结转"
+      ],
+      "plans": [
+        {
+          "name": "幻灯片包",
+          "subtitle": "适合偶尔使用",
+          "price": 1,
+          "unit": "/ 包",
+          "quota": "25 张幻灯片",
+          "features": [
+            "按需购买",
+            "额度不过期"
+          ],
+          "button": "按需购买"
+        },
+        {
+          "name": "专业订阅",
+          "subtitle": "适合经常使用的用户",
+          "price": 4.99,
+          "unit": "/ 月",
+          "quota": "每月1500张 · 每张约0.0033美元",
+          "features": [
+            "前7天免费试用",
+            "未用额度结转",
+            "优先支持",
+            "高级图像模型",
+            "访问全部功能"
+          ],
+          "button": "免费试用7天"
+        },
+        {
+          "name": "团队方案",
+          "subtitle": "协作使用",
+          "price": 19,
+          "unit": "/ 月",
+          "quota": "团队共享额度",
+          "features": [
+            "成员协作",
+            "统一管理"
+          ],
+          "button": "了解更多"
+        }
+      ],
+      "selected": 1,
+      "badge": "最受欢迎",
+      "currency": "$",
+      "footnote": "前景价格与权益来自参考379，未核实；被遮挡套餐用通用占位示例。"
+    },
+    "usage": {
+      "durationSeconds": 8,
+      "headline": [
+        "按需选择，",
+        "清楚比较，",
+        "轻松开始。"
+      ],
+      "summary": "演示套餐与价格，不构成实际报价。",
+      "assurances": [
+        "清楚列出使用额度",
+        "按使用需要选择"
+      ],
+      "plans": [
+        {
+          "name": "入门方案",
+          "subtitle": "适合个人试用",
+          "price": 0,
+          "unit": "/ 月",
+          "quota": "每月20次 · 基础功能",
+          "features": [
+            "基础模型",
+            "标准导出"
+          ],
+          "button": "开始体验"
+        },
+        {
+          "name": "创作方案",
+          "subtitle": "适合持续内容创作",
+          "price": 39,
+          "unit": "/ 月",
+          "quota": "每月500次 · 包含批量处理",
+          "features": [
+            "批量生成",
+            "高清导出",
+            "历史版本保留",
+            "更多模板"
+          ],
+          "button": "选择创作方案"
+        },
+        {
+          "name": "协作方案",
+          "subtitle": "适合小型工作室",
+          "price": 129,
+          "unit": "/ 月",
+          "quota": "每月2000次 · 5位成员",
+          "features": [
+            "团队模板库",
+            "共享素材",
+            "权限管理"
+          ],
+          "button": "查看协作方案"
+        }
+      ],
+      "selected": 1,
+      "badge": "本次推荐",
+      "currency": "¥",
+      "footnote": "所有套餐、额度与价格均为虚构复用验证内容。"
+    },
+    "referenceDuration": 7,
+    "usageDuration": 8,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-014": {
+    "reference": {
+      "title": "团队通讯录",
+      "viewLabel": "表格",
+      "durationSeconds": 10,
+      "focus": [
+        "salary",
+        "review"
+      ],
+      "question": "谁能看见\n薪资？",
+      "closing": "由你决定，谁能看见。",
+      "footnote": "参考片数据的中文转写 · 未作事实核验",
+      "dimOpacity": 0.22,
+      "columns": [
+        {
+          "id": "name",
+          "label": "姓名",
+          "width": 270,
+          "icon": "person"
+        },
+        {
+          "id": "team",
+          "label": "团队",
+          "width": 245,
+          "icon": "team"
+        },
+        {
+          "id": "role",
+          "label": "职位",
+          "width": 300,
+          "icon": "briefcase"
+        },
+        {
+          "id": "salary",
+          "label": "薪资",
+          "width": 270,
+          "icon": "money",
+          "align": "right",
+          "locked": true
+        },
+        {
+          "id": "review",
+          "label": "评语",
+          "width": 320,
+          "icon": "star",
+          "locked": true
+        },
+        {
+          "id": "start",
+          "label": "入职日期",
+          "width": 275,
+          "icon": "calendar"
+        }
+      ],
+      "rows": [
+        {
+          "id": "maya",
+          "cells": {
+            "name": "Maya Chen",
+            "team": {
+              "text": "人事",
+              "tag": "rose"
+            },
+            "role": "人事伙伴",
+            "salary": "$140,000",
+            "review": "第一季度晋升",
+            "start": "2021-03-04"
+          }
+        },
+        {
+          "id": "dev",
+          "cells": {
+            "name": "Dev Okafor",
+            "team": {
+              "text": "研发",
+              "tag": "blue"
+            },
+            "role": "资深工程师",
+            "salary": "$230,000",
+            "review": "年度表现优秀",
+            "start": "2019-01-09"
+          }
+        },
+        {
+          "id": "priya",
+          "cells": {
+            "name": "Priya Nair",
+            "team": {
+              "text": "财务",
+              "tag": "green"
+            },
+            "role": "财务主管",
+            "salary": "$190,000",
+            "review": "超出预期",
+            "start": "2020-08-17"
+          }
+        },
+        {
+          "id": "sam",
+          "cells": {
+            "name": "Sam Rivera",
+            "team": {
+              "text": "设计",
+              "tag": "violet"
+            },
+            "role": "设计师",
+            "salary": "$160,000",
+            "review": "进展顺利",
+            "start": "2022-06-06"
+          }
+        },
+        {
+          "id": "ari",
+          "cells": {
+            "name": "Ari Levin",
+            "team": {
+              "text": "研发",
+              "tag": "blue"
+            },
+            "role": "工程师",
+            "salary": "$175,000",
+            "review": "需要支持",
+            "start": "2023-11-13"
+          }
+        }
+      ]
+    },
+    "usage": {
+      "title": "AI 工作流测试",
+      "viewLabel": "结果记录",
+      "durationSeconds": 10,
+      "focus": [
+        "pass",
+        "verdict"
+      ],
+      "question": "这次测试，\n哪些已达标？",
+      "closing": "聚焦结论，也保留上下文。",
+      "footnote": "演示数据 · 用于验证模板复用，不代表实际评测结果",
+      "dimOpacity": 0.2,
+      "columns": [
+        {
+          "id": "task",
+          "label": "任务",
+          "width": 280,
+          "icon": "briefcase"
+        },
+        {
+          "id": "workflow",
+          "label": "流程",
+          "width": 240,
+          "icon": "team"
+        },
+        {
+          "id": "count",
+          "label": "样本数",
+          "width": 190,
+          "icon": "table",
+          "align": "right"
+        },
+        {
+          "id": "pass",
+          "label": "通过率",
+          "width": 270,
+          "icon": "check",
+          "align": "right"
+        },
+        {
+          "id": "verdict",
+          "label": "结论",
+          "width": 400,
+          "icon": "star"
+        },
+        {
+          "id": "date",
+          "label": "更新日期",
+          "width": 300,
+          "icon": "calendar"
+        }
+      ],
+      "rows": [
+        {
+          "id": "notes",
+          "cells": {
+            "task": "会议纪要",
+            "workflow": {
+              "text": "整理",
+              "tag": "blue"
+            },
+            "count": "20",
+            "pass": "95%",
+            "verdict": "结构清楚，待复核",
+            "date": "2026-10-26"
+          }
+        },
+        {
+          "id": "summary",
+          "cells": {
+            "task": "文档摘要",
+            "workflow": {
+              "text": "提炼",
+              "tag": "green"
+            },
+            "count": "20",
+            "pass": "90%",
+            "verdict": "保留关键结论",
+            "date": "2026-10-26"
+          }
+        },
+        {
+          "id": "sheet",
+          "cells": {
+            "task": "表格整理",
+            "workflow": {
+              "text": "分类",
+              "tag": "violet"
+            },
+            "count": "20",
+            "pass": "100%",
+            "verdict": "字段与分类一致",
+            "date": "2026-10-26"
+          }
+        },
+        {
+          "id": "search",
+          "cells": {
+            "task": "知识检索",
+            "workflow": {
+              "text": "检索",
+              "tag": "amber"
+            },
+            "count": "20",
+            "pass": "85%",
+            "verdict": "补充来源说明",
+            "date": "2026-10-26"
+          }
+        },
+        {
+          "id": "mail",
+          "cells": {
+            "task": "邮件草稿",
+            "workflow": {
+              "text": "写作",
+              "tag": "rose"
+            },
+            "count": "20",
+            "pass": "95%",
+            "verdict": "语气符合要求",
+            "date": "2026-10-26"
+          }
+        },
+        {
+          "id": "compare",
+          "cells": {
+            "task": "版本比较",
+            "workflow": {
+              "text": "核对",
+              "tag": "blue"
+            },
+            "count": "20",
+            "pass": "90%",
+            "verdict": "差异已逐项标注",
+            "date": "2026-10-26"
+          }
+        }
+      ]
+    },
+    "referenceDuration": 10,
+    "usageDuration": 10,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-034": {
+    "reference": {
+      "title": "让代码变化看得见",
+      "durationSeconds": 16,
+      "fileName": "carousel.js",
+      "steps": [
+        {
+          "title": "读取每张卡片的位置",
+          "note": "先计算相对中心的位移，预览卡片随位置平滑移动。",
+          "code": [
+            "const progress = slide.progress;",
+            "const offset = progress * 360;",
+            "slide.style.transform =",
+            "  `translateX(${offset}px)`;"
+          ],
+          "highlight": 1,
+          "result": "位置跟随",
+          "detail": "滑动距离对应画面位移",
+          "accent": "#638e79"
+        },
+        {
+          "title": "让文字跟随位移",
+          "note": "将位移映射到文字高度，让卡片与文案形成层次。",
+          "code": [
+            "const distance = Math.abs(progress);",
+            "const y = distance * 50;",
+            "text.style.transform =",
+            "  `translateY(${y}px)`;"
+          ],
+          "highlight": 3,
+          "result": "文字视差",
+          "detail": "同一数据驱动不同层次",
+          "accent": "#d88696"
+        },
+        {
+          "title": "根据速度调整吸附",
+          "note": "快滑缩短吸附时间；数值示例仅用于解释动画逻辑。",
+          "code": [
+            "const speed = distance / elapsed;",
+            "const duration = 1000 - speed * 800;",
+            "swiper.params.speed =",
+            "  Math.max(200, Math.min(1000, duration));"
+          ],
+          "highlight": 3,
+          "result": "速度响应",
+          "detail": "限制最短与最长时间",
+          "accent": "#aa94c9"
+        }
+      ]
+    },
+    "usage": {
+      "title": "AI 页面动效改写 · 示例",
+      "durationSeconds": 15,
+      "fileName": "hero-animation.ts",
+      "steps": [
+        {
+          "title": "先定义初始状态",
+          "note": "示例将标题放在起始位置，等待进入视口后播放。",
+          "code": [
+            "const initial = {",
+            "  opacity: 0,",
+            "  translateY: 24,",
+            "};"
+          ],
+          "highlight": 2,
+          "result": "淡入标题",
+          "detail": "初始偏移 24 像素",
+          "accent": "#768fbd"
+        },
+        {
+          "title": "平滑进入最终位置",
+          "note": "同一进度同时控制位置与透明度，避免动作割裂。",
+          "code": [
+            "const p = smoothstep(progress);",
+            "const opacity = p;",
+            "const y = 24 * (1 - p);",
+            "title.style.opacity = opacity;"
+          ],
+          "highlight": 0,
+          "result": "统一节奏",
+          "detail": "位置与透明度同步",
+          "accent": "#ba8b62"
+        },
+        {
+          "title": "限制过度的运动",
+          "note": "面向演示的简化代码，不在模板内执行用户代码。",
+          "code": [
+            "const reduced = prefersReducedMotion;",
+            "const travel = reduced ? 0 : 24;",
+            "const duration = reduced ? 0 : 420;",
+            "animate({travel, duration});"
+          ],
+          "highlight": 2,
+          "result": "减少动态",
+          "detail": "保留内容与信息层级",
+          "accent": "#668e8a"
+        }
+      ]
+    },
+    "referenceDuration": 16,
+    "usageDuration": 15,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-035": {
+    "reference": {
+      "title": "把最常用的操作留在前面",
+      "durationSeconds": 11,
+      "workspace": "客户工作台 · 界面重构示例",
+      "subject": "北岸设计工作室",
+      "actions": [
+        "写邮件",
+        "打电话",
+        "建任务",
+        "记笔记",
+        "上传",
+        "更多"
+      ],
+      "primary": "写邮件",
+      "beforeNote": "六个按钮权重相同，用户需要反复寻找常用操作。",
+      "afterNote": "保留一个主操作，其余动作收进更多菜单。",
+      "facts": [
+        {
+          "label": "行业",
+          "value": "设计服务"
+        },
+        {
+          "label": "阶段",
+          "value": "方案沟通"
+        },
+        {
+          "label": "负责人",
+          "value": "林悦"
+        },
+        {
+          "label": "更新",
+          "value": "今天"
+        }
+      ],
+      "activities": [
+        "已发送项目介绍",
+        "客户补充了需求文档",
+        "方案评审时间已确认",
+        "新增沟通纪要"
+      ]
+    },
+    "usage": {
+      "title": "让生成动作成为唯一主角",
+      "durationSeconds": 11,
+      "workspace": "AI 写作工作台 · 示例",
+      "subject": "产品发布文案",
+      "actions": [
+        "生成",
+        "润色",
+        "翻译",
+        "缩写",
+        "导出"
+      ],
+      "primary": "生成初稿",
+      "beforeNote": "输入完成之后，五个操作都在争夺注意力。",
+      "afterNote": "首先生成初稿，修改与导出随后再提供。",
+      "facts": [
+        {
+          "label": "目标",
+          "value": "新品介绍"
+        },
+        {
+          "label": "渠道",
+          "value": "公众号"
+        },
+        {
+          "label": "语气",
+          "value": "清晰克制"
+        },
+        {
+          "label": "版本",
+          "value": "草稿 v1"
+        }
+      ],
+      "activities": [
+        "已填写目标读者",
+        "已补充产品要点",
+        "参考语气已保存"
+      ]
+    },
+    "referenceDuration": 11,
+    "usageDuration": 11,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-036": {
+    "reference": {
+      "title": "让每一步更清楚",
+      "durationSeconds": 12,
+      "steps": [
+        {
+          "word": "点击",
+          "hint": "点击这里，开始操作。",
+          "action": "click",
+          "theme": "light",
+          "focus": {
+            "x": 0.2,
+            "y": 0.31,
+            "w": 0.22,
+            "h": 0.2
+          }
+        },
+        {
+          "word": "引导",
+          "hint": "把说明放在正在操作的位置。",
+          "action": "guide",
+          "theme": "dark",
+          "focus": {
+            "x": 0.2,
+            "y": 0.31,
+            "w": 0.22,
+            "h": 0.2
+          }
+        },
+        {
+          "word": "模糊",
+          "hint": "选中需要隐藏的局部信息。",
+          "action": "blur",
+          "theme": "blue",
+          "focus": {
+            "x": 0.3,
+            "y": 0.33,
+            "w": 0.12,
+            "h": 0.18
+          }
+        },
+        {
+          "word": "放大",
+          "hint": "让关键动作占据更多画面。",
+          "action": "zoom",
+          "theme": "light",
+          "focus": {
+            "x": 0.2,
+            "y": 0.31,
+            "w": 0.22,
+            "h": 0.2
+          }
+        }
+      ]
+    },
+    "usage": {
+      "title": "教程录屏的四种标记",
+      "durationSeconds": 12,
+      "steps": [
+        {
+          "word": "打开",
+          "hint": "先打开项目面板。",
+          "action": "click",
+          "theme": "light",
+          "focus": {
+            "x": 0.2,
+            "y": 0.31,
+            "w": 0.22,
+            "h": 0.2
+          }
+        },
+        {
+          "word": "确认",
+          "hint": "确认模型和输出格式。",
+          "action": "guide",
+          "theme": "dark",
+          "focus": {
+            "x": 0.2,
+            "y": 0.31,
+            "w": 0.22,
+            "h": 0.2
+          }
+        },
+        {
+          "word": "隐去",
+          "hint": "分享前隐藏账号信息。",
+          "action": "blur",
+          "theme": "blue",
+          "focus": {
+            "x": 0.3,
+            "y": 0.33,
+            "w": 0.12,
+            "h": 0.18
+          }
+        },
+        {
+          "word": "查看",
+          "hint": "放大查看生成结果。",
+          "action": "zoom",
+          "theme": "light",
+          "focus": {
+            "x": 0.2,
+            "y": 0.31,
+            "w": 0.22,
+            "h": 0.2
+          }
+        }
+      ]
+    },
+    "referenceDuration": 12,
+    "usageDuration": 12,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-037": {
+    "reference": {
+      "title": "手机操作与步骤说明卡",
+      "durationSeconds": 12,
+      "appName": "随行工作台",
+      "accent": "#b5ddc9",
+      "steps": [
+        {
+          "title": "打开任务入口",
+          "note": "从首页进入任务列表，找到这次需要处理的项目。",
+          "screenTitle": "今日任务",
+          "rows": [
+            "内容整理",
+            "会议纪要",
+            "资料归档"
+          ],
+          "button": "进入工作台",
+          "feedback": "任务列表已打开",
+          "tap": {
+            "x": 0.5,
+            "y": 0.69
+          }
+        },
+        {
+          "title": "选择导出方式",
+          "note": "选中需要的格式，检查文件名称后继续。",
+          "screenTitle": "导出内容",
+          "rows": [
+            "复制为文本",
+            "生成文档",
+            "保存到本地"
+          ],
+          "button": "确认导出",
+          "feedback": "导出方式已选择",
+          "tap": {
+            "x": 0.5,
+            "y": 0.36
+          }
+        },
+        {
+          "title": "复制并完成",
+          "note": "点击复制链接，把整理后的内容带到下一步工作。",
+          "screenTitle": "分享成果",
+          "rows": [
+            "链接访问",
+            "权限设置",
+            "保存副本"
+          ],
+          "button": "复制链接",
+          "feedback": "链接复制成功",
+          "tap": {
+            "x": 0.5,
+            "y": 0.69
+          }
+        }
+      ]
+    },
+    "usage": {
+      "title": "三步提交差旅报销",
+      "durationSeconds": 15,
+      "appName": "企业服务",
+      "accent": "#e9ca8e",
+      "steps": [
+        {
+          "title": "创建报销单",
+          "note": "打开员工服务，选择差旅报销并填写出行目的。",
+          "screenTitle": "员工服务",
+          "rows": [
+            "差旅报销",
+            "费用申请",
+            "审批记录"
+          ],
+          "button": "新建报销单",
+          "feedback": "报销单已创建",
+          "tap": {
+            "x": 0.5,
+            "y": 0.69
+          }
+        },
+        {
+          "title": "添加出差凭证",
+          "note": "选中本次行程，上传交通和住宿凭证。",
+          "screenTitle": "本次出差",
+          "rows": [
+            "交通费用",
+            "住宿费用",
+            "出差补贴"
+          ],
+          "button": "保存凭证",
+          "feedback": "凭证保存成功",
+          "tap": {
+            "x": 0.5,
+            "y": 0.36
+          }
+        },
+        {
+          "title": "确认后提交",
+          "note": "核对费用明细和收款账户，再提交审批。",
+          "screenTitle": "确认报销",
+          "rows": [
+            "费用明细",
+            "收款账户",
+            "审批人员"
+          ],
+          "button": "提交审批",
+          "feedback": "已提交审批",
+          "tap": {
+            "x": 0.5,
+            "y": 0.69
+          }
+        }
+      ]
+    },
+    "referenceDuration": 12,
+    "usageDuration": 15,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-038": {
+    "reference": {
+      "title": "提示词生成图片并落入版面",
+      "durationSeconds": 12,
+      "prompt": "生成一张温暖的山间步道插画，保留干净留白，用作旅行手册封面。",
+      "documentTitle": "走进山野的周末",
+      "documentBody": "沿着山间小路慢慢前行，发现日常之外的风景。让一张插画成为故事的开场。",
+      "resultLabel": "插画已加入文档",
+      "accent": "#7b9b72",
+      "art": "landscape"
+    },
+    "usage": {
+      "title": "把概念图放进项目提案",
+      "durationSeconds": 14,
+      "prompt": "为数字化协作方案绘制简洁的几何模块示意，使用青绿色块与清晰的层次。",
+      "documentTitle": "让团队协作更清晰",
+      "documentBody": "将分散的信息整理成可见的模块，帮助团队从共同目标出发，逐步推进交付。",
+      "resultLabel": "概念图已插入提案",
+      "accent": "#458d96",
+      "art": "blocks"
+    },
+    "referenceDuration": 12,
+    "usageDuration": 14,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-039": {
+    "reference": {
+      "title": "日历定位与周期进度",
+      "durationSeconds": 12,
+      "date": "2026-10-02",
+      "milestoneDate": "2026-10-09",
+      "milestoneLabel": "下一次周度回顾",
+      "accent": "#e76d3d"
+    },
+    "usage": {
+      "title": "产品发布倒计时",
+      "durationSeconds": 14,
+      "date": "2028-02-29",
+      "milestoneDate": "2028-03-08",
+      "milestoneLabel": "新版本正式发布",
+      "accent": "#e0a743"
+    },
+    "referenceDuration": 12,
+    "usageDuration": 14,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-040": {
+    "reference": {
+      "title": "一条执行线，完成整个交付",
+      "durationSeconds": 12,
+      "taskLabel": "示例任务：发布一份产品说明",
+      "completionNote": "交付文件已准备好，可以进入最终验收",
+      "accent": "#7e982c",
+      "stages": [
+        {
+          "code": "PLAN",
+          "label": "规划",
+          "description": "整理目标，拆分需要完成的任务"
+        },
+        {
+          "code": "BUILD",
+          "label": "执行",
+          "description": "生成内容，组装可检查的成果"
+        },
+        {
+          "code": "VERIFY",
+          "label": "验证",
+          "description": "逐项核对，修正发现的问题"
+        },
+        {
+          "code": "SHIP",
+          "label": "交付",
+          "description": "导出文件，提交最终验收"
+        }
+      ]
+    },
+    "usage": {
+      "title": "从选题到发布，逐步推进",
+      "durationSeconds": 14,
+      "taskLabel": "示例任务：制作一份月度洞察报告",
+      "completionNote": "报告、图表与摘要已经整理完成",
+      "accent": "#47877c",
+      "stages": [
+        {
+          "code": "RESEARCH",
+          "label": "调研",
+          "description": "收集资料并确认信息来源"
+        },
+        {
+          "code": "DRAFT",
+          "label": "写作",
+          "description": "归纳结论，完成报告初稿"
+        },
+        {
+          "code": "REVIEW",
+          "label": "校验",
+          "description": "检查数据和文字表达"
+        },
+        {
+          "code": "PUBLISH",
+          "label": "发布",
+          "description": "导出正式版并归档素材"
+        }
+      ]
+    },
+    "referenceDuration": 12,
+    "usageDuration": 14,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-041": {
+    "reference": {
+      "durationSeconds": 8,
+      "titles": [
+        "一个想法。",
+        "每个平台。",
+        "自动排程。"
+      ],
+      "prompt": "发布我们的夏日菜单",
+      "artworkTitle": "夏日菜单来了",
+      "accent": "#B3C29A",
+      "days": [
+        "周一",
+        "周二",
+        "周三",
+        "周四",
+        "周五",
+        "周六",
+        "周日"
+      ],
+      "cards": [
+        {
+          "platform": "专业社区",
+          "caption": "夏日菜单",
+          "day": 0,
+          "slot": 0,
+          "color": "#177eaa"
+        },
+        {
+          "platform": "生活分享",
+          "caption": "一桌好食光",
+          "day": 1,
+          "slot": 2,
+          "color": "#cf7a89"
+        },
+        {
+          "platform": "社交动态",
+          "caption": "当季新鲜上桌",
+          "day": 2,
+          "slot": 1,
+          "color": "#2789dd"
+        },
+        {
+          "platform": "短视频",
+          "caption": "夏日滋味",
+          "day": 3,
+          "slot": 2,
+          "color": "#1d2731"
+        },
+        {
+          "platform": "短动态",
+          "caption": "共赴一场夏日",
+          "day": 4,
+          "slot": 0,
+          "color": "#25272a"
+        },
+        {
+          "platform": "视频频道",
+          "caption": "新品抢先看",
+          "day": 5,
+          "slot": 1,
+          "color": "#d45a51"
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 10,
+      "titles": [
+        "一个主题。",
+        "四种表达。",
+        "一周发布。"
+      ],
+      "prompt": "介绍我们本周的新手公开课",
+      "artworkTitle": "新手公开课",
+      "accent": "#86B5CE",
+      "days": [
+        "10月26",
+        "10月27",
+        "10月28",
+        "10月29",
+        "10月30",
+        "10月31",
+        "11月01"
+      ],
+      "cards": [
+        {
+          "platform": "图文社区",
+          "caption": "三步快速上手",
+          "day": 0,
+          "slot": 0,
+          "color": "#2f83b8"
+        },
+        {
+          "platform": "短视频",
+          "caption": "一分钟演示",
+          "day": 2,
+          "slot": 1,
+          "color": "#b26350"
+        },
+        {
+          "platform": "邮件订阅",
+          "caption": "本周课程安排",
+          "day": 4,
+          "slot": 0,
+          "color": "#7273b5"
+        },
+        {
+          "platform": "学习社区",
+          "caption": "课后练习题",
+          "day": 5,
+          "slot": 2,
+          "color": "#427e61"
+        }
+      ]
+    },
+    "referenceDuration": 8,
+    "usageDuration": 10,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-042": {
+    "reference": {
+      "durationSeconds": 8,
+      "label": "轻读",
+      "title": "听它朗读出来。",
+      "chapter": "第一章 · 朗读",
+      "tokens": [
+        {
+          "text": "一个",
+          "at": 1.4,
+          "marked": false
+        },
+        {
+          "text": "年轻女孩",
+          "at": 2,
+          "marked": false
+        },
+        {
+          "text": "和她的",
+          "at": 2.8,
+          "marked": false
+        },
+        {
+          "text": "父亲",
+          "at": 3.5,
+          "marked": false
+        },
+        {
+          "text": "以及",
+          "at": 4.2,
+          "marked": false
+        },
+        {
+          "text": "继母",
+          "at": 4.8,
+          "marked": true
+        },
+        {
+          "text": "住在一起。",
+          "at": 5.6,
+          "marked": false
+        }
+      ],
+      "context": "继母有两个女儿，她们总是把家务留给女孩。清晨，她打扫房间、整理衣物，再去厨房准备晚餐。尽管生活并不轻松，女孩始终保持着温柔和善意。",
+      "translation": "重点词保留在原文中，朗读进度逐步向前。",
+      "action": "讨论这段文字"
+    },
+    "usage": {
+      "durationSeconds": 10,
+      "label": "提示词课堂",
+      "title": "逐句看懂这个要求。",
+      "chapter": "提示词 · 重点拆解",
+      "tokens": [
+        {
+          "text": "请将",
+          "at": 1.2,
+          "marked": false
+        },
+        {
+          "text": "这段会议记录",
+          "at": 2,
+          "marked": false
+        },
+        {
+          "text": "整理为",
+          "at": 3,
+          "marked": false
+        },
+        {
+          "text": "三个",
+          "at": 4,
+          "marked": true
+        },
+        {
+          "text": "行动项",
+          "at": 5,
+          "marked": true
+        },
+        {
+          "text": "，并标注",
+          "at": 6,
+          "marked": false
+        },
+        {
+          "text": "负责人",
+          "at": 6.8,
+          "marked": false
+        },
+        {
+          "text": "和截止日期。",
+          "at": 7.7,
+          "marked": false
+        }
+      ],
+      "context": "先区分已经作出的决定和仍需讨论的问题，再提取可执行事项。缺少负责人或时间时，请保留待确认标记，避免自行补充不存在的信息。",
+      "translation": "观察“数量、输出结构、必填字段”三个约束。",
+      "action": "检查提示词结构"
+    },
+    "referenceDuration": 8,
+    "usageDuration": 10,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-043": {
+    "reference": {
+      "durationSeconds": 7,
+      "title": "需要一段",
+      "emphasis": "聊天画面？",
+      "subtitle": "为视频、情景短剧或短片，构造一段清晰的对话。",
+      "contact": "小林",
+      "note": "把对话变成可编辑的镜头",
+      "messages": [
+        {
+          "role": "me",
+          "text": "短片需要聊天画面。",
+          "at": 1.5
+        },
+        {
+          "role": "other",
+          "text": "截自己的聊天记录？",
+          "at": 2.6
+        },
+        {
+          "role": "me",
+          "text": "不，我做了这个。",
+          "at": 4.1
+        },
+        {
+          "role": "other",
+          "text": "看起来很清楚。",
+          "at": 5.2
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 9,
+      "title": "演示一次",
+      "emphasis": "AI 对话。",
+      "subtitle": "用可替换的问答，解释实际使用过程。",
+      "contact": "整理助手",
+      "note": "示例问答，不代表真实模型输出",
+      "messages": [
+        {
+          "role": "me",
+          "text": "整理这段会议记录。",
+          "at": 1.7
+        },
+        {
+          "role": "other",
+          "text": "按决定和行动项分类？",
+          "at": 3.2
+        },
+        {
+          "role": "me",
+          "text": "对，补上负责人。",
+          "at": 5
+        },
+        {
+          "role": "other",
+          "text": "已生成三条待办。",
+          "at": 6.7
+        }
+      ]
+    },
+    "referenceDuration": 7,
+    "usageDuration": 9,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-044": {
+    "reference": {
+      "durationSeconds": 7.5,
+      "title": "创作一次，出现在每个平台。",
+      "days": [
+        "周一",
+        "周二",
+        "周三",
+        "周四",
+        "周五",
+        "周六",
+        "周日"
+      ],
+      "selected": 4,
+      "complete": "已安排至四个渠道",
+      "tasks": [
+        {
+          "label": "短片",
+          "time": "11:30",
+          "day": 0,
+          "slot": 0,
+          "color": "#ff555b"
+        },
+        {
+          "label": "轮播图文",
+          "time": "14:00",
+          "day": 1,
+          "slot": 1,
+          "color": "#ffce00"
+        },
+        {
+          "label": "发布",
+          "time": "18:00",
+          "day": 2,
+          "slot": 2,
+          "color": "#2f88ed"
+        },
+        {
+          "label": "动态",
+          "time": "09:00",
+          "day": 3,
+          "slot": 0,
+          "color": "#191c36"
+        },
+        {
+          "label": "新课程上线",
+          "time": "18:00",
+          "day": 4,
+          "slot": 1,
+          "color": "#ffffff"
+        },
+        {
+          "label": "短片",
+          "time": "10:00",
+          "day": 5,
+          "slot": 2,
+          "color": "#ff555b"
+        }
+      ],
+      "channels": [
+        {
+          "name": "图文社区",
+          "short": "图",
+          "color": "#ff555b"
+        },
+        {
+          "name": "短动态",
+          "short": "文",
+          "color": "#191c36"
+        },
+        {
+          "name": "短视频",
+          "short": "短",
+          "color": "#2f88ed"
+        },
+        {
+          "name": "视频频道",
+          "short": "频",
+          "color": "#ffce00"
+        }
+      ]
+    },
+    "usage": {
+      "durationSeconds": 9,
+      "title": "一周内容，按计划逐步上线。",
+      "days": [
+        "周一26",
+        "周二27",
+        "周三28",
+        "周四29",
+        "周五30",
+        "周六31",
+        "周日01"
+      ],
+      "selected": 3,
+      "complete": "三端内容已排程",
+      "tasks": [
+        {
+          "label": "选题",
+          "time": "09:30",
+          "day": 0,
+          "slot": 0,
+          "color": "#ffce00"
+        },
+        {
+          "label": "录制",
+          "time": "14:00",
+          "day": 1,
+          "slot": 1,
+          "color": "#2f88ed"
+        },
+        {
+          "label": "初剪",
+          "time": "16:00",
+          "day": 2,
+          "slot": 2,
+          "color": "#191c36"
+        },
+        {
+          "label": "工具测评上线",
+          "time": "18:00",
+          "day": 4,
+          "slot": 1,
+          "color": "#ffffff"
+        },
+        {
+          "label": "答疑",
+          "time": "10:00",
+          "day": 6,
+          "slot": 2,
+          "color": "#ff555b"
+        }
+      ],
+      "channels": [
+        {
+          "name": "视频号",
+          "short": "视",
+          "color": "#2f88ed"
+        },
+        {
+          "name": "邮件订阅",
+          "short": "邮",
+          "color": "#191c36"
+        },
+        {
+          "name": "学习社群",
+          "short": "群",
+          "color": "#ffce00"
+        }
+      ]
+    },
+    "referenceDuration": 7.5,
+    "usageDuration": 9,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-015": {
+    "reference": {
+      "title": "Agent 帮你填写上架信息",
+      "subtitle": "并配置授权兑换",
+      "browserLabel": "studio.example / products / your-app",
+      "fields": [
+        {
+          "label": "名称",
+          "value": "你的应用"
+        },
+        {
+          "label": "一句话介绍",
+          "value": "自动处理繁琐工作"
+        },
+        {
+          "label": "方案",
+          "value": "$59 终身使用"
+        }
+      ],
+      "featuresTitle": "包含功能",
+      "features": [
+        "不限项目",
+        "团队席位",
+        "后续 AI 更新"
+      ],
+      "panelTitle": "授权设置",
+      "tabs": [
+        "兑换码",
+        "授权"
+      ],
+      "settings": [
+        {
+          "label": "接收地址",
+          "value": "app.example/redeem"
+        },
+        {
+          "label": "回调地址",
+          "value": "app.example/thanks"
+        }
+      ],
+      "button": "运行测试",
+      "complete": "已通过"
+    },
+    "usage": {
+      "title": "Agent 帮你整理活动报名",
+      "subtitle": "再安排通知与日历提醒",
+      "browserLabel": "studio.example / events / workshop",
+      "fields": [
+        {
+          "label": "活动",
+          "value": "AI 创作工作坊"
+        },
+        {
+          "label": "时间",
+          "value": "11 月 8 日 14:00"
+        },
+        {
+          "label": "人数",
+          "value": "30 个席位"
+        }
+      ],
+      "featuresTitle": "自动完成",
+      "features": [
+        "填写报名资料",
+        "发送提醒邮件",
+        "生成日历邀请"
+      ],
+      "panelTitle": "通知设置",
+      "tabs": [
+        "邮件",
+        "日历"
+      ],
+      "settings": [
+        {
+          "label": "提醒对象",
+          "value": "已报名用户"
+        },
+        {
+          "label": "发送时间",
+          "value": "活动开始前 1 小时"
+        }
+      ],
+      "button": "检查配置",
+      "complete": "准备就绪"
+    },
+    "referenceDuration": 11.5,
+    "usageDuration": 11.5,
+    "durationKey": null,
+    "fixedDuration": 11.5,
+    "minDuration": null
+  },
+  "MG-045": {
+    "reference": {
+      "duration": 9,
+      "title": "从一个地点到整个世界",
+      "person": "小林",
+      "events": [
+        {
+          "year": "2021",
+          "label": "第一次公开测试",
+          "count": 22000,
+          "unit": "个收藏地点",
+          "caption": "最初，我们只想让附近的好地点更容易被发现。"
+        },
+        {
+          "year": "2022",
+          "label": "更多城市加入",
+          "count": 30000,
+          "unit": "个收藏地点",
+          "caption": "一年之后，这份小小的地图，已经连接起更多城市。"
+        }
+      ]
+    },
+    "usage": {
+      "duration": 10,
+      "title": "创作者资料库成长史",
+      "person": "阿禾",
+      "events": [
+        {
+          "year": "2024",
+          "label": "个人素材开始整理",
+          "count": 320,
+          "unit": "条灵感记录",
+          "caption": "把零散的灵感收藏起来，先从自己的小小资料库开始。"
+        },
+        {
+          "year": "2026",
+          "label": "共同整理的新阶段",
+          "count": 4800,
+          "unit": "条灵感记录",
+          "caption": "当更多创作者一起整理，灵感也有了新的生长空间。"
+        }
+      ]
+    },
+    "referenceDuration": 9,
+    "usageDuration": 10,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-046": {
+    "reference": {
+      "duration": 10,
+      "title": "复杂系统",
+      "subtitle": "中间有一层",
+      "topLabel": "输入资源",
+      "resources": [
+        "文档",
+        "图片",
+        "表格",
+        "音频"
+      ],
+      "middle": "统一处理层",
+      "bottomLabel": "输出工具",
+      "clients": [
+        "知识库",
+        "检索应用",
+        "工作台"
+      ],
+      "edgeLabels": [
+        "结构化整理",
+        "统一接口"
+      ],
+      "boundary": "本机处理",
+      "conclusion": "先看清每一层的职责",
+      "note": "连接关系，比工具名称更重要。"
+    },
+    "usage": {
+      "duration": 12,
+      "title": "内容生产",
+      "subtitle": "从素材到成片",
+      "topLabel": "内容来源",
+      "resources": [
+        "文字脚本",
+        "自有照片",
+        "屏幕录制"
+      ],
+      "middle": "剪辑与审校",
+      "bottomLabel": "交付渠道",
+      "clients": [
+        "中文教程",
+        "产品测评"
+      ],
+      "edgeLabels": [
+        "导入与整理",
+        "渲染与导出"
+      ],
+      "boundary": "制作工作区",
+      "conclusion": "中间层负责一致性",
+      "note": "每一条箭头，都对应实际的交接。"
+    },
+    "referenceDuration": 10,
+    "usageDuration": 12,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-047": {
+    "reference": {
+      "duration": 11.5,
+      "title": "链接传递的是含义",
+      "subtitle": "不同来源的文字，帮助我们理解目标内容；空泛描述不增加信息。",
+      "target": "learn.example/agents",
+      "sources": [
+        {
+          "name": "教程索引",
+          "phrase": "智能体工作流",
+          "relevant": true
+        },
+        {
+          "name": "开发手记",
+          "phrase": "工具调用入门",
+          "relevant": true
+        },
+        {
+          "name": "推荐列表",
+          "phrase": "点这里看看",
+          "relevant": false
+        }
+      ],
+      "tags": [
+        "智能体",
+        "工作流",
+        "工具调用",
+        "教程",
+        "入门"
+      ],
+      "conclusion": "好的链接文字，应描述目标内容"
+    },
+    "usage": {
+      "duration": 12,
+      "title": "把线索汇聚成一个主题",
+      "subtitle": "示例：给中文 AI 测评建立内容索引，让描述能说清目标页面。",
+      "target": "review.example/video",
+      "sources": [
+        {
+          "name": "视频工具周报",
+          "phrase": "视频生成对比",
+          "relevant": true
+        },
+        {
+          "name": "创作者笔记",
+          "phrase": "中文提示词实测",
+          "relevant": true
+        },
+        {
+          "name": "我的收藏夹",
+          "phrase": "最新实用内容",
+          "relevant": false
+        }
+      ],
+      "tags": [
+        "中文测评",
+        "提示词",
+        "画质",
+        "一致性",
+        "生成速度",
+        "视频"
+      ],
+      "conclusion": "先读描述，再决定是否值得打开"
+    },
+    "referenceDuration": 11.5,
+    "usageDuration": 12,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-048": {
+    "reference": {
+      "duration": 10,
+      "title": "把增长放到同一把刻度上",
+      "unit": "条",
+      "maximum": 100,
+      "levels": [
+        {
+          "value": 20,
+          "label": "开始整理"
+        },
+        {
+          "value": 45,
+          "label": "形成目录"
+        },
+        {
+          "value": 65,
+          "label": "可检索"
+        },
+        {
+          "value": 90,
+          "label": "可复用"
+        }
+      ],
+      "summary": "从积累到复用",
+      "note": "每一层，都有清楚的完成条件。"
+    },
+    "usage": {
+      "duration": 11,
+      "title": "中文教程素材库的完成进度",
+      "unit": "份",
+      "maximum": 200,
+      "levels": [
+        {
+          "value": 40,
+          "label": "收集原始材料"
+        },
+        {
+          "value": 85,
+          "label": "标注关键片段"
+        },
+        {
+          "value": 130,
+          "label": "完成中文审校"
+        },
+        {
+          "value": 180,
+          "label": "交付可用模板"
+        }
+      ],
+      "summary": "制作进度可见",
+      "note": "示例数据，用来演示阶段与刻度的对应。"
+    },
+    "referenceDuration": 10,
+    "usageDuration": 11,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-049": {
+    "reference": {
+      "duration": 12,
+      "title": "从想法到发布",
+      "steps": [
+        {
+          "label": "准备脚本",
+          "detail": "先说明这条内容想解决什么问题。",
+          "result": "脚本结构已建立"
+        },
+        {
+          "label": "组织素材",
+          "detail": "把图片、录屏和旁白放到对应位置。",
+          "result": "素材位置已对齐"
+        },
+        {
+          "label": "检查节奏",
+          "detail": "按叙事顺序校对信息和停留时间。",
+          "result": "节奏检查已完成"
+        },
+        {
+          "label": "完成交付",
+          "detail": "统一画幅、导出并核对成片。",
+          "result": "成片已导出"
+        }
+      ],
+      "final": "所有步骤完成，可以开始最终验收。"
+    },
+    "usage": {
+      "duration": 13,
+      "title": "中文资料整理",
+      "steps": [
+        {
+          "label": "导入项目资料",
+          "detail": "收集授权资料并保留原始来源。",
+          "result": "原始文档已归档"
+        },
+        {
+          "label": "标注关键信息",
+          "detail": "用中文短句记录每段内容的用途。",
+          "result": "关键主题已标注"
+        },
+        {
+          "label": "汇总检索目录",
+          "detail": "按使用场景建立可查找的目录。",
+          "result": "检索目录已生成"
+        },
+        {
+          "label": "复核引用来源",
+          "detail": "检查引用与说明是否准确对应。",
+          "result": "来源复核已完成"
+        }
+      ],
+      "final": "资料库已准备好，交给团队复核。"
+    },
+    "referenceDuration": 12,
+    "usageDuration": 13,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-050": {
+    "reference": {
+      "duration": 9,
+      "title": "从线条，到可连接的结构",
+      "label": "一个单元，展开更多可能",
+      "caption": "描线 → 展开 → 平铺 → 蓝图",
+      "tiles": 7,
+      "accent": "#263ec8"
+    },
+    "usage": {
+      "duration": 10,
+      "title": "把单个能力，组织成协作模块",
+      "label": "模块之间，用清楚的接口连接",
+      "caption": "以几何结构，说明组件复用与系统组织。",
+      "tiles": 5,
+      "accent": "#135b69"
+    },
+    "referenceDuration": 9,
+    "usageDuration": 10,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-051": {
+    "reference": {
+      "duration": 9,
+      "title": "把能力连接到工作",
+      "headline": "从理解，到执行",
+      "description": "一个入口，连接日常使用的多种工具。",
+      "center": "工作助手",
+      "tools": [
+        {
+          "name": "文档",
+          "icon": "file"
+        },
+        {
+          "name": "邮件",
+          "icon": "mail"
+        },
+        {
+          "name": "日历",
+          "icon": "calendar"
+        },
+        {
+          "name": "数据",
+          "icon": "chart"
+        },
+        {
+          "name": "终端",
+          "icon": "terminal"
+        },
+        {
+          "name": "文件",
+          "icon": "file"
+        },
+        {
+          "name": "浏览器",
+          "icon": "browser"
+        },
+        {
+          "name": "设计",
+          "icon": "design"
+        }
+      ],
+      "caption": "按顺序绘制连线，再展示工具之间的协作。"
+    },
+    "usage": {
+      "duration": 10,
+      "title": "中文内容团队的工作台",
+      "headline": "把制作流程连起来",
+      "description": "从选题检索，到脚本、数据与成片管理。",
+      "center": "内容中枢",
+      "tools": [
+        {
+          "name": "选题",
+          "icon": "search"
+        },
+        {
+          "name": "脚本",
+          "icon": "file"
+        },
+        {
+          "name": "排期",
+          "icon": "calendar"
+        },
+        {
+          "name": "复盘",
+          "icon": "chart"
+        },
+        {
+          "name": "素材",
+          "icon": "file"
+        },
+        {
+          "name": "发布",
+          "icon": "browser"
+        }
+      ],
+      "caption": "工具关系为示例，请按实际能力替换。"
+    },
+    "referenceDuration": 9,
+    "usageDuration": 10,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-052": {
+    "reference": {
+      "duration": 9,
+      "title": "把分散来源，汇成一个结果",
+      "subtitle": "三个来源，独立呈现，统一汇总。",
+      "items": [
+        {
+          "name": "研究资料",
+          "detail": "原始报告与阅读笔记",
+          "value": 120,
+          "tag": "资料"
+        },
+        {
+          "name": "访谈记录",
+          "detail": "经过授权的用户反馈",
+          "value": 85,
+          "tag": "访谈"
+        },
+        {
+          "name": "项目案例",
+          "detail": "整理好的经验与证据",
+          "value": 64,
+          "tag": "案例"
+        }
+      ],
+      "unit": "份",
+      "result": "已收集内容",
+      "note": "示例数据 · 汇总数值等于各来源之和"
+    },
+    "usage": {
+      "duration": 10,
+      "title": "中文课程素材，一处看清",
+      "subtitle": "各组整理自己的内容，再交付到统一目录。",
+      "items": [
+        {
+          "name": "产品录屏",
+          "detail": "核心功能与完整操作流程",
+          "value": 38,
+          "tag": "演示"
+        },
+        {
+          "name": "讲解脚本",
+          "detail": "中文知识点与旁白文案",
+          "value": 24,
+          "tag": "脚本"
+        },
+        {
+          "name": "动效模板",
+          "detail": "可复用的信息解释组件",
+          "value": 50,
+          "tag": "动效"
+        }
+      ],
+      "unit": "项",
+      "result": "课程素材总计",
+      "note": "数量由参数提供，可替换为团队实际数据"
+    },
+    "referenceDuration": 9,
+    "usageDuration": 10,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-053": {
+    "reference": {
+      "duration": 12,
+      "title": "从一个原型，到完整的产品",
+      "events": [
+        {
+          "year": "2022",
+          "label": "连接最初的想法",
+          "detail": "先建立关系，再找到可验证的问题。",
+          "icon": "network",
+          "color": "#5894ff"
+        },
+        {
+          "year": "2023",
+          "label": "做出第一个版本",
+          "detail": "把核心流程变成可以使用的工具。",
+          "icon": "build",
+          "color": "#ff7188"
+        },
+        {
+          "year": "2024",
+          "label": "逐步积累反馈",
+          "detail": "每次迭代都回应一个真实的使用场景。",
+          "icon": "chart",
+          "color": "#54dbad"
+        },
+        {
+          "year": "2025",
+          "label": "把体验带到更多设备",
+          "detail": "在不同环境中延续相同的工作方式。",
+          "icon": "device",
+          "color": "#ffca62"
+        }
+      ]
+    },
+    "usage": {
+      "duration": 13,
+      "title": "中文教程项目的迭代节点",
+      "events": [
+        {
+          "year": "V1.0",
+          "label": "建立基础课程目录",
+          "detail": "用统一语言描述功能和操作目标。",
+          "icon": "network",
+          "color": "#5894ff"
+        },
+        {
+          "year": "V1.5",
+          "label": "补充可复用动效",
+          "detail": "让抽象信息以图形和节奏呈现。",
+          "icon": "build",
+          "color": "#c892fa"
+        },
+        {
+          "year": "V2.0",
+          "label": "完成多场景验证",
+          "detail": "把桌面演示、移动观看和中文阅读连起来。",
+          "icon": "device",
+          "color": "#54dbad"
+        }
+      ]
+    },
+    "referenceDuration": 12,
+    "usageDuration": 13,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-054": {
+    "reference": {
+      "duration": 10,
+      "title": "数据可以缺失，也可以重新拼回",
+      "message": "用同一组数据块，展示局部缺失与逐格恢复。",
+      "grid": 16,
+      "missing": 19,
+      "seed": 47,
+      "labels": [
+        "排列原始数据",
+        "模拟局部缺失",
+        "从保留副本还原"
+      ],
+      "note": "概念动画 · 不实现二维码或纠错算法"
+    },
+    "usage": {
+      "duration": 11,
+      "title": "让素材同步的中断与恢复看得见",
+      "message": "示例：传输部分中断后，重新补齐丢失的数据块。",
+      "grid": 18,
+      "missing": 26,
+      "seed": 81,
+      "labels": [
+        "拆分传输数据",
+        "部分数据未送达",
+        "重新传输并补齐"
+      ],
+      "note": "每个方格为示意数据块；恢复来自预设副本"
+    },
+    "referenceDuration": 10,
+    "usageDuration": 11,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-055": {
+    "reference": {
+      "duration": 12,
+      "title": "思考、调用、读取结果，然后再继续",
+      "initialTokens": 1800,
+      "capacity": 12000,
+      "steps": [
+        {
+          "tool": "检索",
+          "action": "寻找相关实现",
+          "tokens": 600
+        },
+        {
+          "tool": "读取",
+          "action": "查看源文件内容",
+          "tokens": 1800
+        },
+        {
+          "tool": "修改",
+          "action": "补充边界处理",
+          "tokens": 400
+        },
+        {
+          "tool": "测试",
+          "action": "读取验证结果",
+          "tokens": 1200
+        }
+      ],
+      "conclusion": "无需新的工具调用，整理并返回结果。"
+    },
+    "usage": {
+      "duration": 13,
+      "title": "中文资料助手如何完成一次整理",
+      "initialTokens": 2400,
+      "capacity": 16000,
+      "steps": [
+        {
+          "tool": "目录",
+          "action": "获取项目资料清单",
+          "tokens": 800
+        },
+        {
+          "tool": "读取",
+          "action": "提取中文文档段落",
+          "tokens": 3000
+        },
+        {
+          "tool": "检索",
+          "action": "补充引用来源",
+          "tokens": 1400
+        },
+        {
+          "tool": "整理",
+          "action": "生成主题与标签",
+          "tokens": 600
+        },
+        {
+          "tool": "校对",
+          "action": "检查引用对应关系",
+          "tokens": 1000
+        }
+      ],
+      "conclusion": "整理结果已形成，交给使用者复核。"
+    },
+    "referenceDuration": 12,
+    "usageDuration": 13,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-056": {
+    "reference": {
+      "duration": 10,
+      "title": "等待之后，信息开始流动",
+      "prompt": "把这一季的项目进展整理成摘要。",
+      "waiting": "正在组织回答…",
+      "ready": "输出状态已展开",
+      "tokens": [
+        "读取",
+        "思考",
+        "组织",
+        "片段",
+        "主题",
+        "结果",
+        "校对",
+        "上下文",
+        "生成",
+        "完成",
+        "检索",
+        "返回"
+      ],
+      "columns": 10,
+      "rows": 8,
+      "note": "示例动画 · 数量是画面单元数，不是性能测试数据"
+    },
+    "usage": {
+      "duration": 11,
+      "title": "把中文摘要拆成可见的片段",
+      "prompt": "请整理课程评价，并按主题归类。",
+      "waiting": "正在汇总中文反馈…",
+      "ready": "已排布的内容片段",
+      "tokens": [
+        "课程",
+        "体验",
+        "问题",
+        "建议",
+        "清晰",
+        "节奏",
+        "工具",
+        "示例",
+        "理解",
+        "复习",
+        "实践",
+        "改进"
+      ],
+      "columns": 8,
+      "rows": 7,
+      "note": "短标签由参数提供，可替换为主题词、任务状态或信息类别"
+    },
+    "referenceDuration": 10,
+    "usageDuration": 11,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-057": {
+    "reference": {
+      "duration": 8,
+      "title": "说明数据在什么位置处理",
+      "headline": "工作留在本机",
+      "description": "示例架构：处理与保存均在当前设备进行。",
+      "device": "本地工作设备",
+      "mode": "local",
+      "lock": true,
+      "cloudLabel": "此示例未启用云端同步",
+      "note": "能力示意，必须按实际产品功能、数据流向与配置填写。"
+    },
+    "usage": {
+      "duration": 9,
+      "title": "把同步条件说清楚",
+      "headline": "确认之后再同步",
+      "description": "示例架构：选定资料经授权后发送到团队空间。",
+      "device": "团队资料终端",
+      "mode": "sync",
+      "lock": true,
+      "cloudLabel": "已授权的同步路径",
+      "note": "图标不构成隐私保证；请核对真实产品的同步范围与安全设置。"
+    },
+    "referenceDuration": 8,
+    "usageDuration": 9,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-058": {
+    "reference": {
+      "duration": 14,
+      "title": "容量消耗、拒绝与回补",
+      "capacity": 10,
+      "refillRate": 2,
+      "simSeconds": 12,
+      "requests": [
+        {
+          "at": 0.5,
+          "cost": 1
+        },
+        {
+          "at": 1.3,
+          "cost": 1
+        },
+        {
+          "at": 1.9,
+          "cost": 1
+        },
+        {
+          "at": 2.5,
+          "cost": 1
+        },
+        {
+          "at": 2.6,
+          "cost": 1
+        },
+        {
+          "at": 2.7,
+          "cost": 1
+        },
+        {
+          "at": 2.8,
+          "cost": 1
+        },
+        {
+          "at": 2.9,
+          "cost": 1
+        },
+        {
+          "at": 3.0,
+          "cost": 1
+        },
+        {
+          "at": 3.1,
+          "cost": 1
+        },
+        {
+          "at": 3.2,
+          "cost": 1
+        },
+        {
+          "at": 3.3,
+          "cost": 1
+        },
+        {
+          "at": 3.4,
+          "cost": 1
+        },
+        {
+          "at": 3.5,
+          "cost": 1
+        },
+        {
+          "at": 3.6,
+          "cost": 1
+        },
+        {
+          "at": 3.7,
+          "cost": 1
+        },
+        {
+          "at": 3.8,
+          "cost": 1
+        },
+        {
+          "at": 3.9,
+          "cost": 1
+        },
+        {
+          "at": 4.0,
+          "cost": 1
+        },
+        {
+          "at": 4.1,
+          "cost": 1
+        },
+        {
+          "at": 4.2,
+          "cost": 1
+        },
+        {
+          "at": 4.3,
+          "cost": 1
+        },
+        {
+          "at": 4.4,
+          "cost": 1
+        },
+        {
+          "at": 4.5,
+          "cost": 1
+        },
+        {
+          "at": 4.6,
+          "cost": 1
+        },
+        {
+          "at": 5.1,
+          "cost": 1
+        },
+        {
+          "at": 5.6,
+          "cost": 1
+        },
+        {
+          "at": 6.2,
+          "cost": 1
+        },
+        {
+          "at": 7.6,
+          "cost": 1
+        }
+      ],
+      "note": "离散令牌桶示例 · 每次回补1格 · 同时刻先回补后处理请求"
+    },
+    "usage": {
+      "duration": 15,
+      "title": "批量请求为什么需要等待",
+      "capacity": 8,
+      "refillRate": 1.5,
+      "simSeconds": 12,
+      "requests": [
+        {
+          "at": 0.6,
+          "cost": 2
+        },
+        {
+          "at": 1.2,
+          "cost": 2
+        },
+        {
+          "at": 2.3,
+          "cost": 2
+        },
+        {
+          "at": 2.4,
+          "cost": 2
+        },
+        {
+          "at": 2.5,
+          "cost": 2
+        },
+        {
+          "at": 2.6,
+          "cost": 2
+        },
+        {
+          "at": 2.7,
+          "cost": 2
+        },
+        {
+          "at": 3.2,
+          "cost": 2
+        },
+        {
+          "at": 4,
+          "cost": 2
+        },
+        {
+          "at": 4.1,
+          "cost": 2
+        },
+        {
+          "at": 5,
+          "cost": 2
+        },
+        {
+          "at": 6,
+          "cost": 2
+        }
+      ],
+      "note": "示例规则：每次请求消耗2格；不足时拒绝，后续容量持续恢复"
+    },
+    "referenceDuration": 14,
+    "usageDuration": 15,
+    "durationKey": "duration",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-059": {
+    "reference": {
+      "durationSeconds": 18,
+      "title": "多个状态，组成一棵树",
+      "levels": [
+        "q₀",
+        "q₁",
+        "q₂"
+      ],
+      "summary": [
+        "叶节点 = 纯状态",
+        "亲缘越近，重叠越多",
+        "→ 超度量结构"
+      ],
+      "leaves": [],
+      "notes": [],
+      "footnote": "参考图示的中文转写；物理结论未在本项目中核实"
+    },
+    "usage": {
+      "durationSeconds": 14,
+      "title": "把复杂任务，逐层拆开",
+      "levels": [
+        "目标",
+        "阶段",
+        "动作"
+      ],
+      "summary": [
+        "每个叶节点，都是一个可执行动作",
+        "同一分支共享上下文",
+        "→ 并行执行，逐层汇总"
+      ],
+      "leaves": [
+        "收集",
+        "分类",
+        "摘录",
+        "检索",
+        "起草",
+        "配图",
+        "核对",
+        "交付"
+      ],
+      "notes": [
+        "先明确任务目标",
+        "把阶段拆成具体动作",
+        "每个动作都有验收结果"
+      ],
+      "footnote": "任务拆分的参数示例，不代表真实系统执行结果"
+    },
+    "referenceDuration": 18,
+    "usageDuration": 14,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-060": {
+    "reference": {
+      "durationSeconds": 4.5,
+      "title": "亲自掌控。",
+      "sliders": [
+        {
+          "label": "策划",
+          "values": [
+            35,
+            31,
+            45,
+            83
+          ]
+        },
+        {
+          "label": "导演",
+          "values": [
+            75,
+            61,
+            46,
+            18
+          ]
+        },
+        {
+          "label": "AI",
+          "values": [
+            32,
+            54,
+            78,
+            20
+          ]
+        },
+        {
+          "label": "剪辑",
+          "values": [
+            64,
+            28,
+            17,
+            59
+          ]
+        }
+      ],
+      "showValues": false,
+      "note": ""
+    },
+    "usage": {
+      "durationSeconds": 7,
+      "title": "把主动权，交还给你",
+      "sliders": [
+        {
+          "label": "创意发散",
+          "values": [
+            25,
+            62,
+            80,
+            65
+          ]
+        },
+        {
+          "label": "事实核验",
+          "values": [
+            40,
+            70,
+            85,
+            95
+          ]
+        },
+        {
+          "label": "自动执行",
+          "values": [
+            65,
+            50,
+            35,
+            20
+          ]
+        }
+      ],
+      "showValues": true,
+      "note": "演示权重；百分比不是模型实测分数"
+    },
+    "referenceDuration": 4.5,
+    "usageDuration": 7,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-061": {
+    "reference": {
+      "durationSeconds": 8.7,
+      "title": "主节点离线",
+      "subtitle": "B 发现租约已过期，接管任务。同一时刻，只有一个节点胜出。",
+      "nodes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "failedIndex": 0,
+      "successorIndex": 1,
+      "leaseSeconds": 10,
+      "eventTimes": [
+        "8:00",
+        "19:59",
+        "20:00"
+      ],
+      "bucketTitle": "共享存储",
+      "channelTitle": "事件频道",
+      "footnote": "按参考机制做的动画示意；技术结论未在本项目中验证"
+    },
+    "usage": {
+      "durationSeconds": 11,
+      "title": "断线以后，任务接着跑",
+      "subtitle": "制作节点失联后，备用节点取得任务，继续提交一次结果。",
+      "nodes": [
+        "甲",
+        "乙",
+        "丙"
+      ],
+      "failedIndex": 1,
+      "successorIndex": 2,
+      "leaseSeconds": 15,
+      "eventTimes": [
+        "09:00",
+        "09:59",
+        "10:00"
+      ],
+      "bucketTitle": "任务登记簿",
+      "channelTitle": "交付记录",
+      "footnote": "Agent 调度的参数示例；此画面不连接真实后台"
+    },
+    "referenceDuration": 8.7,
+    "usageDuration": 11,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  },
+  "MG-062": {
+    "reference": {
+      "durationSeconds": 8,
+      "titleLines": [
+        "此刻，每个传奇",
+        "都想加入"
+      ],
+      "tickets": [
+        {
+          "year": 2023,
+          "name": "U2",
+          "detail": "开幕演出 · 40 场"
+        },
+        {
+          "year": 2024,
+          "name": "PHISH",
+          "detail": "4 夜即兴演出"
+        },
+        {
+          "year": 2024,
+          "name": "DEAD & COMPANY",
+          "detail": "48 场演出"
+        },
+        {
+          "year": 2024,
+          "name": "EAGLES",
+          "detail": "72 场演出"
+        },
+        {
+          "year": 2025,
+          "name": "KENNY CHESNEY",
+          "detail": "25 场演出"
+        },
+        {
+          "year": 2025,
+          "name": "BACKSTREET BOYS",
+          "detail": "53 场演出"
+        },
+        {
+          "year": 2026,
+          "name": "NO DOUBT",
+          "detail": "18 场演出"
+        }
+      ],
+      "showAxis": false,
+      "stamp": "ADMIT ONE",
+      "summaryValue": "$420.5M",
+      "summaryLabel": "2024 · 场馆票房纪录",
+      "footnote": "演出名称、年份及数字来自参考原片，未核实，仅供内部样片对照"
+    },
+    "usage": {
+      "durationSeconds": 9,
+      "titleLines": [
+        "每次进步",
+        "都有迹可循"
+      ],
+      "tickets": [
+        {
+          "year": 2022,
+          "name": "第一个原型",
+          "detail": "把需求变成能试用的界面"
+        },
+        {
+          "year": 2023,
+          "name": "上线测试版",
+          "detail": "邀请真实用户参与反馈"
+        },
+        {
+          "year": 2024,
+          "name": "建立模板库",
+          "detail": "让重复工作可以直接复用"
+        },
+        {
+          "year": 2025,
+          "name": "加入自动检查",
+          "detail": "发现问题后自动回到修改"
+        },
+        {
+          "year": 2026,
+          "name": "完成工作流",
+          "detail": "从文案到交付，连成完整过程"
+        }
+      ],
+      "showAxis": true,
+      "stamp": "里程碑",
+      "summaryValue": "5 个阶段",
+      "summaryLabel": "从想法到稳定交付",
+      "footnote": "虚构项目历程，用于验证年份、条数和中文参数替换"
+    },
+    "referenceDuration": 8,
+    "usageDuration": 9,
+    "durationKey": "durationSeconds",
+    "fixedDuration": null,
+    "minDuration": null
+  }
+}

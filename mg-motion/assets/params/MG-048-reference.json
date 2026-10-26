@@ -1,0 +1,26 @@
+{
+  "duration": 10,
+  "title": "把增长放到同一把刻度上",
+  "unit": "条",
+  "maximum": 100,
+  "levels": [
+    {
+      "value": 20,
+      "label": "开始整理"
+    },
+    {
+      "value": 45,
+      "label": "形成目录"
+    },
+    {
+      "value": 65,
+      "label": "可检索"
+    },
+    {
+      "value": 90,
+      "label": "可复用"
+    }
+  ],
+  "summary": "从积累到复用",
+  "note": "每一层，都有清楚的完成条件。"
+}

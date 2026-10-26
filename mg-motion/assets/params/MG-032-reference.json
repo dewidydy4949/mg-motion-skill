@@ -1,0 +1,42 @@
+{
+  "durationSeconds": 6,
+  "intro": "在 AI 时代，难的是",
+  "items": [
+    {
+      "label": "选对模型",
+      "color": "#737366",
+      "icon": 0
+    },
+    {
+      "label": "写好提示词",
+      "color": "#46636e",
+      "icon": 5
+    },
+    {
+      "label": "管理上下文",
+      "color": "#765da2",
+      "icon": 6
+    },
+    {
+      "label": "检查 Agent 的修改",
+      "color": "#989386",
+      "icon": 7
+    },
+    {
+      "label": "评估输出结果",
+      "color": "#529778",
+      "icon": 3
+    },
+    {
+      "label": "在应用之间切换",
+      "color": "#b34f6a",
+      "icon": 1
+    },
+    {
+      "label": "管理你的桌面",
+      "color": "#438dbb",
+      "icon": 4
+    }
+  ],
+  "footnote": "参考376开头词组的中文节选；背景和图标均为代码生成。"
+}

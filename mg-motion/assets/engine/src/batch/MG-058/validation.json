@@ -1,0 +1,9 @@
+{
+  "id": "MG-058",
+  "results": [
+    "reference: valid",
+    "reference: rejects invalid duration and oversized Chinese title",
+    "usage: valid",
+    "usage: rejects invalid duration and oversized Chinese title"
+  ]
+}

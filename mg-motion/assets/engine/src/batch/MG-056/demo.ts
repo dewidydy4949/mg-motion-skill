@@ -1,0 +1,3 @@
+import {Props} from './model';
+export const referenceProps:Props={"duration": 10, "title": "等待之后，信息开始流动", "prompt": "把这一季的项目进展整理成摘要。", "waiting": "正在组织回答…", "ready": "输出状态已展开", "tokens": ["读取", "思考", "组织", "片段", "主题", "结果", "校对", "上下文", "生成", "完成", "检索", "返回"], "columns": 10, "rows": 8, "note": "示例动画 · 数量是画面单元数，不是性能测试数据"};
+export const usageProps:Props={"duration": 11, "title": "把中文摘要拆成可见的片段", "prompt": "请整理课程评价，并按主题归类。", "waiting": "正在汇总中文反馈…", "ready": "已排布的内容片段", "tokens": ["课程", "体验", "问题", "建议", "清晰", "节奏", "工具", "示例", "理解", "复习", "实践", "改进"], "columns": 8, "rows": 7, "note": "短标签由参数提供，可替换为主题词、任务状态或信息类别"};

@@ -1,0 +1,18 @@
+# Generated dependencies, caches, local media, and credentials
+**/node_modules/
+**/.cache/
+**/mg-jobs/
+**/scratch/
+**/work/
+**/out/
+**/dist/
+*.mp4
+*.mov
+*.webm
+*.zip
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

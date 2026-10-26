@@ -1,0 +1,10 @@
+{
+  "title": "提示词生成图片并落入版面",
+  "durationSeconds": 12,
+  "prompt": "生成一张温暖的山间步道插画，保留干净留白，用作旅行手册封面。",
+  "documentTitle": "走进山野的周末",
+  "documentBody": "沿着山间小路慢慢前行，发现日常之外的风景。让一张插画成为故事的开场。",
+  "resultLabel": "插画已加入文档",
+  "accent": "#7b9b72",
+  "art": "landscape"
+}

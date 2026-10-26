@@ -1,0 +1,3 @@
+import {Props} from './model';
+export const referenceProps:Props={"duration": 10, "title": "把增长放到同一把刻度上", "unit": "条", "maximum": 100, "levels": [{"value": 20, "label": "开始整理"}, {"value": 45, "label": "形成目录"}, {"value": 65, "label": "可检索"}, {"value": 90, "label": "可复用"}], "summary": "从积累到复用", "note": "每一层，都有清楚的完成条件。"};
+export const usageProps:Props={"duration": 11, "title": "中文教程素材库的完成进度", "unit": "份", "maximum": 200, "levels": [{"value": 40, "label": "收集原始材料"}, {"value": 85, "label": "标注关键片段"}, {"value": 130, "label": "完成中文审校"}, {"value": 180, "label": "交付可用模板"}], "summary": "制作进度可见", "note": "示例数据，用来演示阶段与刻度的对应。"};

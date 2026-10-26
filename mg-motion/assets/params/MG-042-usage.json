@@ -1,0 +1,51 @@
+{
+  "durationSeconds": 10,
+  "label": "提示词课堂",
+  "title": "逐句看懂这个要求。",
+  "chapter": "提示词 · 重点拆解",
+  "tokens": [
+    {
+      "text": "请将",
+      "at": 1.2,
+      "marked": false
+    },
+    {
+      "text": "这段会议记录",
+      "at": 2,
+      "marked": false
+    },
+    {
+      "text": "整理为",
+      "at": 3,
+      "marked": false
+    },
+    {
+      "text": "三个",
+      "at": 4,
+      "marked": true
+    },
+    {
+      "text": "行动项",
+      "at": 5,
+      "marked": true
+    },
+    {
+      "text": "，并标注",
+      "at": 6,
+      "marked": false
+    },
+    {
+      "text": "负责人",
+      "at": 6.8,
+      "marked": false
+    },
+    {
+      "text": "和截止日期。",
+      "at": 7.7,
+      "marked": false
+    }
+  ],
+  "context": "先区分已经作出的决定和仍需讨论的问题，再提取可执行事项。缺少负责人或时间时，请保留待确认标记，避免自行补充不存在的信息。",
+  "translation": "观察“数量、输出结构、必填字段”三个约束。",
+  "action": "检查提示词结构"
+}

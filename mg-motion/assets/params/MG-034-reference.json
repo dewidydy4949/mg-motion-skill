@@ -1,0 +1,49 @@
+{
+  "title": "让代码变化看得见",
+  "durationSeconds": 16,
+  "fileName": "carousel.js",
+  "steps": [
+    {
+      "title": "读取每张卡片的位置",
+      "note": "先计算相对中心的位移，预览卡片随位置平滑移动。",
+      "code": [
+        "const progress = slide.progress;",
+        "const offset = progress * 360;",
+        "slide.style.transform =",
+        "  `translateX(${offset}px)`;"
+      ],
+      "highlight": 1,
+      "result": "位置跟随",
+      "detail": "滑动距离对应画面位移",
+      "accent": "#638e79"
+    },
+    {
+      "title": "让文字跟随位移",
+      "note": "将位移映射到文字高度，让卡片与文案形成层次。",
+      "code": [
+        "const distance = Math.abs(progress);",
+        "const y = distance * 50;",
+        "text.style.transform =",
+        "  `translateY(${y}px)`;"
+      ],
+      "highlight": 3,
+      "result": "文字视差",
+      "detail": "同一数据驱动不同层次",
+      "accent": "#d88696"
+    },
+    {
+      "title": "根据速度调整吸附",
+      "note": "快滑缩短吸附时间；数值示例仅用于解释动画逻辑。",
+      "code": [
+        "const speed = distance / elapsed;",
+        "const duration = 1000 - speed * 800;",
+        "swiper.params.speed =",
+        "  Math.max(200, Math.min(1000, duration));"
+      ],
+      "highlight": 3,
+      "result": "速度响应",
+      "detail": "限制最短与最长时间",
+      "accent": "#aa94c9"
+    }
+  ]
+}

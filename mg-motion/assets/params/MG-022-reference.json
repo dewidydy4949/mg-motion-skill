@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 6,
+  "title": "跨过目标线，状态翻转",
+  "metric": "完成率",
+  "before": 68,
+  "after": 86,
+  "threshold": 75,
+  "beforeLabel": "需要继续推进",
+  "afterLabel": "已超过目标",
+  "note": "演示数据 · 状态由阈值自动判断"
+}

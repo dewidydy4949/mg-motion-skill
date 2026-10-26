@@ -1,0 +1,10 @@
+{
+  "title": "操作示意与固定勾选清单",
+  "sourceStart": 3,
+  "sourceEnd": 19,
+  "parameters": "steps 3–5项，label 12、detail 24、result 14中文宽度；title 14，final 22；duration 3–40秒。清单、主画面和顶部进度共享当前步骤。",
+  "limitations": [
+    "保留原片固定侧栏、当前箭头和逐步勾选，主操作改为文档构建示意。",
+    "不包含调酒、液体物理或真实软件自动化；完成状态仅是动画数据。"
+  ]
+}

@@ -1,0 +1,71 @@
+import {Props} from './model';
+export const referenceProps:Props={
+  "durationSeconds": 7,
+  "title": "每种结果，都有下一步",
+  "subtitle": "状态、例子和处理建议，成组展示。",
+  "results": [
+    {
+      "status": "有效",
+      "example": "资料完整，可直接使用。",
+      "action": "进入下一流程",
+      "color": "#62d8b1"
+    },
+    {
+      "status": "待核实",
+      "example": "来源尚未确认。",
+      "action": "补充来源信息",
+      "color": "#c4a3ff"
+    },
+    {
+      "status": "需抽检",
+      "example": "大部分合格，仍需复核。",
+      "action": "抽样检查质量",
+      "color": "#e3b958"
+    },
+    {
+      "status": "重复",
+      "example": "发现相似或重复内容。",
+      "action": "合并保留一份",
+      "color": "#f08bcd"
+    },
+    {
+      "status": "未知",
+      "example": "现有证据不足以判断。",
+      "action": "转交人工处理",
+      "color": "#9aa9cf"
+    },
+    {
+      "status": "无效",
+      "example": "关键字段不符合要求。",
+      "action": "退回补充材料",
+      "color": "#ee7b85"
+    }
+  ],
+  "note": "分类结果为演示，不代表真实审核结论"
+};
+export const usageProps:Props={
+  "durationSeconds": 6,
+  "title": "资料入库前的三种去向",
+  "subtitle": "按实际规则整理，明确下一步。",
+  "results": [
+    {
+      "status": "可入库",
+      "example": "说明完整，版本已确认。",
+      "action": "提交归档",
+      "color": "#62d8b1"
+    },
+    {
+      "status": "待补充",
+      "example": "缺少责任人与有效日期。",
+      "action": "补齐关键信息",
+      "color": "#e3b958"
+    },
+    {
+      "status": "需合并",
+      "example": "多个版本记录相同内容。",
+      "action": "统一保留最新版本",
+      "color": "#f08bcd"
+    }
+  ],
+  "note": "资料处理示意 · 请按实际业务规则填写"
+};

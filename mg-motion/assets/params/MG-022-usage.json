@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 7,
+  "title": "本周交付，是否达标",
+  "metric": "按时交付比例",
+  "before": 72,
+  "after": 94,
+  "threshold": 90,
+  "beforeLabel": "仍有任务延误",
+  "afterLabel": "目标已经完成",
+  "note": "示例业务数据 · 请替换为真实记录"
+}

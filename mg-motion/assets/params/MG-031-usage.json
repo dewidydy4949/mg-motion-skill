@@ -1,0 +1,44 @@
+{
+  "durationSeconds": 6,
+  "title": "把创作流程",
+  "emphasis": "装进你的工具箱",
+  "items": [
+    {
+      "category": "创作",
+      "label": "文字与脚本",
+      "icon": 5,
+      "color": "#c7afe7"
+    },
+    {
+      "category": "视觉",
+      "label": "图片与封面",
+      "icon": 4,
+      "color": "#c2dcf0"
+    },
+    {
+      "category": "效率",
+      "label": "表格与数据",
+      "icon": 0,
+      "color": "#c5ed92"
+    },
+    {
+      "category": "自动化",
+      "label": "Agent 工作流",
+      "icon": 7,
+      "color": "#ffe59b"
+    },
+    {
+      "category": "表达",
+      "label": "演示与讲解",
+      "icon": 6,
+      "color": "#f4c58c"
+    },
+    {
+      "category": "发布",
+      "label": "视频与音频",
+      "icon": 3,
+      "color": "#edb0cd"
+    }
+  ],
+  "footnote": "虚构工具分类，仅展示替换文字、图标、颜色后的效果。"
+}

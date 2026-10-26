@@ -1,0 +1,11 @@
+{
+  "sourceStart": 58,
+  "sourceEnd": 69.5,
+  "title": "语义连线与关键词汇聚",
+  "parameters": "sources 固定3项，每项含 name/phrase/relevant；tags 3–6项；relevant 控制线色与无关提示。duration 3–40秒。 name10、phrase7、target15、tag6中文宽度。",
+  "limitations": [
+    "保留深色背景、三条弧线、沿线移动标签、暖色目标球与关键词环绕；品牌域名替换为示例域名。",
+    "仅演示语义关系，不计算搜索排名或自动提取关键词。",
+    "标签按参数顺序展开，词条集合由使用者提供。"
+  ]
+}

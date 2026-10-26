@@ -1,0 +1,15 @@
+{
+  "title": "霓虹节点年表与图标讲史",
+  "sourceStart": 2,
+  "sourceEnd": 11,
+  "parameters": "events3–5项，year4.5、label18、detail32中文宽度，icon为network/build/chart/device/rocket，color六位HEX；duration3–40秒。",
+  "limitations": [
+    "原片为竖版；横版重排为左侧年份与说明、右侧事件线稿，保留底部持久节点轴。",
+    "年份与事件全部可替换；演示项目时间不构成真实历史断言。"
+  ],
+  "frameFractions": [
+    0.18,
+    0.55,
+    0.996
+  ]
+}

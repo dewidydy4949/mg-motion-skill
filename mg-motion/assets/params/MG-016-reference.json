@@ -1,0 +1,40 @@
+{
+  "durationSeconds": 5,
+  "accent": "#ff591c",
+  "scenes": [
+    {
+      "lines": [
+        "AFTER",
+        "EFFECTS"
+      ],
+      "background": "#eeeadd",
+      "ink": "#0c0c0d",
+      "strike": true
+    },
+    {
+      "lines": [
+        "KEY",
+        "FRAMES"
+      ],
+      "background": "#2d32ee",
+      "ink": "#eeeadd",
+      "strike": true
+    },
+    {
+      "lines": [
+        "JUST",
+        "CODE."
+      ],
+      "background": "#0b0c0e",
+      "ink": "#eeeadd"
+    },
+    {
+      "lines": [
+        "OPUS",
+        "5.5"
+      ],
+      "background": "#0b0c0e",
+      "ink": "#eeeadd"
+    }
+  ]
+}

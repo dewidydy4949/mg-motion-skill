@@ -1,0 +1,31 @@
+{
+  "duration": 11.5,
+  "title": "链接传递的是含义",
+  "subtitle": "不同来源的文字，帮助我们理解目标内容；空泛描述不增加信息。",
+  "target": "learn.example/agents",
+  "sources": [
+    {
+      "name": "教程索引",
+      "phrase": "智能体工作流",
+      "relevant": true
+    },
+    {
+      "name": "开发手记",
+      "phrase": "工具调用入门",
+      "relevant": true
+    },
+    {
+      "name": "推荐列表",
+      "phrase": "点这里看看",
+      "relevant": false
+    }
+  ],
+  "tags": [
+    "智能体",
+    "工作流",
+    "工具调用",
+    "教程",
+    "入门"
+  ],
+  "conclusion": "好的链接文字，应描述目标内容"
+}

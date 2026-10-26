@@ -1,0 +1,29 @@
+{
+  "title": "从选题到发布，逐步推进",
+  "durationSeconds": 14,
+  "taskLabel": "示例任务：制作一份月度洞察报告",
+  "completionNote": "报告、图表与摘要已经整理完成",
+  "accent": "#47877c",
+  "stages": [
+    {
+      "code": "RESEARCH",
+      "label": "调研",
+      "description": "收集资料并确认信息来源"
+    },
+    {
+      "code": "DRAFT",
+      "label": "写作",
+      "description": "归纳结论，完成报告初稿"
+    },
+    {
+      "code": "REVIEW",
+      "label": "校验",
+      "description": "检查数据和文字表达"
+    },
+    {
+      "code": "PUBLISH",
+      "label": "发布",
+      "description": "导出正式版并归档素材"
+    }
+  ]
+}

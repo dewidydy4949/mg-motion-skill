@@ -1,0 +1,10 @@
+{
+  "title": "多源卡片与统一结果",
+  "sourceStart": 24,
+  "sourceEnd": 28.5,
+  "parameters": "items 固定3项，value 为0–99999；name10、detail19、tag8中文宽度。结果由三项 value 求和；unit4、result12、note35；duration3–40秒。",
+  "limitations": [
+    "保留原片三张来源卡、蓝紫色带、弧形连线与下方汇总节点。",
+    "动画只求和传入数值，不抓取第三方数据；卡片人物改为序号图形。"
+  ]
+}

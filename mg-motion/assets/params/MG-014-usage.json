@@ -1,0 +1,139 @@
+{
+  "title": "AI 工作流测试",
+  "viewLabel": "结果记录",
+  "durationSeconds": 10,
+  "focus": [
+    "pass",
+    "verdict"
+  ],
+  "question": "这次测试，\n哪些已达标？",
+  "closing": "聚焦结论，也保留上下文。",
+  "footnote": "演示数据 · 用于验证模板复用，不代表实际评测结果",
+  "dimOpacity": 0.2,
+  "columns": [
+    {
+      "id": "task",
+      "label": "任务",
+      "width": 280,
+      "icon": "briefcase"
+    },
+    {
+      "id": "workflow",
+      "label": "流程",
+      "width": 240,
+      "icon": "team"
+    },
+    {
+      "id": "count",
+      "label": "样本数",
+      "width": 190,
+      "icon": "table",
+      "align": "right"
+    },
+    {
+      "id": "pass",
+      "label": "通过率",
+      "width": 270,
+      "icon": "check",
+      "align": "right"
+    },
+    {
+      "id": "verdict",
+      "label": "结论",
+      "width": 400,
+      "icon": "star"
+    },
+    {
+      "id": "date",
+      "label": "更新日期",
+      "width": 300,
+      "icon": "calendar"
+    }
+  ],
+  "rows": [
+    {
+      "id": "notes",
+      "cells": {
+        "task": "会议纪要",
+        "workflow": {
+          "text": "整理",
+          "tag": "blue"
+        },
+        "count": "20",
+        "pass": "95%",
+        "verdict": "结构清楚，待复核",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "summary",
+      "cells": {
+        "task": "文档摘要",
+        "workflow": {
+          "text": "提炼",
+          "tag": "green"
+        },
+        "count": "20",
+        "pass": "90%",
+        "verdict": "保留关键结论",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "sheet",
+      "cells": {
+        "task": "表格整理",
+        "workflow": {
+          "text": "分类",
+          "tag": "violet"
+        },
+        "count": "20",
+        "pass": "100%",
+        "verdict": "字段与分类一致",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "search",
+      "cells": {
+        "task": "知识检索",
+        "workflow": {
+          "text": "检索",
+          "tag": "amber"
+        },
+        "count": "20",
+        "pass": "85%",
+        "verdict": "补充来源说明",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "mail",
+      "cells": {
+        "task": "邮件草稿",
+        "workflow": {
+          "text": "写作",
+          "tag": "rose"
+        },
+        "count": "20",
+        "pass": "95%",
+        "verdict": "语气符合要求",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "compare",
+      "cells": {
+        "task": "版本比较",
+        "workflow": {
+          "text": "核对",
+          "tag": "blue"
+        },
+        "count": "20",
+        "pass": "90%",
+        "verdict": "差异已逐项标注",
+        "date": "2026-10-26"
+      }
+    }
+  ]
+}

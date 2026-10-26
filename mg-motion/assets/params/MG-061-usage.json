@@ -1,0 +1,21 @@
+{
+  "durationSeconds": 11,
+  "title": "断线以后，任务接着跑",
+  "subtitle": "制作节点失联后，备用节点取得任务，继续提交一次结果。",
+  "nodes": [
+    "甲",
+    "乙",
+    "丙"
+  ],
+  "failedIndex": 1,
+  "successorIndex": 2,
+  "leaseSeconds": 15,
+  "eventTimes": [
+    "09:00",
+    "09:59",
+    "10:00"
+  ],
+  "bucketTitle": "任务登记簿",
+  "channelTitle": "交付记录",
+  "footnote": "Agent 调度的参数示例；此画面不连接真实后台"
+}

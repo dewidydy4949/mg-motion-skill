@@ -1,0 +1,42 @@
+{
+  "title": "Agent 帮你填写上架信息",
+  "subtitle": "并配置授权兑换",
+  "browserLabel": "studio.example / products / your-app",
+  "fields": [
+    {
+      "label": "名称",
+      "value": "你的应用"
+    },
+    {
+      "label": "一句话介绍",
+      "value": "自动处理繁琐工作"
+    },
+    {
+      "label": "方案",
+      "value": "$59 终身使用"
+    }
+  ],
+  "featuresTitle": "包含功能",
+  "features": [
+    "不限项目",
+    "团队席位",
+    "后续 AI 更新"
+  ],
+  "panelTitle": "授权设置",
+  "tabs": [
+    "兑换码",
+    "授权"
+  ],
+  "settings": [
+    {
+      "label": "接收地址",
+      "value": "app.example/redeem"
+    },
+    {
+      "label": "回调地址",
+      "value": "app.example/thanks"
+    }
+  ],
+  "button": "运行测试",
+  "complete": "已通过"
+}

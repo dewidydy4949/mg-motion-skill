@@ -1,0 +1,25 @@
+{
+  "kind": "project-specific motion study",
+  "date": "2026-10-27",
+  "technicalChecks": {
+    "typescript": "passed",
+    "legacySuite": "35 checks passed",
+    "render": "1920x1080, 30fps, 600 frames, 20 seconds",
+    "audio": "optional original procedural draft, 48kHz stereo, no clipping in PCM source; no subjective listening claim"
+  },
+  "observedFrameSeconds": [0.8,2,2.8,4.966667,5,6,7.6,8.8,10.6,11.8,13.6,15.5,16.9,17.6,19,19.966667],
+  "playbackCheck": "The reviewed draft played to the end at 1x in a browser: 600 frames, zero reported drops, no media error. Visual observations came from extracted frames; this is not a claim of frame-by-frame viewing or hearing the soundtrack.",
+  "improvements": [
+    "Shared geometry and color connect the phases; objects move and reconfigure instead of only changing text in fixed panels.",
+    "120 credits stay valid until the expiry event, then the value changes directly to zero.",
+    "The choosing-a-plan phase is labeled separately; task icons do not represent restored expired credits.",
+    "The task stages expand into full-width compositions, then return to the opening visual arrangement for the conclusion."
+  ],
+  "remainingLimits": [
+    "The study is a deliberately authored 20-second project, not a generic planner or an automatic motion primitive API.",
+    "Large headings and geometric arrays remain dominant; richer visual storytelling and art direction still need further iteration.",
+    "The price phase explains a shared comparison unit; without actual quotes it does not demonstrate a real price difference.",
+    "Subjective beauty, pacing and sound quality need human acceptance. Passing code and playback checks is insufficient."
+  ],
+  "reviewRepair": "Replaced multiplication signs between usage, unit price and capacity with separators to avoid implying an invalid formula."
+}

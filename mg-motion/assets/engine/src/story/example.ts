@@ -1,0 +1,24 @@
+import type {StoryPlan} from './schema';
+
+/** A hypothetical rule, not a statement about any service's current credit policy. */
+export const exampleStory: StoryPlan = {
+  mode: 'story',
+  title: '选择适合自己的积分包',
+  subtitle: '规则示意：假设未使用的积分会在约定日期失效',
+  theme: {preset: 'light', accent: '#356b62'},
+  subject: {id: 'credits', label: '会员积分', detail: '围绕实际用量，比较同一份预算能完成的任务'},
+  beats: [
+    {id: 'question', durationSeconds: 4, heading: '先看是否用得完', layout: 'statement', text: '单价更低，也要结合实际用量。', caption: '先明确需要完成的任务，再选择套餐。'},
+    {id: 'expiry', durationSeconds: 6, heading: '假设剩余积分到期失效', layout: 'metric', metric: {id: 'remaining', label: '剩余积分 · 示意', value: 120, nextValue: 0, unit: '积分', change: 'expire', atSeconds: 3.5, beforeLabel: '到期前', afterLabel: '到期后失效'}, caption: '到期后，这部分未使用的额度不再保留。'},
+    {id: 'criteria', durationSeconds: 7, heading: '把三个判断放在一起', layout: 'criteria', items: [
+      {id: 'usage', label: '看用量', detail: '每月计划完成多少条内容'},
+      {id: 'price', label: '看单价', detail: '同样长度与条件下，每条需要多少钱'},
+      {id: 'capacity', label: '看产能', detail: '这份额度能支持多少次实际制作'},
+    ], caption: '使用相同的比较条件，避免只看积分总量。'},
+    {id: 'conclusion', durationSeconds: 3, heading: '选择适合实际任务的那一档', layout: 'criteria', items: [
+      {id: 'usage', label: '看用量', detail: '需求明确'},
+      {id: 'price', label: '看单价', detail: '成本可比'},
+      {id: 'capacity', label: '看产能', detail: '额度够用'},
+    ], caption: '实际价格和有效期，以所选平台当前说明为准。'},
+  ],
+};

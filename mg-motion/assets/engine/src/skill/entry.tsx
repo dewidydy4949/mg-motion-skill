@@ -1,6 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, Composition, Sequence, registerRoot, staticFile} from 'remotion';
 import {registry} from './registry';
+import {Story, exampleStory, storyFrames, validateStory} from '../story';
+import type {StoryPlan} from '../story';
 
 export type Shot = {templateId:string; variant?:'reference'|'usage'; props?:Record<string,unknown>; durationSeconds?:number};
 export type Plan = {shots:Shot[]};
@@ -33,9 +35,11 @@ export function resolvePlan(plan:Plan){
  return plan.shots.map(shot=>{const r=resolveShot(shot);const out={...r,from};from+=r.frames;return out;});
 }
 const Single:React.FC<Shot>=(shot)=>{const {Component,props}=resolveShot(shot);return <Component {...props}/>;};
+const Continuous:React.FC<StoryPlan>=(plan)=>{const resolved=resolveAssets(plan);validateStory(resolved);return <Story {...resolved}/>;};
 const Timeline:React.FC<Plan>=(plan)=><AbsoluteFill style={{background:'#000'}}>{resolvePlan(plan).map(({Component,props,frames,from},i)=><Sequence key={i} from={from} durationInFrames={frames}><Component {...props}/></Sequence>)}</AbsoluteFill>;
 const defaultShot:Shot={templateId:'MG-013'};
 const Root:React.FC=()=> <>
+ <Composition id="MG-Story" component={Continuous} defaultProps={exampleStory} width={1920} height={1080} fps={30} durationInFrames={storyFrames(exampleStory)} calculateMetadata={({props})=>{validateStory(props);return {durationInFrames:storyFrames(props)}}}/>
  <Composition id="MG-Single" component={Single} defaultProps={defaultShot} width={1920} height={1080} fps={30} durationInFrames={255} calculateMetadata={({props})=>({durationInFrames:resolveShot(props).frames})}/>
  <Composition id="MG-Timeline" component={Timeline} defaultProps={{shots:[defaultShot]}} width={1920} height={1080} fps={30} durationInFrames={255} calculateMetadata={({props})=>({durationInFrames:resolvePlan(props).reduce((n,s)=>n+s.frames,0)})}/>
 </>;

@@ -8,7 +8,12 @@ export const referenceProps:Props={
   "threshold": 75,
   "beforeLabel": "需要继续推进",
   "afterLabel": "已超过目标",
-  "note": "演示数据 · 状态由阈值自动判断"
+  "note": "演示数据 · 状态由阈值自动判断",
+  "meaning": "threshold",
+  "thresholdLabel": "合格线",
+  "passLabel": "已达标",
+  "failLabel": "未达标",
+  "statusHeading": "STATUS"
 };
 export const usageProps:Props={
   "durationSeconds": 7,
@@ -19,5 +24,10 @@ export const usageProps:Props={
   "threshold": 90,
   "beforeLabel": "仍有任务延误",
   "afterLabel": "目标已经完成",
-  "note": "示例业务数据 · 请替换为真实记录"
+  "note": "示例业务数据 · 请替换为真实记录",
+  "meaning": "threshold",
+  "thresholdLabel": "合格线",
+  "passLabel": "已达标",
+  "failLabel": "未达标",
+  "statusHeading": ""
 };

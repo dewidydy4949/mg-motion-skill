@@ -180,10 +180,10 @@
         "min": 3,
         "max": 20,
         "key": "durationSeconds",
-        "behavior": "入场和数字滚动使用固定秒数，最迟约2.55秒完成计数；延长主要增加停留，卡片持续轻浮动。"
+        "behavior": "入场和数字滚动使用固定秒数，最迟约2.55秒完成计数；延长主要增加停留，卡片持续轻浮动。 ordinal/static 模式不计数，直接显示给定数字。"
       },
-      "capacity": "指标2–3项；值0–1000000、小数位0或1、后缀≤4字符、标签≤10字符；标题≤16字符、副标题≤32字符。",
-      "avoid": "不适合趋势曲线、分布结构或多于三项的密集数据表。"
+      "capacity": "指标2–3项；值0–1000000、小数位0或1、后缀≤4字符、标签≤10字符；标题≤16字符、副标题≤32字符。；每项 numberMode 为 metric/ordinal/static，ordinal 只接受正整数；footerLabel 可选、默认隐藏。",
+      "avoid": "不适合趋势曲线、分布结构或多于三项的密集数据表。 步骤序号必须显式设置 numberMode:ordinal，不能沿用默认计数。"
     },
     {
       "id": "MG-021",
@@ -229,7 +229,7 @@
         "behavior": "数值在片长约38%–63%间由before过渡到after；颜色和状态按当前值是否达到threshold变化。"
       },
       "capacity": "before、after、threshold均为0–100；标题≤20字符，指标名与两种状态标签各≤12字符。",
-      "avoid": "不适合非百分比指标、多条时间序列或不依赖阈值的任意状态切换。"
+      "avoid": "不适合非百分比指标、多条时间序列或不依赖阈值的任意状态切换。 到期清零不属于阈值判断；meaning 仅支持 threshold。"
     },
     {
       "id": "MG-023",
@@ -487,7 +487,7 @@
         "key": "durationSeconds",
         "behavior": "约1.05秒开始滚动，结束点为max(3.85秒,片长−1.4秒)；末项停驻后加问号，背景轻微缩放持续。"
       },
-      "capacity": "词组3–10项、每项≤22中文字宽；引导句≤30中文字宽；图标仅0–7内置编号；背景路径≤200中文字宽。",
+      "capacity": "词组3–10项、每项≤22中文字宽；引导句≤30中文字宽；图标仅0–7内置编号；背景路径≤200中文字宽。；完整保留输入标点，不再自动添加问号。",
       "avoid": "不适合真实桌面操作、录屏演示或同时清晰显示全部词条；背景图不适合承载需阅读的细节。"
     },
     {
@@ -921,7 +921,7 @@
         "key": "duration",
         "behavior": "按11.5秒基准缩放连线绘制、短语沿线移动、标签环绕出现和结论入场。"
       },
-      "capacity": "sources固定3项，name≤10/phrase≤7中文宽度，relevant为布尔值；tags 3–6项/每项≤6；title≤32、subtitle≤43、target≤15、conclusion≤30。",
+      "capacity": "sources固定3项，name≤10/phrase≤7中文宽度，relevant为布尔值；tags 3–6项/每项≤6；title≤32、subtitle≤43、target≤15、conclusion≤30。；eyebrow、targetPrompt、irrelevantLabel 可选，默认不带示例文案。",
       "avoid": "自动提取关键词、真实搜索排名计算、多目标网络、自由数量来源；标签和相关性须由参数提供。"
     },
     {

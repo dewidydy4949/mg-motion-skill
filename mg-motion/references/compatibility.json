@@ -1,0 +1,594 @@
+{
+  "schemaVersion": 1,
+  "description": "Conservative compatibility metadata for the independent template library. A shared source utility or similar color does not establish interchangeable style. Existing templates retain their own family until adaptations are reviewed together.",
+  "intents": {
+    "headline": "短标题、口号或章节开场",
+    "input-distribution": "同一输入分发给多个对象",
+    "comparison": "对齐维度的并排或前后比较，仍须检查具体模板限制",
+    "table-focus": "表格字段聚焦与回到整表",
+    "ordinal": "编号或顺序标签，不表示数量增长",
+    "metrics": "实际指标或明确标注的示例数值",
+    "threshold": "给定数值与明确定义的阈值比较",
+    "expiry": "到期导致的离散失效；现有独立模板无通用到期场景，优先 story",
+    "cause-effect": "原因到结果的连续解释；优先 story，不能用滚动短语替代推导",
+    "criteria": "并列判断维度或选择依据；优先 story 的 criteria 布局",
+    "sequence": "明确顺序的操作或处理步骤",
+    "timeline": "年份、日期或事件演进",
+    "ranking": "同量纲对象的名次或竞赛",
+    "progress": "进度、完成状态或递增阶段",
+    "classification": "分类、类别或处理结果",
+    "media-callout": "真实素材中的指定区域与说明",
+    "gallery": "多幅成果素材陈列",
+    "quotes": "评论或用户反馈摘录",
+    "phrases": "独立短语依次滚动，不承担因果推导",
+    "reading": "原文词组按时间强调",
+    "dialogue": "问答或对话",
+    "architecture": "层级能力、资源和客户端结构",
+    "semantic-relations": "有明确定义的来源到目标语义关系",
+    "geometry": "几何结构展开",
+    "capability-map": "中心能力及可调用工具",
+    "aggregation": "同量纲数值汇总",
+    "recovery": "丢失与恢复过程示意",
+    "agent-loop": "模型、工具、上下文调用循环",
+    "token-grid": "等待到输出阵列形成的示意",
+    "privacy-boundary": "本地或云端数据边界示意",
+    "rate-limit": "令牌桶消耗和回补机制",
+    "hierarchy": "固定层级或树形关系",
+    "parameters": "控制参数或权重调节",
+    "failover": "节点失效、租约到期与接管",
+    "price-selection": "候选价位中突出一个选项"
+  },
+  "familyPolicy": "Each legacy template has a distinct family; repeated use of one family still needs content, typography, timing and continuity review. These IDs do not implement a global theme.",
+  "templates": [
+    {
+      "id": "MG-013",
+      "family": "legacy-mg-013",
+      "style": "深色科技 金色强调",
+      "semanticIntents": [
+        "input-distribution"
+      ],
+      "forbiddenIntents": [
+        "comparison",
+        "ranking"
+      ],
+      "motionMeaning": "连线表示同一输入的分发，不是回答内容或成绩比较。"
+    },
+    {
+      "id": "MG-014",
+      "family": "legacy-mg-014",
+      "style": "极简白底、淡蓝选列、局部放大、非重点弱化、中文表格",
+      "semanticIntents": [
+        "table-focus"
+      ],
+      "forbiddenIntents": [
+        "comparison"
+      ],
+      "motionMeaning": "内置单列提问阶段会隐藏其他主要列，持续并排比较应另选布局。"
+    },
+    {
+      "id": "MG-015",
+      "family": "legacy-mg-015",
+      "style": "纸纹手绘 · 黄色强调 · 浏览器填表与设置完成",
+      "semanticIntents": [
+        "sequence"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "固定三字段表单和两项配置；不代表任意操作流程。"
+    },
+    {
+      "id": "MG-016",
+      "family": "legacy-mg-016",
+      "style": "大字海报",
+      "semanticIntents": [
+        "headline"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "内部色块硬切且各场景均分时长，适合短标题，不能承担整段解释。"
+    },
+    {
+      "id": "MG-017",
+      "family": "legacy-mg-017",
+      "style": "浅色产品",
+      "semanticIntents": [
+        "comparison"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "只比较给定短回答；不自动评价正确性或量化排名。"
+    },
+    {
+      "id": "MG-018",
+      "family": "legacy-mg-018",
+      "style": "浅色极简",
+      "semanticIntents": [
+        "price-selection"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "价格滚轮是候选选中，不表示价格的时间趋势。"
+    },
+    {
+      "id": "MG-019",
+      "family": "legacy-mg-019",
+      "style": "黑底彩色横条、数值标签、大时间戳",
+      "semanticIntents": [
+        "ranking"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "排名和横条依赖真实同量纲时间序列。"
+    },
+    {
+      "id": "MG-020",
+      "family": "legacy-mg-020",
+      "style": "浅色渐变、圆角白卡、黑色大数字",
+      "semanticIntents": [
+        "metrics",
+        "ordinal"
+      ],
+      "forbiddenIntents": [
+        "threshold",
+        "expiry"
+      ],
+      "motionMeaning": "指标默认从零计数；序号必须逐项指定 numberMode: ordinal，禁止以计数动画代替编号。",
+      "requirementsByIntent": {
+        "ordinal": {
+          "each": "stats",
+          "property": "numberMode",
+          "equals": "ordinal",
+          "message": "编号必须将每项 stats[].numberMode 设为 ordinal，避免出现从 0 计数的序号。"
+        }
+      }
+    },
+    {
+      "id": "MG-021",
+      "family": "legacy-mg-021",
+      "style": "黑白网点、纸张卡片、标签、等级与评分条",
+      "semanticIntents": [
+        "classification"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "内置分类、等级和评分语义；评分须有输入依据。"
+    },
+    {
+      "id": "MG-022",
+      "family": "legacy-mg-022",
+      "style": "粗黑大字、红绿状态、警示斜纹、印章",
+      "semanticIntents": [
+        "threshold"
+      ],
+      "forbiddenIntents": [
+        "expiry",
+        "progress",
+        "metrics",
+        "criteria"
+      ],
+      "motionMeaning": "阈值、达标印章与红绿状态是核心语义，不能表示到期清零、普通余额或任意状态切换。"
+    },
+    {
+      "id": "MG-023",
+      "family": "legacy-mg-023",
+      "style": "黑底橙色强调、大字、截图与头像网格",
+      "semanticIntents": [
+        "media-callout"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "先确认截图和实际标注区域，图像关系不能靠文字推断。"
+    },
+    {
+      "id": "MG-024",
+      "family": "legacy-mg-024",
+      "style": "深色运动科技",
+      "semanticIntents": [
+        "ranking"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "所有对象必须有共同目标；展示领先者，不表示并列分类。"
+    },
+    {
+      "id": "MG-025",
+      "family": "legacy-mg-025",
+      "style": "高饱和波普",
+      "semanticIntents": [
+        "quotes"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "示例评论不是真实证言；不要为了填满模板编造用户评价。"
+    },
+    {
+      "id": "MG-026",
+      "family": "legacy-mg-026",
+      "style": "彩色产品",
+      "semanticIntents": [
+        "progress"
+      ],
+      "forbiddenIntents": [
+        "expiry",
+        "threshold"
+      ],
+      "motionMeaning": "到100%变为完成勾号，不能表达过期失效。"
+    },
+    {
+      "id": "MG-027",
+      "family": "legacy-mg-027",
+      "style": "深色产品",
+      "semanticIntents": [
+        "gallery"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "多图缩略陈列不适合阅读素材中的密集文字。"
+    },
+    {
+      "id": "MG-028",
+      "family": "legacy-mg-028",
+      "style": "紫色产品",
+      "semanticIntents": [
+        "classification"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "分类状态及处理建议需要明确输入依据。"
+    },
+    {
+      "id": "MG-029",
+      "family": "legacy-mg-029",
+      "style": "米白编辑排版、黑色引用卡、红色荧光标记",
+      "semanticIntents": [
+        "comparison"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "高亮原文与修改理由必须对应，不是自由的双栏装饰。"
+    },
+    {
+      "id": "MG-030",
+      "family": "legacy-mg-030",
+      "style": "极简白底、巨大黑字、红黑点阵、细线",
+      "semanticIntents": [
+        "metrics"
+      ],
+      "forbiddenIntents": [
+        "ordinal",
+        "criteria"
+      ],
+      "motionMeaning": "百分比和点阵代表样本组成，不能用步骤序号或主观观点代替比例。"
+    },
+    {
+      "id": "MG-031",
+      "family": "legacy-mg-031",
+      "style": "柔和彩色卡片、粗黑描边、倾斜网格、贴纸标题",
+      "semanticIntents": [
+        "classification"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "背景卡墙用于类别丰富感，未逐项解释每个类别。"
+    },
+    {
+      "id": "MG-032",
+      "family": "legacy-mg-032",
+      "style": "背景虚化、滚动词组、应用图标、桌面窗口",
+      "semanticIntents": [
+        "phrases"
+      ],
+      "forbiddenIntents": [
+        "cause-effect",
+        "sequence",
+        "criteria"
+      ],
+      "motionMeaning": "滚动强调独立词组；相邻短语会弱化和模糊，不适合需要同时读清的因果链。"
+    },
+    {
+      "id": "MG-033",
+      "family": "legacy-mg-033",
+      "style": "暖白产品风、叠放卡片、橙色重点、细分隔",
+      "semanticIntents": [
+        "comparison"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "有推荐档位和价格权益结构；推荐必须来自输入依据。"
+    },
+    {
+      "id": "MG-034",
+      "family": "legacy-mg-034",
+      "style": "深色代码窗、橙色行高亮、浅色结果预览",
+      "semanticIntents": [
+        "sequence"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "代码与结果对应；通用步骤可用 story，不能把无关文案塞进代码行。"
+    },
+    {
+      "id": "MG-035",
+      "family": "legacy-mg-035",
+      "style": "白底产品UI、浅蓝线框、局部淡化、细注释",
+      "semanticIntents": [
+        "comparison"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "内置复杂界面到单一操作的简化过程。"
+    },
+    {
+      "id": "MG-036",
+      "family": "legacy-mg-036",
+      "style": "蓝白强对比、超大功能词、选择框、真实界面窗口",
+      "semanticIntents": [
+        "media-callout"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "聚焦操作局部，每步可切主题；不具备整片主题继承。"
+    },
+    {
+      "id": "MG-037",
+      "family": "legacy-mg-037",
+      "style": "蓝灰纹理底、白色说明卡、黑色手机框",
+      "semanticIntents": [
+        "sequence"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "手机操作和步骤说明同步；真实素材与点击位置必须对应。"
+    },
+    {
+      "id": "MG-038",
+      "family": "legacy-mg-038",
+      "style": "浅色对话侧栏、内容预览、浮动图片卡、柔和阴影",
+      "semanticIntents": [
+        "sequence"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "提示词到视觉结果再到版面，是固定创作过程。"
+    },
+    {
+      "id": "MG-039",
+      "family": "legacy-mg-039",
+      "style": "深色仪表盘、橙色高亮、紧凑信息层级",
+      "semanticIntents": [
+        "timeline"
+      ],
+      "forbiddenIntents": [
+        "expiry"
+      ],
+      "motionMeaning": "日期派生 ISO 周数和年度进度；不能作为余额到期清零动画。"
+    },
+    {
+      "id": "MG-040",
+      "family": "legacy-mg-040",
+      "style": "浅色科技",
+      "semanticIntents": [
+        "sequence"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "按顺序执行并完成的阶段；不用于并列条件或因果论证。"
+    },
+    {
+      "id": "MG-041",
+      "family": "legacy-mg-041",
+      "style": "浅色产品",
+      "semanticIntents": [
+        "sequence"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "一份内容到多平台和排程，是固定发布过程。"
+    },
+    {
+      "id": "MG-042",
+      "family": "legacy-mg-042",
+      "style": "奶油纸底、衬线正文、浅黄色高亮、简洁手机样机",
+      "semanticIntents": [
+        "reading"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "原文词组按显式时间强调；不等于自动语音对齐。"
+    },
+    {
+      "id": "MG-043",
+      "family": "legacy-mg-043",
+      "style": "暖色产品",
+      "semanticIntents": [
+        "dialogue"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "对话气泡交替和输入状态；不用于普通要点清单。"
+    },
+    {
+      "id": "MG-044",
+      "family": "legacy-mg-044",
+      "style": "浅色产品界面、彩色便签、圆角周历",
+      "semanticIntents": [
+        "timeline"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "周历与发布渠道分发，不是任意时间线。"
+    },
+    {
+      "id": "MG-045",
+      "family": "legacy-mg-045",
+      "style": "纸张拼贴、人物抠图、手写年份、便签和涂鸦",
+      "semanticIntents": [
+        "timeline"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "固定两幕成长、地图和数量增长，仍带有场景叙事。"
+    },
+    {
+      "id": "MG-046",
+      "family": "legacy-mg-046",
+      "style": "白底、黑色手绘框、蓝色重点、黄色荧光",
+      "semanticIntents": [
+        "architecture"
+      ],
+      "forbiddenIntents": [
+        "criteria"
+      ],
+      "motionMeaning": "固定三层结构，不是三条并列建议。"
+    },
+    {
+      "id": "MG-047",
+      "family": "legacy-mg-047",
+      "style": "深色科技底、细曲线、光点、标签卡片",
+      "semanticIntents": [
+        "semantic-relations"
+      ],
+      "forbiddenIntents": [
+        "criteria",
+        "ordinal",
+        "comparison"
+      ],
+      "motionMeaning": "三来源到一个目标的语义关系；线条不是三项判断维度的通用表达。"
+    },
+    {
+      "id": "MG-048",
+      "family": "legacy-mg-048",
+      "style": "米色纸张、铅笔线、稀疏红蓝强调",
+      "semanticIntents": [
+        "progress"
+      ],
+      "forbiddenIntents": [
+        "expiry"
+      ],
+      "motionMeaning": "量表只递增，不支持下降或到期失效。"
+    },
+    {
+      "id": "MG-049",
+      "family": "legacy-mg-049",
+      "style": "米色编辑版式、细线手绘、固定侧栏、勾选记号",
+      "semanticIntents": [
+        "sequence"
+      ],
+      "forbiddenIntents": [
+        "criteria"
+      ],
+      "motionMeaning": "顺序操作与结果累积，不表示三条同时成立的选择条件。"
+    },
+    {
+      "id": "MG-050",
+      "family": "legacy-mg-050",
+      "style": "纸面制图、蓝图线框、青色扫描线",
+      "semanticIntents": [
+        "geometry"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "固定六边形结构，不表示任意因果或系统架构。"
+    },
+    {
+      "id": "MG-051",
+      "family": "legacy-mg-051",
+      "style": "深棕黑底、米白衬线大字、细线图标",
+      "semanticIntents": [
+        "capability-map"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "中心能力到工具的辐射关系，不是任意节点关系。"
+    },
+    {
+      "id": "MG-052",
+      "family": "legacy-mg-052",
+      "style": "浅灰白底、蓝紫卡片、弧形连线、柔和阴影",
+      "semanticIntents": [
+        "aggregation"
+      ],
+      "forbiddenIntents": [
+        "ordinal"
+      ],
+      "motionMeaning": "汇总值是三项同量纲数值之和，不可混合单位或用序号凑数。"
+    },
+    {
+      "id": "MG-053",
+      "family": "legacy-mg-053",
+      "style": "暗色网格、霓虹年份、SVG线稿、底部节点线",
+      "semanticIntents": [
+        "timeline"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "等距事件节点不是按实际年份间隔绘制。"
+    },
+    {
+      "id": "MG-054",
+      "family": "legacy-mg-054",
+      "style": "黑底米白卡、像素网格、蓝橙分区",
+      "semanticIntents": [
+        "recovery"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "像素缺失恢复为确定性示意，不是任意素材修复。"
+    },
+    {
+      "id": "MG-055",
+      "family": "legacy-mg-055",
+      "style": "暗色技术界面、彩色节点、工具日志、分段容量条",
+      "semanticIntents": [
+        "agent-loop"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "模型工具上下文循环与容量累计，不是任意步骤流程。"
+    },
+    {
+      "id": "MG-056",
+      "family": "legacy-mg-056",
+      "style": "浅色产品",
+      "semanticIntents": [
+        "token-grid"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "阵列格数和等待值是示意，不代表实测 token 数或时延。"
+    },
+    {
+      "id": "MG-057",
+      "family": "legacy-mg-057",
+      "style": "暖色纸张产品",
+      "semanticIntents": [
+        "privacy-boundary"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "参数仅表达本地或同步状态，不验证真实隐私保护。"
+    },
+    {
+      "id": "MG-058",
+      "family": "legacy-mg-058",
+      "style": "黑底、等宽文字、蓝色格条、红绿日志、阶梯曲线",
+      "semanticIntents": [
+        "rate-limit"
+      ],
+      "forbiddenIntents": [
+        "expiry"
+      ],
+      "motionMeaning": "明确令牌桶消耗和回补规则；不表达订阅积分在日历到期时失效。"
+    },
+    {
+      "id": "MG-059",
+      "family": "legacy-mg-059",
+      "style": "白板、手写标注、细线、红蓝局部强调",
+      "semanticIntents": [
+        "hierarchy"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "固定二叉三层树，不是任意分类布局。"
+    },
+    {
+      "id": "MG-060",
+      "family": "legacy-mg-060",
+      "style": "孔版印刷颗粒、粉蓝黄套色、纸底、粗字",
+      "semanticIntents": [
+        "parameters"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "0–100控制量的连续调节，不是数值统计或达标判断。"
+    },
+    {
+      "id": "MG-061",
+      "family": "legacy-mg-061",
+      "style": "漫画式粗描边、彩色状态卡、连线、进度条",
+      "semanticIntents": [
+        "failover"
+      ],
+      "forbiddenIntents": [
+        "expiry"
+      ],
+      "motionMeaning": "租约失效导致任务接管，不是通用会员或积分过期。"
+    },
+    {
+      "id": "MG-062",
+      "family": "legacy-mg-062",
+      "style": "漫画粗字、顶部刻度轴、年份票卡、浅色纸底",
+      "semanticIntents": [
+        "timeline"
+      ],
+      "forbiddenIntents": [],
+      "motionMeaning": "票卡里程碑和年份轴，不是精细日历排程。"
+    }
+  ]
+}

@@ -9,21 +9,25 @@
       "decimals": 0,
       "suffix": "项",
       "label": "完成项目",
-      "color": "#6579be"
+      "color": "#6579be",
+      "numberMode": "metric"
     },
     {
       "value": 96,
       "decimals": 0,
       "suffix": "%",
       "label": "按期交付",
-      "color": "#6da995"
+      "color": "#6da995",
+      "numberMode": "metric"
     },
     {
       "value": 4.8,
       "decimals": 1,
       "suffix": "分",
       "label": "内部满意度",
-      "color": "#e9b95b"
+      "color": "#e9b95b",
+      "numberMode": "metric"
     }
-  ]
+  ],
+  "footerLabel": ""
 }

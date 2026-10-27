@@ -419,23 +419,27 @@
           "decimals": 1,
           "suffix": "★",
           "label": "平均评分",
-          "color": "#e9b95b"
+          "color": "#e9b95b",
+          "numberMode": "metric"
         },
         {
           "value": 100,
           "decimals": 0,
           "suffix": "万+",
           "label": "累计下载",
-          "color": "#6579be"
+          "color": "#6579be",
+          "numberMode": "metric"
         },
         {
           "value": 26,
           "decimals": 0,
           "suffix": "K+",
           "label": "用户反馈",
-          "color": "#6da995"
+          "color": "#6da995",
+          "numberMode": "metric"
         }
-      ]
+      ],
+      "footerLabel": "PRODUCT INSIGHTS"
     },
     "usage": {
       "durationSeconds": 7,
@@ -448,23 +452,27 @@
           "decimals": 0,
           "suffix": "项",
           "label": "完成项目",
-          "color": "#6579be"
+          "color": "#6579be",
+          "numberMode": "metric"
         },
         {
           "value": 96,
           "decimals": 0,
           "suffix": "%",
           "label": "按期交付",
-          "color": "#6da995"
+          "color": "#6da995",
+          "numberMode": "metric"
         },
         {
           "value": 4.8,
           "decimals": 1,
           "suffix": "分",
           "label": "内部满意度",
-          "color": "#e9b95b"
+          "color": "#e9b95b",
+          "numberMode": "metric"
         }
-      ]
+      ],
+      "footerLabel": ""
     },
     "referenceDuration": 6,
     "usageDuration": 7,
@@ -540,7 +548,12 @@
       "threshold": 75,
       "beforeLabel": "需要继续推进",
       "afterLabel": "已超过目标",
-      "note": "演示数据 · 状态由阈值自动判断"
+      "note": "演示数据 · 状态由阈值自动判断",
+      "meaning": "threshold",
+      "thresholdLabel": "合格线",
+      "passLabel": "已达标",
+      "failLabel": "未达标",
+      "statusHeading": "STATUS"
     },
     "usage": {
       "durationSeconds": 7,
@@ -551,7 +564,12 @@
       "threshold": 90,
       "beforeLabel": "仍有任务延误",
       "afterLabel": "目标已经完成",
-      "note": "示例业务数据 · 请替换为真实记录"
+      "note": "示例业务数据 · 请替换为真实记录",
+      "meaning": "threshold",
+      "thresholdLabel": "合格线",
+      "passLabel": "已达标",
+      "failLabel": "未达标",
+      "statusHeading": ""
     },
     "referenceDuration": 6,
     "usageDuration": 7,
@@ -2819,7 +2837,10 @@
         "教程",
         "入门"
       ],
-      "conclusion": "好的链接文字，应描述目标内容"
+      "conclusion": "好的链接文字，应描述目标内容",
+      "eyebrow": "04 / LINKS CARRY MEANING",
+      "targetPrompt": "这一页讲什么？",
+      "irrelevantLabel": "这段文字没有描述目标内容"
     },
     "usage": {
       "duration": 12,
@@ -2851,7 +2872,10 @@
         "生成速度",
         "视频"
       ],
-      "conclusion": "先读描述，再决定是否值得打开"
+      "conclusion": "先读描述，再决定是否值得打开",
+      "eyebrow": "",
+      "targetPrompt": "",
+      "irrelevantLabel": ""
     },
     "referenceDuration": 11.5,
     "usageDuration": 12,
@@ -3446,7 +3470,7 @@
           "cost": 1
         },
         {
-          "at": 3.0,
+          "at": 3,
           "cost": 1
         },
         {
@@ -3486,7 +3510,7 @@
           "cost": 1
         },
         {
-          "at": 4.0,
+          "at": 4,
           "cost": 1
         },
         {

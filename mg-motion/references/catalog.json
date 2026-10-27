@@ -1,7 +1,7 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "count": 50,
-  "engineSha256": "fef51a2d7d592a30667b92096dd75056d9a9f68bddef1672213532ff1396abdc",
+  "engineSha256": "aeddef77060428e1d8deba38a92d182c16bbf046492a95924f326146bc67c399",
   "templates": [
     {
       "id": "MG-013",
@@ -14,7 +14,7 @@
       "sourceId": "244",
       "sourceRange": [
         21.5,
-        29.0
+        29
       ],
       "sampleSeconds": 7.5,
       "usageSeconds": 8.5,
@@ -172,7 +172,7 @@
       ],
       "sourceId": "354",
       "sourceRange": [
-        26.0,
+        26,
         29.5
       ],
       "sampleSeconds": 6,
@@ -188,9 +188,11 @@
         "单屏2～3数据项；不自动创建图表。",
         "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "modelSource": "src/batch/MG-020/model.tsx",
-      "modelSha256": "c5a8aca94ce087ef906491217d8f012749e9f129d4914501be8d16457a08e277"
+      "modelSha256": "f46b3d8a9825bab25d07fae4bf59028ec8661a1cf537d9c0b5beb0807b018318",
+      "previewVersion": "1.0.0",
+      "validationStatus": "参数与组件行为已检查；本修订未重新渲染，旧预览仅供结构参考"
     },
     {
       "id": "MG-021",
@@ -248,9 +250,11 @@
         "前后状态由数值与阈值判断，允许升或降。",
         "无配乐和音效；参数示例中的数字、评价或价格不构成实测事实。"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "modelSource": "src/batch/MG-022/model.tsx",
-      "modelSha256": "07bcfbb8cf950a28231692dbc6d43c9ec1296fae1f421d9dae155b7927b7a3c2"
+      "modelSha256": "d61d3303a0e24a61e2ea00d4b2bc5eeaa52a11d9a6edfc736fad9ac420704a72",
+      "previewVersion": "1.0.0",
+      "validationStatus": "参数与组件行为已检查；本修订未重新渲染，旧预览仅供结构参考"
     },
     {
       "id": "MG-023",
@@ -551,9 +555,11 @@
         "桌面多窗口镜头不在本模板范围；无真实应用控制。",
         "本版无配乐或音效。"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "modelSource": "src/batch/MG-032/model.tsx",
-      "modelSha256": "6f29e74e81e1ee1b97865dad67514a550834ca303e947af70cafe0d3b281a156"
+      "modelSha256": "289ac698cea74269ced7d28adc840449e91395b0d696f54cb6e8266bb3be5f30",
+      "previewVersion": "1.0.0",
+      "validationStatus": "参数与组件行为已检查；本修订未重新渲染，旧预览仅供结构参考"
     },
     {
       "id": "MG-033",
@@ -1062,9 +1068,11 @@
         "仅演示语义关系，不计算搜索排名或自动提取关键词。",
         "标签按参数顺序展开，词条集合由使用者提供。"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "modelSource": "src/batch/MG-047/model.tsx",
-      "modelSha256": "fd637274853bbca0744c90a6586b0ea75245f17e12e60fd443ac00a8099732af"
+      "modelSha256": "d0215aa83999d98415e4b8ff0516ab237d2737fe61a14ac458ea37eccefa518a",
+      "previewVersion": "1.0.0",
+      "validationStatus": "参数与组件行为已检查；本修订未重新渲染，旧预览仅供结构参考"
     },
     {
       "id": "MG-048",
@@ -1521,5 +1529,12 @@
       "modelSource": "src/batch/MG-062/model.tsx",
       "modelSha256": "09348ffea0841f7498036bd933451bd6a25838092fe116a0f0e9555417a0cac0"
     }
-  ]
+  ],
+  "story": {
+    "version": "1.0.0",
+    "source": "src/story/index.tsx",
+    "schema": "src/story/schema.ts",
+    "example": "assets/examples/story.json",
+    "validationStatus": "代码与参数检查；视觉验收待用户试片"
+  }
 }

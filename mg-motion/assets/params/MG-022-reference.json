@@ -7,5 +7,10 @@
   "threshold": 75,
   "beforeLabel": "需要继续推进",
   "afterLabel": "已超过目标",
-  "note": "演示数据 · 状态由阈值自动判断"
+  "note": "演示数据 · 状态由阈值自动判断",
+  "meaning": "threshold",
+  "thresholdLabel": "合格线",
+  "passLabel": "已达标",
+  "failLabel": "未达标",
+  "statusHeading": "STATUS"
 }

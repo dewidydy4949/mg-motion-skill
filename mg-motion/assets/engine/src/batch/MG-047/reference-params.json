@@ -27,5 +27,8 @@
     "教程",
     "入门"
   ],
-  "conclusion": "好的链接文字，应描述目标内容"
+  "conclusion": "好的链接文字，应描述目标内容",
+  "eyebrow": "04 / LINKS CARRY MEANING",
+  "targetPrompt": "这一页讲什么？",
+  "irrelevantLabel": "这段文字没有描述目标内容"
 }

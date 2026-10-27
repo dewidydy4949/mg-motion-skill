@@ -28,5 +28,8 @@
     "生成速度",
     "视频"
   ],
-  "conclusion": "先读描述，再决定是否值得打开"
+  "conclusion": "先读描述，再决定是否值得打开",
+  "eyebrow": "",
+  "targetPrompt": "",
+  "irrelevantLabel": ""
 }

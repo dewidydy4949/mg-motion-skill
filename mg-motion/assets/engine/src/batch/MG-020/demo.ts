@@ -10,23 +10,27 @@ export const referenceProps:Props={
       "decimals": 1,
       "suffix": "★",
       "label": "平均评分",
-      "color": "#e9b95b"
+      "color": "#e9b95b",
+      "numberMode": "metric"
     },
     {
       "value": 100,
       "decimals": 0,
       "suffix": "万+",
       "label": "累计下载",
-      "color": "#6579be"
+      "color": "#6579be",
+      "numberMode": "metric"
     },
     {
       "value": 26,
       "decimals": 0,
       "suffix": "K+",
       "label": "用户反馈",
-      "color": "#6da995"
+      "color": "#6da995",
+      "numberMode": "metric"
     }
-  ]
+  ],
+  "footerLabel": "PRODUCT INSIGHTS"
 };
 export const usageProps:Props={
   "durationSeconds": 7,
@@ -39,21 +43,25 @@ export const usageProps:Props={
       "decimals": 0,
       "suffix": "项",
       "label": "完成项目",
-      "color": "#6579be"
+      "color": "#6579be",
+      "numberMode": "metric"
     },
     {
       "value": 96,
       "decimals": 0,
       "suffix": "%",
       "label": "按期交付",
-      "color": "#6da995"
+      "color": "#6da995",
+      "numberMode": "metric"
     },
     {
       "value": 4.8,
       "decimals": 1,
       "suffix": "分",
       "label": "内部满意度",
-      "color": "#e9b95b"
+      "color": "#e9b95b",
+      "numberMode": "metric"
     }
-  ]
+  ],
+  "footerLabel": ""
 };

@@ -9,21 +9,25 @@
       "decimals": 1,
       "suffix": "★",
       "label": "平均评分",
-      "color": "#e9b95b"
+      "color": "#e9b95b",
+      "numberMode": "metric"
     },
     {
       "value": 100,
       "decimals": 0,
       "suffix": "万+",
       "label": "累计下载",
-      "color": "#6579be"
+      "color": "#6579be",
+      "numberMode": "metric"
     },
     {
       "value": 26,
       "decimals": 0,
       "suffix": "K+",
       "label": "用户反馈",
-      "color": "#6da995"
+      "color": "#6da995",
+      "numberMode": "metric"
     }
-  ]
+  ],
+  "footerLabel": "PRODUCT INSIGHTS"
 }

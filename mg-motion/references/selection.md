@@ -1,21 +1,42 @@
-# 从素材选择模板
+# 按表达找参考，再决定复用
 
-先判断是独立片段还是连续 MG。连续 MG 按 [motion-direction.md](motion-direction.md) 先规划全片的对象、动作和视觉语言，再寻找实现；阅读为主的信息说明可选 [story.md](story.md)。完整模板是可选实现，不按每句文案机械分配一个模板。需要旧模板时，先确定整段视觉方案和镜头的表达关系，再筛选。无需让用户选择编号，也无需把50套源码和说明全部读入。
+给文案补画面时先使用参考检索。默认 30 个代表参考按表达覆盖与减少近重复选出，其他 20 个保留为备用；全部源码、预览和参数仍然可用。取舍理由与检查依据记录在 reference-library.json，不能把这个选择当成“原视频美感排名”。
+
+```text
+node scripts/mg.mjs refs
+node scripts/mg.mjs refs "同一输入分发，再比较回答"
+node scripts/mg.mjs refs --expression process --limit 4
+node scripts/mg.mjs refs --all
+node scripts/mg.mjs inspect MG-013
+```
+
+空查询返回紧凑目录；有查询或表达分类时返回学习点、适配边界和实际文件路径。inspect 展开单项详情。表达分类：emphasis（强调）、comparison（比较）、change（变化）、process（流程）、relationship（关系）、focus（聚焦）、conversation（问答）、timeline（时间）、media（素材/界面）。分类允许交叉。
+
+refs 是词表与分类检索，由调用模型理解文案并决定参考，不是自动视觉理解或自动分镜。有查询默认返回 5 项，--limit 可调整。没有命中时浏览表达分类或 --all，不能虚构参考或改变文案含义来取得匹配。
+
+## 看什么、怎样借鉴
+
+先实际查看少量匹配预览和动作说明，运动对方案重要时查看源码并按需重渲染参考版：
+
+```text
+node scripts/mg.mjs render MG-013 --variant reference --out work/reference-MG-013.mp4 --browser "Chrome路径"
+```
+
+这是当前库内复刻版的渲染，不是原始参考视频。仓库随附的是复刻静态预览、模型源码和历史使用卡；原始视频没有随包分发，使用卡中的旧 sample.mp4/usage.mp4 不能假定存在。卡片的历史评审状态、旧文件名与新版能力冲突时，以当前参数、源码和文件实际存在情况为准。不能把静态预览写成已观看完整动作。
+
+参考要说明借鉴的构图、对象动作、观看顺序或衔接，并保留新文案的逻辑。一套合适的主参考提供视觉依据，辅助参考的机制需要适配后再引入。参考原长 5–10 秒，不妨碍用其设计语言组织 20–30 秒的内容；直接运行原组件则仍受原时长、容量和动作行为约束。refs 因此不接受 --duration，避免错误地把短参考排除。
+
+## 直接复用才检查模板条件
 
 ```text
 node scripts/mg.mjs match "手机问答，突出最后回复" --duration 9
-node scripts/mg.mjs match "录屏教程，鼠标点击并放大界面" --media video --duration 12
-node scripts/mg.mjs match "年份时间线和人物成长" --media image --duration 12
-node scripts/mg.mjs inspect MG-036
-node scripts/mg.mjs match "大数字卡" --intent ordinal --duration 6
+node scripts/mg.mjs match "录屏教程，鼠标聚焦" --media video --duration 12
 node scripts/mg.mjs match "阈值警报" --intent expiry --duration 7
 ```
 
-`match` 默认返回最多3个候选。`--limit` 可设1–10。`--intent` 与 `--family` 是硬过滤，意图名称及模板限制在 `compatibility.json`。明确意图时也可找到未命中查询词的适用模板；关键词分数只用于候选排序，不代表置信度。最后一个例子不会把阈值模板推荐给到期失效。没有旧模板支持时返回空候选：按表达关系做项目适配或新的动作实现；只有阅读型说明适合时才采用 story，不能以空候选为由自动降成固定卡片。
+match 保留原有关键词、语义、素材和时长筛选，默认最多 3 项。--intent 与 --family 是硬过滤，分数不是置信度；最后一个例子不会把阈值模板当成到期失效。参考目录中的表达分类比直接复用意图更宽：例如输入分发可以启发“比较前统一条件”，但不代表原组件已经能展示两份答案或比较成绩。查看 inspect.reference.directUse 与 compatibility。
 
-脚本不读取图片或视频，不自动推断句子中的真实逻辑。先由使用者概括表达关系；不要把“到期失效”谎报成“阈值”以通过筛选。没有命中时可以改善查询，但不能去掉必须的语义或素材条件来强套模板。
-
-目前旧模板各自属于独立的 `legacy-mg-xxx` 风格族。这是保守地表示尚未认证为同一套设计，并非所有深色模板都能相互拼接。`--family` 筛选不会修改颜色、字体或版式。一个项目若要把多个模板适配成共同视觉，应在项目引擎中实际修改，并记录适配说明。
+表达或视觉不适配时使用 [独立项目](project.md) 编写/适配场景，不强行塞参数，不自动降为 story。story 仅适合内容本来以阅读为主的信息说明。旧模板的 legacy-mg-xxx 风格族是保守兼容声明，换成同色不代表动作和版式已经适配。
 
 ## 素材的用途
 

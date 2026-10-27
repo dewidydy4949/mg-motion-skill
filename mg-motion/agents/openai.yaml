@@ -1,4 +1,4 @@
 interface:
-  display_name: "MG 动效出片"
-  short_description: "先规划内容递进与统一视觉，再制作连贯的横屏动画或独立片段，保留可修改参数"
-  default_prompt: "使用 $mg-motion 根据这些素材和文案制作横屏动画，先规划连贯表达和统一视觉，再选择连续场景或独立模板，并保留可修改计划。"
+  display_name: "MG 文案补画面"
+  short_description: "根据文案借鉴合适样片，补充清楚、连贯的横屏动画，自动选择参考并保留可改工程"
+  default_prompt: "使用 $mg-motion 为这段文案补画面，借鉴合适的库内参考，根据内容组织连贯动画，保留可修改工程："

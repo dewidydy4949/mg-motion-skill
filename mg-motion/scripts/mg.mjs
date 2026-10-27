@@ -5,6 +5,7 @@ import crypto from 'node:crypto';
 import {createRequire} from 'node:module';
 import {recommend} from './select.mjs';
 import {auditPlan} from './plan-audit.mjs';
+import {browseReferences,describeReference} from './references.mjs';
 
 const skill=path.resolve(import.meta.dirname,'..');
 const json=(p)=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
@@ -19,6 +20,7 @@ function engineSources(engine){
  return {files:sorted,sha256:crypto.createHash('sha256').update(JSON.stringify(sorted)).digest('hex')};
 }
 const help=`MG Motion
+  node scripts/mg.mjs refs [表达目标] [--expression 分类] [--all] [--limit 5]
   node scripts/mg.mjs list [关键词]
   node scripts/mg.mjs match "表达目标" [--intent 意图] [--family 风格族] [--media image|video] [--duration 秒]
   node scripts/mg.mjs story --out story.json
@@ -32,7 +34,8 @@ const help=`MG Motion
   node scripts/mg.mjs still --plan shots.json --time 12 --out frame.png
 Options: --duration 秒 --browser Chrome路径 --engine 工程路径 --work-dir 临时目录
          --assets 资源映射JSON --overwrite --concurrency 1
-Story plans share one visual system; legacy shots retain their individual designs.
+refs browses design references; match filters directly reusable templates.
+Story provides information layouts; legacy shots retain their individual designs.
 No voice or music is generated. See references/story.md and references/rendering.md.`;
 
 async function loadStorySchema(engine){
@@ -48,17 +51,24 @@ async function loadStorySchema(engine){
 async function main(){
  const [cmd,...argv]=process.argv.slice(2); if(!cmd||cmd==='help'||cmd==='--help'){console.log(help);return;}
  const options={},pos=[];
- const allowed=new Set(['out','variant','params','plan','duration','browser','engine','work-dir','assets','overwrite','time','concurrency','media','limit','intent','family']);
+ const allowed=new Set(['out','variant','params','plan','duration','browser','engine','work-dir','assets','overwrite','time','concurrency','media','limit','intent','family','expression','all']);
  for(let i=0;i<argv.length;i++){
   const a=argv[i]; if(!a.startsWith('--')){pos.push(a);continue;}
   const key=a.slice(2);if(!allowed.has(key))fail('未知参数 '+a);
-  if(key==='overwrite'){options[key]=true;continue;}
+  if(key==='overwrite'||key==='all'){options[key]=true;continue;}
   if(!argv[i+1]||argv[i+1].startsWith('--'))fail(a+' 缺少值');options[key]=argv[++i];
  }
+ if(cmd!=='refs'&&(options.expression!==undefined||options.all!==undefined))fail('--expression 与 --all 仅用于 refs');
  if(options.family&&cmd!=='match')fail('--family 仅用于 match；计划的风格声明写在 JSON 中');
  if(options.intent&&cmd!=='match'&&(!['check','render','still'].includes(cmd)||options.plan))fail('--intent 仅用于 match 或单条 check/render/still；计划请逐镜头填写 semanticIntent');
  const catalog=json(path.join(skill,'references/catalog.json'));
  const compatibility=json(path.join(skill,'references/compatibility.json'));
+ const referencePath=path.join(skill,'references/reference-library.json');
+ if(cmd==='refs'){
+  if(!fs.existsSync(referencePath))fail('缺少 references/reference-library.json，请同步完整新版 Skill；旧 list / match 仍可使用');
+  const selection=json(path.join(skill,'references/selection.json'));
+  console.log(JSON.stringify(browseReferences(catalog,selection,compatibility,json(referencePath),pos.join(' '),options),null,2));return;
+ }
  if(cmd==='story'){
   if(!options.out)fail('story 需要 --out');
   const out=path.resolve(options.out);
@@ -77,7 +87,12 @@ async function main(){
  }
  if(['inspect','params'].includes(cmd)){
   const item=lookup(pos[0]);const props=json(path.join(skill,`assets/params/${item.id}-${variant}.json`));
-  if(cmd==='inspect'){const selection=json(path.join(skill,'references/selection.json')).templates.find(t=>t.id===item.id);const rules=compatibility.templates.find(t=>t.id===item.id);console.log(JSON.stringify({...item,selection,compatibility:rules,defaultProps:props},null,2));return;}
+  if(cmd==='inspect'){
+   const selections=json(path.join(skill,'references/selection.json'));
+   const selection=selections.templates.find(t=>t.id===item.id),rules=compatibility.templates.find(t=>t.id===item.id);
+   const reference=fs.existsSync(referencePath)?describeReference(catalog,selections,compatibility,json(referencePath),item.id):null;
+   console.log(JSON.stringify({...item,selection,compatibility:rules,reference,defaultProps:props},null,2));return;
+  }
   if(!options.out)fail('params 需要 --out');const out=path.resolve(options.out);
   if(fs.existsSync(out)&&!options.overwrite)fail('输出已存在，请换名称或使用 --overwrite');save(out,props);console.log(out);return;
  }

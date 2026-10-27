@@ -1,114 +1,75 @@
 # MG Motion Skill
 
-用于 Codex 的本地 MG 动效 Skill：把文案、截图、图片或录屏做成可修改的横屏动画，适用于产品介绍、教程、数据比较和概念解释。当前源码版本：**v1.2.0**。
+**v1.3.0：参考驱动的文案补画面。** 给一段文案或口播，模型理解表达关系、选择并查看设计参考，再组织成所需时长的连贯 MG 画面，供剪辑使用。
 
-保留 **50 套独立模板源码、100 组参数和 50 张历史预览**，新增共享视觉系统的信息说明模式。连续 MG 先规划对象的动作、内容递进与统一视觉，再选择或适配模板；阅读为主的说明可用 story。每次输出保存输入记录和运行清单，便于后续修改与追溯。
+默认参考从 50 套中整理为 **30 套代表参考＋20 套备用**，按 9 类表达用途检索。全部 50 套源码、100 组参数和 50 张预览保留；备用是减少默认干扰，不是删除素材。选择依据是静态预览、动作说明与部分源码，原始视频并未完整随包分发。
 
-完整样片用于学习整体表达，从中提炼对象动作与衔接方法；新视频先编排全片，再决定复用哪种实现。完整模板是制作选项，不是逐句拼接的基本单位。目前库仍以模板为主，尚无通用动作原语 API 或自动导演系统。
+## 这次改了什么
 
-## v1.2.0 的调整
+- **先看参考，再组织整段内容**：参考提供构图、图形与动作依据；模型负责适配文案。取消连续内容默认套固定卡片的路线。
+- **参考检索与直接复用分开**：新增 refs，短参考不会因用户要 20–30 秒画面而被排除；match 继续检查直接使用模板的实际边界。
+- **自由场景有可靠制作工具**：新增 project.mjs，创建独立 Remotion 项目并检查/抽帧/渲染，不规定固定布局或动作 schema。
+- **旧工程兼容保留**：原有 render/compose、story、语义检查及模板修复继续可用。story 是阅读型信息说明选项。
 
-- **新增 `story` 信息说明模式**：同一背景、字体、主体和内容区域，使用稳定元素 ID 跨阶段展开；支持解释、判断维度、步骤、对比、数值和真实素材。它适合阅读型信息，不能代替连续 MG 的动作设计。
-- **选模增加语义约束**：`match --intent / --family`；`audit` 检查计划。`coherent` 模式拒绝未经适配的多风格组合，旧 `shots` 计划继续兼容并提示风险。
-- **修复已复现问题**：MG-020 序号不再必须从零计数；MG-032 不自动添加问号；MG-020 / MG-047 默认隐藏无关示例文字；MG-022 保持阈值专用并修复下降变化的说明对应。
-- **改进使用流程**：先确定整段表达与视觉，再决定组件或模板；不按字数、句数机械拼出多个独立视频。
-
-v1.2.0 初始发布只做代码、参数和组件行为检查，未更新历史预览。后续 20 秒 story 样片确认了颜色与布局一致，也暴露了卡片停留偏久、淡叠重影和文字直接替换的问题。因此连续 MG 不再默认套入 story：先设计对象动作与构图演进，story 保留为阅读型信息说明的保守方案。它不会自动改造全部旧模板，也不承诺已修好所有停顿问题。
-
-## 仓库结构
-
-```text
-README.md
-.gitignore
-mg-motion/
-  SKILL.md
-  agents/
-  scripts/
-  references/
-  assets/
-```
-
-## 安装
-
-建议使用 Node.js 22（本次验证版本为 22.17.0）与 npm，并准备可用的本地 Chrome 和支持中文的字体。建议安装 Noto Sans SC；部分手绘模板使用楷体或 Noto Serif SC。渲染引擎锁定 Remotion 4.0.534。换电脑后需重新检查字体、字宽和实际画面。
-
-1. 克隆公开仓库：
-
-   ```sh
-   git clone https://github.com/dewidydy4949/mg-motion-skill.git
-   cd mg-motion-skill
-   ```
-
-2. 将仓库中的整个 `mg-motion` 文件夹复制到用户的 Codex skills 目录，通常为 `~/.codex/skills/`；Windows 对应 `%USERPROFILE%\.codex\skills\`。若使用自定义 `CODEX_HOME`，则放到其 `skills/` 子目录。
-
-   **已有同名 Skill 时，先备份并比较差异，保留现有修改，再合并或替换。不要直接覆盖尚未保存的改动。**
-
-3. 进入安装后 Skill 的 `assets/engine/` 目录安装锁定依赖：
-
-   ```sh
-   npm ci --ignore-scripts --no-audit --no-fund
-   ```
-
-4. 渲染时用 `--browser "Chrome可执行文件路径"` 指定 Chrome，或设置环境变量 `MG_BROWSER_EXECUTABLE`。
-
-仓库副本和已安装 Skill 是两个独立副本。修改或更新仓库源码后，需要再次比较并同步到安装目录；如果依赖锁文件变化，在安装目录重新执行上述安装命令。项目专用的布局或动作修改应保存在项目引擎副本中，通过 `--engine` 使用，保留安装库的稳定默认效果。
+技能指引见 [SKILL.md](mg-motion/SKILL.md)，参考整理见 [selection.md](mg-motion/references/selection.md)，自由工程见 [project.md](mg-motion/references/project.md)。这是调用模型的创作流程和本地工具，refs 本身不会自动理解文案、观看视频或生成动画。
 
 ## 使用
 
-在 Codex 中调用：
+```text
+$mg-motion 为这段文案补一段20秒横屏画面，供插入口播剪辑：……
+```
+
+有指定时长、口播、截图或录屏时一起提供；只有文案时，模型自行估算时长并说明。无需用户选择模板编号。风格以合适的参考为依据，画面根据文案推进，声音按任务选择。
+
+在 mg-motion/ 目录可运行：
 
 ```text
-$mg-motion 把下面四组问答做成 9 秒横屏动画，突出最后一条回复：……
+node scripts/mg.mjs refs
+node scripts/mg.mjs refs "同一输入分发，再比较答案"
+node scripts/mg.mjs refs --expression process --limit 4
+node scripts/mg.mjs refs --all
+node scripts/mg.mjs inspect MG-013
 ```
 
-连续讲解可直接说：
+先看返回的 preview、card 和学习点；需要看动作时按 referenceRender 重渲染库内参考版。静态预览、源码分析、复刻视频和原始参考不是同一种证据。
+
+需要新场景时：
 
 ```text
-$mg-motion 把这段文案做成 20 秒连贯横屏 MG。统一颜色、字体和图形语言，让对象的动作推进内容，按意思安排构图与节奏：……
+node scripts/project.mjs init --dir work/my-segment
 ```
 
-制作方法见 [动作与声音编排](mg-motion/references/motion-direction.md)。需要图形变形、连续运动等表达时，在项目引擎中实现；现有命令不会从文案自动生成这些动作。BGM 和音效可参与节奏，画面在静音时也应讲得清楚。
+初始工程是空画布，模型应根据文案与所选参考写入实际场景，再运行：
 
-新增 [20 秒积分动作案例](mg-motion/examples/credits-motion/README.md)，提供项目源码、渲染脚本和可选的原创程序合成节奏/音效脚本。它用对象重排、失效、任务图形和不同构图检验制作方法，是固定案例而非新的通用模板。已实际渲染并检查关键帧，审美与表达效果仍需人工判断；没有将它包装成自动编排器。
-
-如果内容适合阅读型信息说明，可导出 story 示例，修改后检查与渲染：
-
-```sh
-node scripts/mg.mjs story --out work/story.json
-node scripts/mg.mjs audit --plan work/story.json
-node scripts/mg.mjs check --plan work/story.json --browser "Chrome可执行文件路径"
-node scripts/mg.mjs compose --plan work/story.json --out outputs/story.mp4 --browser "Chrome可执行文件路径"
+```text
+node scripts/project.mjs check --dir work/my-segment --browser "Chrome路径"
+node scripts/project.mjs render --dir work/my-segment --out outputs/segment.mp4 --browser "Chrome路径"
+node scripts/project.mjs still --dir work/my-segment --time 7.5 --out work/check.png --browser "Chrome路径"
 ```
 
-上面的命令在 `mg-motion/` 目录执行。参数说明见 [Story 信息说明](mg-motion/references/story.md)。导出的是可编辑示例，仍需根据实际文案规划各阶段；它不作为连续 MG 的美术、动作或节奏基准。
+直接复用现成模板和素材槽时使用 [原渲染工具](mg-motion/references/rendering.md)。另保留 [20秒积分项目案例](mg-motion/examples/credits-motion/README.md)，它是专用试验，不是所有文案的默认模板。
 
-也可在 Skill 目录中直接运行脚本：
+## 安装与更新
 
-```sh
-node scripts/mg.mjs match "手机问答，突出最后回复" --duration 9
-node scripts/mg.mjs inspect MG-043
-node scripts/mg.mjs params MG-043 --out work/dialog.json
-```
+需要 Node.js、npm、本地 Chrome 和可用中文字体。本工程锁定 Remotion 4.0.534；依赖锁保持不变。
 
-编辑导出的参数，替换示例文字后再检查和渲染：
+1. 克隆本仓库，将整个 mg-motion 文件夹复制到实际 skills 安装目录，如 ~/.codex/skills/ 或 Windows 的 %USERPROFILE%\\.codex\\skills\\。保留已有本地修改后再合并。
+2. 在安装目录的 assets/engine 中执行：
 
-```sh
-node scripts/mg.mjs check MG-043 --params work/dialog.json --duration 9 --browser "Chrome可执行文件路径"
-node scripts/mg.mjs render MG-043 --params work/dialog.json --duration 9 --out outputs/dialog.mp4 --browser "Chrome可执行文件路径"
-```
+   ```text
+   npm ci --ignore-scripts --no-audit --no-fund
+   ```
 
-查看 [Skill 流程](mg-motion/SKILL.md)、[模板选择与素材能力](mg-motion/references/selection.md) 和 [参数、渲染与复跑](mg-motion/references/rendering.md)。渲染会写入所用引擎的素材暂存与缓存；需要隔离项目时使用自己的引擎副本、`--engine` 和 `--work-dir`。
+3. 使用 --browser 指定 Chrome，或设置 MG_BROWSER_EXECUTABLE。换电脑需检查字体与字宽。
+4. 更新时先 git pull --ff-only，再同步实际安装的 Skill。只拉仓库不会更新安装副本；新会话中检查帮助是否包含 refs，并确认 scripts/project.mjs 存在。
 
-更新时先在仓库运行 `git pull --ff-only`，再将新版 `mg-motion` 同步到实际调用的 skills 目录。只更新仓库不会改变已安装副本。保留自己做过的局部修改，并在新会话中确认 `inspect` 能显示 `compatibility`、帮助中有 `story` / `audit` 命令。旧 Release 附件仍是 v1.1.0，本次改造通过仓库源码提供。
+## 验证与边界
 
-开发者可在安装引擎依赖后，从 `mg-motion/` 执行 `node scripts/verify.mjs`：运行 TypeScript 与无视频的行为回归检查。
+运行 `node scripts/verify.mjs` 检查 TypeScript、参数、参考索引与工具行为。工程工具的 check 只加载合成并渲染第0帧，完整动作和美感需要实看。实际试跑记录与项目放在 [workflow-cases](mg-motion/examples/workflow-cases/README.md)。
 
-## 能力边界
+默认补画面为 1920×1080、30fps、无声；比例、声音和特殊动作可在独立项目实现并验证。不会自动写入剪辑软件时间线。输出保留可改工程/参数和哈希清单，visualReviewed:false 不代表已经通过人工审美验收。
 
-- 默认输出为 **1920×1080、30fps、无声 MP4**；没有自动旁白、音乐或配音。需要声音时在项目工程或后期剪辑中加入。旧模板多镜头采用直接切换；story 在共享场景内更新内容，不提供通用的对象变形或音画编排能力。
-- `match` 是关键词与能力约束筛选，不会读取图片或视频，也不提供自动视觉匹配。能否嵌入素材以具体模板槽位为准。
-- 不自动写入剪辑软件时间线。竖屏、透明叠加和复杂转场需另做工程修改与验证。
-- 参数校验通过不等于视觉验收通过。需实际查看关键帧、转换与末帧，并检查整片节奏。清单中的 `visualReviewed:false` 是脚本原始记录，视觉检查另行记录。
+当前 30 项是人工选择的初始参考集，未重新观看全部原始视频。历史预览不等于最新参数的视觉验收；新增项目示例也不证明所有题材或所有模型都达到同等质量。后续根据真实补画面案例逐步调整参考与方法。
 
 ## v1.1.0 历史验证范围
 

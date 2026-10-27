@@ -60,7 +60,7 @@ export function recommend(catalog, selection, brief, options = {}, compatibility
     query: brief, filters: {media, seconds, intent, family}, totalMatches: rows.length,
     candidates: rows.slice(0, limit),
     note: rows.length
-      ? '这是词表与声明约束筛选，分数不是置信度；语义来自调用者声明，并非自动理解文案。核对 motionMeaning、requiredProps 和使用卡。family 只描述现有模板，不会自动统一颜色或跨镜头状态。连续讲解优先使用 story 计划。'
-      : '没有符合当前声明、词表与能力条件的候选。不要为了拿到候选而放弃语义或必需素材约束；连续解释、到期失效等可使用 story，或在项目副本中定制。',
+      ? '这是直接复用模板的词表与声明约束筛选，分数不是置信度；语义来自调用者声明，并非自动理解文案。核对 motionMeaning、requiredProps 和使用卡。family 不会自动统一跨镜头设计。需要学习构图与动作时使用 refs，再按整段内容组织画面。'
+      : '没有符合当前声明、词表与能力条件的直接复用模板。保留文案含义与必需素材条件；可用 refs 寻找设计参考，再在项目中适配或编写动作，不自动退回固定卡片。',
   };
 }

@@ -1,0 +1,1376 @@
+{
+  "schemaVersion": 1,
+  "curation": {
+    "coreCount": 30,
+    "extendedCount": 20,
+    "basis": "人工检查静态预览、使用卡、已知语义与部分源码；按表达覆盖及减少近重复选择，不是所有原视频的美感排名。",
+    "media": "原始参考视频未随包分发；当前预览来自库内复刻，运动可按需重渲染核对。"
+  },
+  "expressions": {
+    "emphasis": {
+      "label": "强调与引入",
+      "description": "突出关键词、问题、结论或章节重点",
+      "keywords": [
+        "强调",
+        "重点",
+        "引入",
+        "开头",
+        "结论",
+        "标题",
+        "关键词",
+        "hook",
+        "emphasis"
+      ]
+    },
+    "comparison": {
+      "label": "比较与选择",
+      "description": "沿同一维度对齐对象、条件或结果",
+      "keywords": [
+        "对比",
+        "比较",
+        "选择",
+        "区别",
+        "方案",
+        "价格",
+        "comparison",
+        "compare"
+      ]
+    },
+    "change": {
+      "label": "数量与状态变化",
+      "description": "解释增长、减少、失效、完成或恢复等变化",
+      "keywords": [
+        "变化",
+        "增长",
+        "减少",
+        "失效",
+        "到期",
+        "清零",
+        "恢复",
+        "状态",
+        "change"
+      ]
+    },
+    "process": {
+      "label": "步骤与流程",
+      "description": "表现操作顺序、任务处理与阶段推进",
+      "keywords": [
+        "步骤",
+        "流程",
+        "处理",
+        "操作",
+        "分类",
+        "顺序",
+        "process",
+        "steps"
+      ]
+    },
+    "relationship": {
+      "label": "关系与结构",
+      "description": "表现分发、汇聚、层级、连接和有依据的因果",
+      "keywords": [
+        "关系",
+        "结构",
+        "分发",
+        "汇聚",
+        "合并",
+        "分配",
+        "因果",
+        "连接",
+        "原因",
+        "relationship"
+      ]
+    },
+    "focus": {
+      "label": "局部聚焦与解释",
+      "description": "从整体找到重点、放大解释并保留上下文",
+      "keywords": [
+        "聚焦",
+        "放大",
+        "标注",
+        "批注",
+        "解释",
+        "局部",
+        "表格",
+        "focus",
+        "zoom"
+      ]
+    },
+    "conversation": {
+      "label": "对话与问答",
+      "description": "建立提问、回复、观点与信息交换的观看顺序",
+      "keywords": [
+        "问答",
+        "对话",
+        "聊天",
+        "回复",
+        "观点",
+        "conversation",
+        "chat"
+      ]
+    },
+    "timeline": {
+      "label": "时间与演进",
+      "description": "组织时间节点、发展过程和阶段关系",
+      "keywords": [
+        "时间",
+        "年份",
+        "历史",
+        "演进",
+        "时间线",
+        "日历",
+        "timeline"
+      ]
+    },
+    "media": {
+      "label": "素材与界面展示",
+      "description": "将真实图片、截图、录屏或示意界面组织成可读画面",
+      "keywords": [
+        "截图",
+        "录屏",
+        "图片",
+        "照片",
+        "界面",
+        "演示",
+        "素材",
+        "教程",
+        "media",
+        "screen"
+      ]
+    }
+  },
+  "references": [
+    {
+      "id": "MG-013",
+      "tier": "core",
+      "expressions": [
+        "relationship",
+        "comparison"
+      ],
+      "learn": [
+        "用共同输入作为持续主体，分叉连线明确一对多分发关系",
+        "输入窗口与右侧对象分区，逐个建立连接后保留全局关系",
+        "底部原则在分发结构建立后出现，辅助解释比较前提"
+      ],
+      "adapt": "借鉴分发结构时保留同一输入的语义；成绩或回答比较需要另画结果，不沿用这段连线当结论。",
+      "reason": "一对多分发的表达机制明确，与普通对比卡片有实质区别；适合解释统一输入、任务派发。",
+      "related": [
+        "MG-017",
+        "MG-021"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-013.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-013.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/pilots/P01/Comparison.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-014",
+      "tier": "core",
+      "expressions": [
+        "focus",
+        "comparison"
+      ],
+      "learn": [
+        "先给整表上下文，再通过选区和推近带出重点列",
+        "降低非重点内容对比度，而不是从一开始删掉它们",
+        "回到整表承接结论，让局部解释回到整体"
+      ],
+      "adapt": "已有模板的单列提问会弱化其他列；持续并排比较时借鉴聚焦方法并修改阶段，不直接沿用整段。",
+      "reason": "整表到局部再返回的视线组织具有代表性，能用于真实数据解释；不是普通静态表格页。",
+      "related": [
+        "MG-029",
+        "MG-035",
+        "MG-036"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-014.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-014.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/pilots/P02/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-015",
+      "tier": "core",
+      "expressions": [
+        "process",
+        "media"
+      ],
+      "learn": [
+        "纸纹、手绘线条和单一黄色强调形成完整视觉语言",
+        "填写、勾选、圈注与通过反馈按操作关系推进",
+        "主浏览器保留，侧面配置区随后补入以扩展过程"
+      ],
+      "adapt": "把它作为手绘过程演示参考；当前代码固定三字段和两项设置，图形是示意界面，不能冒充真实操作。",
+      "reason": "在本组中手绘图形和动作叙事差异最大，提供非科技卡片路线；适合资料录入、操作步骤。",
+      "related": [
+        "MG-034",
+        "MG-037"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-015.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-015.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/pilots/P03/AgentForm.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-016",
+      "tier": "core",
+      "expressions": [
+        "emphasis"
+      ],
+      "learn": [
+        "超大字与紧凑行距建立单一重点",
+        "斜划线、色块与文字缩放共同构成短标题的运动力度",
+        "短句用明确切换和短停留形成开场节奏"
+      ],
+      "adapt": "只借鉴短标题和强调动作；长解释要另设对象和阅读空间，不能把整篇文案逐句塞入硬切海报。",
+      "reason": "纯字体与几何强调的代表，视觉直接，补足短引入和结论强调用途。",
+      "related": [
+        "MG-018",
+        "MG-031",
+        "MG-032"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-016.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-016.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/batch/MG-016/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-017",
+      "tier": "core",
+      "expressions": [
+        "comparison",
+        "conversation"
+      ],
+      "learn": [
+        "共同问题保留在画面中，为多个回答建立比较上下文",
+        "两到三列回答保持同级位置，便于同时扫描",
+        "内容逐字展开与面板错峰入场分别承担阅读和建立结构"
+      ],
+      "adapt": "只用已有短回答或明确的示例；不要凭模板给模型排名，长回答需要摘要并重新安排阅读时间。",
+      "reason": "保留实际回答内容的同题比较机制，弥补输入分发只能讲比较方法的限制。",
+      "related": [
+        "MG-013",
+        "MG-029"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-017.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-017.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/batch/MG-017/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-018",
+      "tier": "extended",
+      "expressions": [
+        "focus",
+        "comparison"
+      ],
+      "learn": [
+        "纵向滚轮把多个候选依次带过统一焦点",
+        "用清晰度、字重和尺度区分当前项与上下文",
+        "在指定项停驻，形成选择落点"
+      ],
+      "adapt": "滚过的数字是候选选择，不是价格时间走势；需要完整权益比较时用并列结构。",
+      "reason": "滚轮聚焦与 MG-032 方法相近，价格用途较窄，作为备用表达保留。",
+      "related": [
+        "MG-032",
+        "MG-033"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-018.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-018.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/batch/MG-018/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-019",
+      "tier": "core",
+      "expressions": [
+        "comparison",
+        "change",
+        "timeline"
+      ],
+      "learn": [
+        "条形长度和位置同时响应同一时点的数据",
+        "时间标签保留，帮助理解名次变化的依据",
+        "对象身份随排序移动持续存在，避免每帧重新认识榜单"
+      ],
+      "adapt": "仅用于有依据的同量纲时序数据；不能为了动画编数，也不要把普通并列观点做成竞争排名。",
+      "reason": "同时覆盖数量变化、时序和比较，有真正的数据运动结构；比固定赛道更通用。",
+      "related": [
+        "MG-024",
+        "MG-030"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-019.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-019.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/batch/MG-019/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-020",
+      "tier": "extended",
+      "expressions": [
+        "emphasis",
+        "change"
+      ],
+      "learn": [
+        "用大数字和较轻说明建立统计摘要的主次",
+        "两到三项等权排列，适合有限指标的快速扫描",
+        "指标数值与条目入场分开安排"
+      ],
+      "adapt": "编号和静态值必须使用相应 numberMode；概念列表不应伪装成统计指标。",
+      "reason": "通用统计卡的机制较基础且静态倾向明显，作为指标摘要备用，不作连续画面的默认设计。",
+      "related": [
+        "MG-028",
+        "MG-030"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-020.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-020.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-021",
+      "tier": "core",
+      "expressions": [
+        "process",
+        "relationship"
+      ],
+      "learn": [
+        "纸张对象沿输送路径经过处理点，形成输入到结果的关系",
+        "分类器保持位置，多个对象依次经过以建立重复处理规则",
+        "对象携带结果进入收集区，用空间位置表达流程完成"
+      ],
+      "adapt": "等级和评分必须来自输入依据；若任务没有评分，只借鉴对象穿过处理节点的方法并去掉相关判断。",
+      "reason": "把抽象处理过程转为可见对象运动，区别于单纯出现结果卡，适合流程与概念解释。",
+      "related": [
+        "MG-013",
+        "MG-028"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-021.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-021.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-022",
+      "tier": "core",
+      "expressions": [
+        "change",
+        "emphasis"
+      ],
+      "learn": [
+        "量值与阈值线处于同一标尺，变化的原因可见",
+        "跨越阈值时颜色、状态和印章同步更新",
+        "大数值与简短判断形成明确的前后状态"
+      ],
+      "adapt": "红绿、合格线和印章绑定阈值判断；过期失效、一般余额消耗或步骤编号需另设表达。",
+      "reason": "提供由条件触发状态翻转的代表机制；保留核心参考同时明确狭窄语义，防止误用。",
+      "related": [
+        "MG-026",
+        "MG-030"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-022.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-022.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-023",
+      "tier": "extended",
+      "expressions": [
+        "media",
+        "focus"
+      ],
+      "learn": [
+        "把短功能文字与真实素材分区，让画面证据占主要位置",
+        "在素材内部用选择框指出对应位置",
+        "局部标记承担解释，避免只用大标题声称功能"
+      ],
+      "adapt": "必须有对应截图和正确焦点坐标；默认示意图不能代表用户的实际产品，原模板不支持视频。",
+      "reason": "功能说明加截图是一种可靠但较常见的布局，重点标注能力与 MG-036 重叠，作为简单图片版备用。",
+      "related": [
+        "MG-036",
+        "MG-027"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-023.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-023.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-024",
+      "tier": "extended",
+      "expressions": [
+        "comparison",
+        "change"
+      ],
+      "learn": [
+        "独立赛道与共同终点共同定义竞争关系",
+        "对象向同一目标移动，领先者随时序更新",
+        "保留目标位置使进展有可判断的尺度"
+      ],
+      "adapt": "各对象需要真实共同目标；画面倒计时是演示剩余时长，不能标成实际项目期限。",
+      "reason": "和 MG-019 同属竞争时序表达，赛道形式更专用，保留为共同目标场景的备用。",
+      "related": [
+        "MG-019",
+        "MG-026"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-024.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-024.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-025",
+      "tier": "extended",
+      "expressions": [
+        "conversation",
+        "emphasis"
+      ],
+      "learn": [
+        "评论逐张进入形成反馈累积感",
+        "作者、正文、互动信息建立可辨识的层级",
+        "超过可见数量后滚动，让前后评论共享同一展示区域"
+      ],
+      "adapt": "只用真实提供的评论或显式示例；该模板没有真实头像和截图槽，不自动变成证言证据。",
+      "reason": "社交评论题材专用，卡片逐项进入机制与多个列表示例重复；作为明确评论需求的备用。",
+      "related": [
+        "MG-017",
+        "MG-028"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-025.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-025.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-026",
+      "tier": "core",
+      "expressions": [
+        "change",
+        "emphasis"
+      ],
+      "learn": [
+        "圆环绘制把有限区间的进度变成可见过程",
+        "完成时从数值状态转为勾号确认",
+        "保留一个中心主体，让状态变化本身成为重点"
+      ],
+      "adapt": "环到勾号仅表示完成，不能挪用于到期失效；默认满屏配色可作为项目风格适配项。",
+      "reason": "完成状态转化机制简单但通用，作为基础动作参考覆盖独立进度说明。",
+      "related": [
+        "MG-022",
+        "MG-024"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-026.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-026.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-027",
+      "tier": "core",
+      "expressions": [
+        "media",
+        "emphasis"
+      ],
+      "learn": [
+        "把多张真实成果统一到有节制的矩阵中",
+        "多素材从侧面进入并归位，建立集合而非随机堆叠",
+        "左侧结论与右侧证据相互对应，区分讲述与展示"
+      ],
+      "adapt": "缩略图适合概览，不适合读密集文字；数量、画幅和结论应来自现有素材，不能用假作品填满。",
+      "reason": "覆盖多图片成果展示这一实际补画面需求，兼有可替换素材能力和清楚的整体构图。",
+      "related": [
+        "MG-023",
+        "MG-031"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-027.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-027.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-028",
+      "tier": "extended",
+      "expressions": [
+        "relationship",
+        "process"
+      ],
+      "learn": [
+        "每项把分类结果、例子与后续动作放在一起",
+        "网格给并列结果一致的阅读位置",
+        "依次揭示结果，减少一开始同时出现的信息量"
+      ],
+      "adapt": "分类与建议要有内容依据；需要解释处理过程时应画对象如何经过流程，不能只增加结果卡。",
+      "reason": "结果网格的动作较弱、与一般信息卡重复；保留作阅读型分类摘要，核心流程参考由 MG-021 承担。",
+      "related": [
+        "MG-021",
+        "MG-020"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-028.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-028.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-029",
+      "tier": "core",
+      "expressions": [
+        "comparison",
+        "focus"
+      ],
+      "learn": [
+        "对齐原文和改写，使变化有可回看的上下文",
+        "局部高亮把注意力集中到实际讨论的词组",
+        "批注和结论在文本对应关系建立后补入"
+      ],
+      "adapt": "高亮内容必须真实存在且与说明相符；它是短文本对照，不是自动纠错，也不能无限装入长文。",
+      "reason": "编辑式配色与原文标注对解释语言、观点和修改原因有明确价值，区别于普通并排回答。",
+      "related": [
+        "MG-014",
+        "MG-017"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-029.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-029.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-030",
+      "tier": "core",
+      "expressions": [
+        "relationship",
+        "comparison"
+      ],
+      "learn": [
+        "重复点形成总体，颜色区分部分与剩余的关系",
+        "大百分比与点数使用同一数据来源",
+        "主结论与图例分层，既给结果又保留解释依据"
+      ],
+      "adapt": "分类必须互斥且分母一致；颜色不是装饰分类，不能用无关数字配点阵。",
+      "reason": "用部分与整体关系解释比例，视觉克制且数据语义明确，补足普通数字卡无法展示的组成关系。",
+      "related": [
+        "MG-020",
+        "MG-019"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-030.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-030.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-031",
+      "tier": "extended",
+      "expressions": [
+        "emphasis",
+        "relationship"
+      ],
+      "learn": [
+        "密集卡墙和前景标题形成前后层次",
+        "倾斜、粗描边与硬阴影共同构成统一插画语言",
+        "背景缓移强化种类丰富感，前景保留阅读焦点"
+      ],
+      "adapt": "卡墙是丰富感的背景，标题会遮挡条目；需要逐项解释时改成可读结构，勿当完整目录。",
+      "reason": "主要承担装饰与品类丰富感，信息推进有限；作为特定活泼风格的备用参考。",
+      "related": [
+        "MG-016",
+        "MG-027"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-031.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-031.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-032",
+      "tier": "extended",
+      "expressions": [
+        "emphasis",
+        "focus"
+      ],
+      "learn": [
+        "让短项经过统一中心焦点，以尺度和模糊建立阅读次序",
+        "上方引导语持续保留，把多个短项放在一个语境里",
+        "最后一项停驻形成当前重点"
+      ],
+      "adapt": "只适合独立短项；因果、步骤和同时比较需要保留上下文，当前新版也不会自动添加问号。",
+      "reason": "与 MG-018 共享滚轮聚焦机制且容易丢失语义连接，保留为确实需要短项串列时的备用。",
+      "related": [
+        "MG-018",
+        "MG-016"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-032.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-032.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-033",
+      "tier": "extended",
+      "expressions": [
+        "comparison",
+        "emphasis"
+      ],
+      "learn": [
+        "错位叠卡通过前后层次突出一个已选方案",
+        "大价格与权益分层，让重点档位的选择依据可读",
+        "标题与推荐卡分区形成产品说明的视线顺序"
+      ],
+      "adapt": "后方卡片不完整，不能用于全部权益横评；推荐与价格必须有输入依据，价格滚动也不表示真实降价。",
+      "reason": "套餐推荐结构较专用，且叠卡会遮挡其他选项；保留用于明确突出单档的场景。",
+      "related": [
+        "MG-018",
+        "MG-017",
+        "MG-020"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-033.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-033.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-034",
+      "tier": "extended",
+      "expressions": [
+        "process",
+        "media",
+        "relationship"
+      ],
+      "learn": [
+        "代码中的当前行与右侧结果同步改变，建立原因与结果的对应",
+        "结果沿同一横向轨道移动，保留前后状态的空间线索",
+        "解释短句跟随步骤更新，把文字与当前操作绑定"
+      ],
+      "adapt": "需要真实代码逻辑或明确示意，模板不会执行代码；通用流程不必伪装成代码窗，已有录屏要对齐步骤。",
+      "reason": "动作关系有价值但代码题材较窄，先列备用；若整体核心集缺少因果演示，可优先提升这一项。",
+      "related": [
+        "MG-015",
+        "MG-035",
+        "MG-037"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-034.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-034.md，以及 catalog/selection/compatibility 元数据",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-035",
+      "tier": "core",
+      "expressions": [
+        "comparison",
+        "focus",
+        "process"
+      ],
+      "learn": [
+        "完整界面先提供上下文，再淡化非关注区域",
+        "多操作向一个主操作收敛，使简化过程可见",
+        "线框作为过渡解释层，连接改前与改后状态"
+      ],
+      "adapt": "现有动作适合界面简化；素材模式主要淡叠，并不会自动把任意截图控件变形为新界面。",
+      "reason": "使用对象收敛表达前后差异，具备可学习的连续变换关系，适合产品改版和流程收敛。",
+      "related": [
+        "MG-014",
+        "MG-036",
+        "MG-034"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-035.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-035.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/batch/MG-035/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-036",
+      "tier": "core",
+      "expressions": [
+        "focus",
+        "media",
+        "process"
+      ],
+      "learn": [
+        "鼠标先把视线带到对象，再给点击或提示反馈",
+        "提示靠近正在解释的位置，减少文字与素材之间的来回查找",
+        "框选、局部处理和缩放提供不同层次的聚焦方法"
+      ],
+      "adapt": "真实素材中的焦点要手动对齐；模板强制指针和均分步骤可能与录屏冲突，必要时改项目动作和时长。",
+      "reason": "覆盖真实界面补画面的高频需要，且有点击、引导、模糊、放大四种可学习机制，优于只放截图。",
+      "related": [
+        "MG-023",
+        "MG-014",
+        "MG-035"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-036.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-036.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/batch/MG-036/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-037",
+      "tier": "core",
+      "expressions": [
+        "process",
+        "media"
+      ],
+      "learn": [
+        "手机画面、点击位置与步骤说明同步，让操作因果可跟随",
+        "完成反馈紧接点击出现，再推进下一步",
+        "持续保留设备和步骤轨迹，减少跨步骤重新建立环境"
+      ],
+      "adapt": "手机窗口适合竖向素材；点击坐标、反馈和真实操作时序必须一致，不能自动识别或控制应用。",
+      "reason": "覆盖移动端教程的独立构图与操作同步机制，与桌面聚焦互补。",
+      "related": [
+        "MG-015",
+        "MG-036",
+        "MG-034"
+      ],
+      "evidence": [
+        "已查看静态历史预览：assets/previews/MG-037.jpg（联系表；MG-015、MG-029、MG-036另看原尺寸）",
+        "已读取使用卡：references/templates/MG-037.md，以及 catalog/selection/compatibility 元数据",
+        "已静态检查模型的动画代码：assets/engine/src/batch/MG-037/model.tsx",
+        "本次没有播放原视频或重新渲染；动作描述依据使用卡，部分由源码交叉核对。"
+      ]
+    },
+    {
+      "id": "MG-038",
+      "tier": "core",
+      "expressions": [
+        "process",
+        "media"
+      ],
+      "learn": [
+        "左右两个工作区域建立输入与交付位置，结果图成为两区之间的视觉联系。",
+        "先揭示结果，再让结果沿弧线移动、放大并落入文档，动作具有明确起点与用途。",
+        "浅色界面、有限强调色与图片本身分工，适合接入用户真实素材。"
+      ],
+      "adapt": "适合单个结果进入版面的过程；使用真实图片或录屏时核对素材槽，不把动画当作实际生成服务。",
+      "reason": "保留“结果在两个上下文之间转移”的完整表达，素材替换能力也能直接服务补画面。",
+      "related": [
+        "MG-041"
+      ],
+      "evidence": [
+        "assets/previews/MG-038.jpg：实际查看静态预览",
+        "references/templates/MG-038.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-039",
+      "tier": "extended",
+      "expressions": [
+        "timeline",
+        "focus"
+      ],
+      "learn": [
+        "从一周日期扫描收束到一天，再放大关键信息形成聚焦。",
+        "同一日期派生的周数、年度进度和下一节点使用清楚的数据层级。"
+      ],
+      "adapt": "日历数据使用 UTC 与 ISO 周规则，不能替代余额到期或任意进度机制。",
+      "reason": "日历派生指标的固定场景较窄；默认集已有其他时间演进参考，保留为日历专项。",
+      "related": [
+        "MG-044",
+        "MG-053",
+        "MG-062"
+      ],
+      "evidence": [
+        "assets/previews/MG-039.jpg：实际查看静态预览",
+        "references/templates/MG-039.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-040",
+      "tier": "extended",
+      "expressions": [
+        "process"
+      ],
+      "learn": [
+        "横向阶段卡通过箭头连接，进行中高亮沿阅读方向移动。",
+        "阶段状态、底部进度和完成提示对应同一执行阶段。"
+      ],
+      "adapt": "适合顺序且基本均分的流程；并列判断、分支失败与不同耗时需重新编排。",
+      "reason": "通用流程能直接复用，但主要依赖卡片入场与状态高亮；与49等流程表达接近，默认参考先保留更丰富的过程案例。",
+      "related": [
+        "MG-049",
+        "MG-055"
+      ],
+      "evidence": [
+        "assets/previews/MG-040.jpg：实际查看静态预览",
+        "references/templates/MG-040.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-041",
+      "tier": "core",
+      "expressions": [
+        "process",
+        "media",
+        "timeline"
+      ],
+      "learn": [
+        "将需求、单份主视觉、多平台形态与周历排布组织成有结果的三阶段构图。",
+        "从中心向两侧展开多画幅内容，再把内容缩为排程中的条目。",
+        "同一主视觉在不同载体中反复出现，帮助建立内容身份。"
+      ],
+      "adapt": "源码用 stage 切换重建画面，不能宣称是真正连续对象变形；保留构图演进思路并按新内容重做交接。",
+      "reason": "具备由一到多再归入排程的完整结构，比单独日历卡片更能展示如何组织连续段落。",
+      "related": [
+        "MG-038",
+        "MG-044"
+      ],
+      "evidence": [
+        "assets/previews/MG-041.jpg：实际查看静态预览",
+        "references/templates/MG-041.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码",
+        "assets/engine/src/batch/MG-041/model.tsx：实际阅读源码"
+      ]
+    },
+    {
+      "id": "MG-042",
+      "tier": "core",
+      "expressions": [
+        "focus",
+        "emphasis"
+      ],
+      "learn": [
+        "正文逐词变深与持续高亮让观众知道当前读到哪里。",
+        "同一词组在大字号摘录与手机原文中同步定位，连接重点和上下文。",
+        "纸底、衬线正文、少量黄色强调形成适合阅读的层级。"
+      ],
+      "adapt": "词组时刻需要显式安排，不能当作自动口播对齐；用于确实需要读原文的段落，避免把所有文案都改成朗读页。",
+      "reason": "提供独立的“原文证据与重点同步”方法，能覆盖口播引用、评析和教程中的阅读需求。",
+      "related": [
+        "MG-043"
+      ],
+      "evidence": [
+        "assets/previews/MG-042.jpg：实际查看静态预览",
+        "references/templates/MG-042.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-043",
+      "tier": "core",
+      "expressions": [
+        "conversation"
+      ],
+      "learn": [
+        "输入、发送、等待和回复按照对话顺序出现，键盘状态也参与表达。",
+        "蓝灰气泡区分双方，同时保留对话上下文。",
+        "暖底、标题下划线与通用手机构成简洁的产品场景。"
+      ],
+      "adapt": "只适合短对话；消息需要真实来源或明确示意，超出空间时重新设计滚动或分镜。",
+      "reason": "对话是常见补画面需求，本例具有明确交互过程和可读身份区分。",
+      "related": [
+        "MG-042"
+      ],
+      "evidence": [
+        "assets/previews/MG-043.jpg：实际查看静态预览",
+        "references/templates/MG-043.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-044",
+      "tier": "extended",
+      "expressions": [
+        "timeline",
+        "process"
+      ],
+      "learn": [
+        "便签依次落入周历，通过位置建立排程关系。",
+        "选中任务描边后向渠道扇出连线，把计划与分发连接起来。"
+      ],
+      "adapt": "周历与发布渠道是固定场景，需保持真实的日期和分发关系；不能用于泛化的时间轴。",
+      "reason": "与41的周历和分发机制重合度高；作为只需排程与渠道关系时的简化专项备用。",
+      "related": [
+        "MG-041",
+        "MG-039"
+      ],
+      "evidence": [
+        "assets/previews/MG-044.jpg：实际查看静态预览",
+        "references/templates/MG-044.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-045",
+      "tier": "core",
+      "expressions": [
+        "timeline",
+        "change",
+        "media"
+      ],
+      "learn": [
+        "年份胶带、人物、地图和便签用同一纸张拼贴语言保持整体观感。",
+        "从个人与手机的局部场景切到地球和规模便签，构图尺度变化表达扩展。",
+        "翻页擦除为两幕建立有材质依据的交接。"
+      ],
+      "adapt": "原实现固定两幕成长与数字增长；地图是示意，替换人物或主题后需重新确认扩展关系成立。",
+      "reason": "在默认集中保留明显不同于界面卡片的拼贴与空间尺度变化，补足视觉表达多样性。",
+      "related": [
+        "MG-053",
+        "MG-062"
+      ],
+      "evidence": [
+        "assets/previews/MG-045.jpg：实际查看静态预览",
+        "references/templates/MG-045.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-046",
+      "tier": "core",
+      "expressions": [
+        "relationship",
+        "process"
+      ],
+      "learn": [
+        "逐笔出现的层框与箭头让结构按层次被理解。",
+        "中间层使用蓝色文字与边界框，明确承担连接上下两层的职责。",
+        "左解释、右结构的留白组织适合复杂概念的逐步说明。"
+      ],
+      "adapt": "固定三层结构只适合有层次职责的内容；并列三项或任意拓扑需重新组织。",
+      "reason": "三层结构的学习价值清楚，可作为系统解释与分层关系的代表参考。",
+      "related": [
+        "MG-059",
+        "MG-051"
+      ],
+      "evidence": [
+        "assets/previews/MG-046.jpg：实际查看静态预览",
+        "references/templates/MG-046.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-047",
+      "tier": "extended",
+      "expressions": [
+        "relationship",
+        "focus"
+      ],
+      "learn": [
+        "来源短语沿曲线朝同一目标移动，使连线具有明确方向。",
+        "目标周围的词条展开补充语义，相关性状态使用颜色区分。"
+      ],
+      "adapt": "只有真实的来源到目标关系才适用；历史预览包含旧示例文案，当前可选字段已修复但未新做视觉验收。",
+      "reason": "固定三来源语义网络较易被误用于三个要点；默认关系参考由51与52分别覆盖辐射和汇总，保留本例用于语义关联。",
+      "related": [
+        "MG-051",
+        "MG-052"
+      ],
+      "evidence": [
+        "assets/previews/MG-047.jpg：实际查看静态预览",
+        "references/templates/MG-047.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-048",
+      "tier": "core",
+      "expressions": [
+        "change",
+        "emphasis"
+      ],
+      "learn": [
+        "量表连续填充与分层标签按顺序显现，给抽象增长一个可见尺度。",
+        "纸面排线、稀疏红蓝强调与手写标签形成一致的图形材质。",
+        "最终值与简短总结在动作完成后稳定停留。"
+      ],
+      "adapt": "原实现只递增且要求阶段间距；下降、来回变化、过期失效应更换运动机制。",
+      "reason": "提供清晰的量变与阶段递进方法，同时为默认集增加手绘图表语言。",
+      "related": [
+        "MG-058",
+        "MG-060"
+      ],
+      "evidence": [
+        "assets/previews/MG-048.jpg：实际查看静态预览",
+        "references/templates/MG-048.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-049",
+      "tier": "extended",
+      "expressions": [
+        "process",
+        "focus"
+      ],
+      "learn": [
+        "主操作示意、当前步骤与侧栏清单共享状态，帮助持续定位。",
+        "已完成项累积勾选，最后由完整清单形成收尾。"
+      ],
+      "adapt": "适合顺序操作说明；原实现是文档构建示意，不包含真实软件操作或每步不同媒体。",
+      "reason": "操作清单结构实用，但与40的阶段推进接近，主画面运动较保守，作为教程专项备用。",
+      "related": [
+        "MG-040"
+      ],
+      "evidence": [
+        "assets/previews/MG-049.jpg：实际查看静态预览",
+        "references/templates/MG-049.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-050",
+      "tier": "core",
+      "expressions": [
+        "change",
+        "relationship"
+      ],
+      "learn": [
+        "线段展开成六边形，再复制平铺，从一个形状推进到整体结构。",
+        "圆形扩张遮罩把纸面转为蓝图底色，转场由图形动作发起。",
+        "描线与后续内部结构按层次揭示，避免一次展示所有细节。"
+      ],
+      "adapt": "六边形是固定的几何隐喻；借鉴展开与复制的方法时，需要为新内容选择有意义的形状。",
+      "reason": "补足对象成形、复制和遮罩过渡的非卡片表达，有助于模型学习动作如何组织画面。",
+      "related": [],
+      "evidence": [
+        "assets/previews/MG-050.jpg：实际查看静态预览",
+        "references/templates/MG-050.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码",
+        "assets/engine/src/batch/MG-050/model.tsx：实际阅读源码"
+      ]
+    },
+    {
+      "id": "MG-051",
+      "tier": "core",
+      "expressions": [
+        "relationship"
+      ],
+      "learn": [
+        "中心对象与外围工具构成清楚的辐射关系。",
+        "节点、连线和向外脉冲分阶段展开，表现可调用范围。",
+        "暖暗底、衬线标题和细线图标提供区别于冷色科技界面的视觉参考。"
+      ],
+      "adapt": "原实现固定6–8个内置工具图标；借鉴中心辐射时仍需匹配实际关系和节点数量。",
+      "reason": "中心辐射是常用关系方法，本例的排版与色彩克制、角色分工明确。",
+      "related": [
+        "MG-047",
+        "MG-046"
+      ],
+      "evidence": [
+        "assets/previews/MG-051.jpg：实际查看静态预览",
+        "references/templates/MG-051.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-052",
+      "tier": "core",
+      "expressions": [
+        "relationship",
+        "change"
+      ],
+      "learn": [
+        "来源卡各自保留信息，再沿弧线进入统一结果，清楚显示多源汇总。",
+        "同一数据从各卡数值到结果总数保持对应。",
+        "蓝紫色带与浅底把来源和结果分层，而不依赖多个不同风格。"
+      ],
+      "adapt": "实际模板结果是三个同量纲值之和；非求和关系不能只换标签，序号也不能拿来凑数。",
+      "reason": "保留有真实数据关系的多源汇总代表，与普通三卡要点有明确差异。",
+      "related": [
+        "MG-047"
+      ],
+      "evidence": [
+        "assets/previews/MG-052.jpg：实际查看静态预览",
+        "references/templates/MG-052.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-053",
+      "tier": "extended",
+      "expressions": [
+        "timeline",
+        "emphasis"
+      ],
+      "learn": [
+        "持续的底部节点轴保留全程位置，年份与事件图标轮流成为重点。",
+        "霓虹描边年份与线稿图标提供清楚的主题切换。"
+      ],
+      "adapt": "节点按事件等距排列，不表示实际年份间隔；没有外部照片槽。",
+      "reason": "时间演进已由45与62覆盖不同构图；本例作为需要暗色线稿风格时的备用。",
+      "related": [
+        "MG-045",
+        "MG-062"
+      ],
+      "evidence": [
+        "assets/previews/MG-053.jpg：实际查看静态预览",
+        "references/templates/MG-053.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-054",
+      "tier": "core",
+      "expressions": [
+        "change",
+        "process"
+      ],
+      "learn": [
+        "矩阵局部缺失与逐格恢复直接显示状态变化，抽象数据过程变为可见对象。",
+        "缺失百分比和空格共享同一状态，图形与数字同步。",
+        "阶段标记与扫描边框明确区分损坏和恢复过程。"
+      ],
+      "adapt": "这是确定性示意矩阵，不是二维码算法或真实文件修复；借鉴机制时也应让数字与图形来自同一状态。",
+      "reason": "具备明确的损失与恢复过程，能够展示动态图形怎样讲清机制而非装饰标题。",
+      "related": [
+        "MG-056",
+        "MG-058"
+      ],
+      "evidence": [
+        "assets/previews/MG-054.jpg：实际查看静态预览",
+        "references/templates/MG-054.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码",
+        "assets/engine/src/batch/MG-054/model.tsx：实际阅读源码"
+      ]
+    },
+    {
+      "id": "MG-055",
+      "tier": "core",
+      "expressions": [
+        "process",
+        "relationship",
+        "change"
+      ],
+      "learn": [
+        "模型、工具和上下文构成循环，区别于只向前推进的线性步骤。",
+        "完成一步后再追加日志与容量，建立动作和累积结果的对应。",
+        "循环主体、记录区和容量条分别承担关系、证据和约束三种职责。"
+      ],
+      "adapt": "原实现的Agent语义和token单位必须保留真实性；换成其他循环过程需要重新设计日志和容量含义。",
+      "reason": "提供少有的循环加累积机制，适合技术解释，也能为项目改写提供有状态的参考。",
+      "related": [
+        "MG-040",
+        "MG-051"
+      ],
+      "evidence": [
+        "assets/previews/MG-055.jpg：实际查看静态预览",
+        "references/templates/MG-055.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-056",
+      "tier": "extended",
+      "expressions": [
+        "change",
+        "emphasis"
+      ],
+      "learn": [
+        "从等待状态到彩色词元阵列，使用整体密度变化表现结果形成。",
+        "中央统计卡为大量小元素提供读数焦点。"
+      ],
+      "adapt": "阵列格数与等待值都是演示数值，不代表模型时延或token实测；不能把装饰阵列当成真实生成结果。",
+      "reason": "表现主要是等待后铺满标签，信息机制较弱且容易制造无依据指标；保留为阵列与状态转化的专项参考。",
+      "related": [
+        "MG-054"
+      ],
+      "evidence": [
+        "assets/previews/MG-056.jpg：实际查看静态预览",
+        "references/templates/MG-056.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-057",
+      "tier": "extended",
+      "expressions": [
+        "relationship",
+        "media"
+      ],
+      "learn": [
+        "设备轮廓、锁和云端符号用空间边界解释处理位置。",
+        "本地与同步通过符号和路径状态区别，文字只做补充。"
+      ],
+      "adapt": "设备、锁或禁用云端图标不证明产品安全；只按已知能力表达本地或同步状态。",
+      "reason": "设备隐私边界场景窄且画面主要靠描线入场，保留为本地处理说明专项。",
+      "related": [
+        "MG-051",
+        "MG-046"
+      ],
+      "evidence": [
+        "assets/previews/MG-057.jpg：实际查看静态预览",
+        "references/templates/MG-057.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-058",
+      "tier": "core",
+      "expressions": [
+        "change",
+        "process"
+      ],
+      "learn": [
+        "容量格条、数值、日志与阶梯曲线共享事件时间线，多个视角解释同一机制。",
+        "消耗、拒绝与离散回补分别触发不同状态，而非所有数字统一计数。",
+        "实际状态变化推进图形，结果停留与模拟过程明确区分。"
+      ],
+      "adapt": "原实现为离散令牌桶；积分在日历到期时清零属于另一种机制，不能直接替换文案使用。",
+      "reason": "保留一个数据与图形严格联动的机制解释代表，展示如何让运动承担因果关系。",
+      "related": [
+        "MG-048",
+        "MG-054"
+      ],
+      "evidence": [
+        "assets/previews/MG-058.jpg：实际查看静态预览",
+        "references/templates/MG-058.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码",
+        "assets/engine/src/batch/MG-058/model.tsx：实际阅读源码"
+      ]
+    },
+    {
+      "id": "MG-059",
+      "tier": "extended",
+      "expressions": [
+        "relationship",
+        "process"
+      ],
+      "learn": [
+        "从层级线到分支再到叶节点逐笔绘制，让层级关系按顺序建立。",
+        "笔尖跟随与手写标注增加解释过程的可见性。"
+      ],
+      "adapt": "源码固定三层完整二叉树与八个叶节点；任意分类或不对称树必须修改拓扑，不能硬填标签。",
+      "reason": "固定拓扑和短标签限制较强，且默认已有46的分层结构；保留为明确二叉拆分任务的专项。",
+      "related": [
+        "MG-046"
+      ],
+      "evidence": [
+        "assets/previews/MG-059.jpg：实际查看静态预览",
+        "references/templates/MG-059.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-060",
+      "tier": "core",
+      "expressions": [
+        "change",
+        "comparison"
+      ],
+      "learn": [
+        "多个滑块在一致刻度上连续移动，变化由位置与读数同步体现。",
+        "蓝色轨道、桃红滑块、黄色基线和颗粒纸底形成鲜明但有限的色彩系统。",
+        "每条滑杆保持身份，关键值变化无需重新入场。"
+      ],
+      "adapt": "控制量限定0–100，表示调节程度；不同单位的统计或达标判断需要另一种标尺与动作。",
+      "reason": "图形简洁、有明确的连续运动和材料风格，适合参数调整与权重变化的参考。",
+      "related": [
+        "MG-048"
+      ],
+      "evidence": [
+        "assets/previews/MG-060.jpg：实际查看静态预览",
+        "references/templates/MG-060.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码",
+        "assets/engine/src/batch/MG-060/model.tsx：实际阅读源码"
+      ]
+    },
+    {
+      "id": "MG-061",
+      "tier": "extended",
+      "expressions": [
+        "process",
+        "relationship",
+        "change"
+      ],
+      "learn": [
+        "离线、租约过期、名牌接管与恢复事件按明确因果顺序推进。",
+        "持有者名牌飞入共享槽位，使任务移交可以被直接看见。",
+        "粗描边、彩色状态与印章结合，形成鲜明的漫画式技术解释。"
+      ],
+      "adapt": "固定三节点和一次失效接管；不适合泛化会员过期或随意改写为所有权竞争。",
+      "reason": "动作与视觉有参考价值，但三节点租约机制和高信息密度较专项，保留为故障接管时可明确召回的备用。",
+      "related": [
+        "MG-055",
+        "MG-058"
+      ],
+      "evidence": [
+        "assets/previews/MG-061.jpg：实际查看静态预览",
+        "references/templates/MG-061.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    },
+    {
+      "id": "MG-062",
+      "tier": "core",
+      "expressions": [
+        "timeline",
+        "emphasis"
+      ],
+      "learn": [
+        "年份票卡从两侧交替飞入，轻微旋转回弹形成有序但不机械的列表。",
+        "年份色块、票面主标题与手写说明区分阅读层级。",
+        "汇总印章在事件完成后收束，年份轴可保留整体位置。"
+      ],
+      "adapt": "原预览含未经核实的原片数据；新内容须替换事实与单位，票卡数量和年份顺序仍需适配。",
+      "reason": "为时间演进保留更有材质与动作特点的代表，与45的拼贴两幕构成互补。",
+      "related": [
+        "MG-045",
+        "MG-053"
+      ],
+      "evidence": [
+        "assets/previews/MG-062.jpg：实际查看静态预览",
+        "references/templates/MG-062.md：阅读动作与边界说明",
+        "catalog.json、selection.json、compatibility.json：核对用途、时长与语义限制",
+        "未播放原视频或新渲染视频；运动判断来自说明与所列源码"
+      ]
+    }
+  ]
+}

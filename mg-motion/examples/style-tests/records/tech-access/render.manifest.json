@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "mode": "project",
+  "operation": {
+    "command": "render"
+  },
+  "composition": "Supplement",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 360,
+  "seconds": 12,
+  "sourceSha256": "54e4545a6ebbd068d6a91573f736001c23b03433c54974eace8c02e818462ab6",
+  "sources": {
+    "brief.md": "a6f6a7e0823a9f3a2bd248adc0eff10a3addc2ffc70058e3bf72fd1f2799e66c",
+    "project.json": "5fb78de57afca24cb0aad2ff21350cb221fe40832e7e9650a197431a8b76296b",
+    "public/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/entry.tsx": "86365eb421ed7cef4c3015984e76756e4aa99660645be58be18758ff7e5c9182"
+  },
+  "engineLockSha256": "09439876103076a232bcf47a96328840c07cc46ebac53d83bc29568e8dafb4cb",
+  "outputSha256": "52386c95d3b88182ec482f53a7a3530cb47dcc4dca4b3ac1b9fcca689a1c4496",
+  "audio": "由项目源码决定，本工具不自动配音或配乐",
+  "visualReviewed": false,
+  "createdAt": "2026-10-27T12:40:03.704Z"
+}

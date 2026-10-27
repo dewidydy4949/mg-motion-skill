@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "entry": "src/entry.tsx",
+  "composition": "Supplement",
+  "description": "文案补画面项目；在 brief.md 记录文案、参考和适配思路"
+}

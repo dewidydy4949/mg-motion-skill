@@ -49,6 +49,8 @@ node scripts/project.mjs still --dir work/my-segment --time 7.5 --out work/check
 
 直接复用现成模板和素材槽时使用 [原渲染工具](mg-motion/references/rendering.md)。另保留 [20秒积分项目案例](mg-motion/examples/credits-motion/README.md)，它是专用试验，不是所有文案的默认模板。
 
+新增 [三种风格测试案例](mg-motion/examples/style-tests/README.md)：亮色几何、纸张手绘、深色科技，各 12 秒，包含可改工程、参考记录、复跑命令与检查清单。
+
 ## 安装与更新
 
 需要 Node.js、npm、本地 Chrome 和可用中文字体。本工程锁定 Remotion 4.0.534；依赖锁保持不变。

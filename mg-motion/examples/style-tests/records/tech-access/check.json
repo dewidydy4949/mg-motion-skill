@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "artifact": "mg-style-03-tech-access.mp4",
+  "method": "Independent Chrome, full 1x playback without seeking, with timed screenshot sampling. Visual review is of samples, not every decoded frame.",
+  "playback": {
+    "seconds": 12,
+    "width": 1920,
+    "height": 1080,
+    "ended": true,
+    "currentTime": 12,
+    "playbackRate": 1,
+    "wallSeconds": 12.01139999999106,
+    "totalFrames": 360,
+    "droppedFrames": 0,
+    "samples": [
+      {
+        "wallMs": 271.3999999910593,
+        "time": 0.2711
+      },
+      {
+        "wallMs": 531.3999999910593,
+        "time": 0.5313
+      },
+      {
+        "wallMs": 798.0999999940395,
+        "time": 0.7979
+      },
+      {
+        "wallMs": 1064.699999988079,
+        "time": 1.0646
+      },
+      {
+        "wallMs": 1331.3999999910593,
+        "time": 1.3312
+      },
+      {
+        "wallMs": 1598,
+        "time": 1.5979
+      },
+      {
+        "wallMs": 1859.5,
+        "time": 1.8593
+      },
+      {
+        "wallMs": 2125.2999999970198,
+        "time": 2.1251
+      },
+      {
+        "wallMs": 2390.699999988079,
+        "time": 2.3906
+      },
+      {
+        "wallMs": 2658.5,
+        "time": 2.6584
+      },
+      {
+        "wallMs": 2922.5,
+        "time": 2.9223
+      },
+      {
+        "wallMs": 3191.7999999970198,
+        "time": 3.1916
+      },
+      {
+        "wallMs": 3457.3999999910593,
+        "time": 3.4572
+      },
+      {
+        "wallMs": 3719.199999988079,
+        "time": 3.719
+      },
+      {
+        "wallMs": 3985.7999999970198,
+        "time": 3.9856
+      },
+      {
+        "wallMs": 4252.5999999940395,
+        "time": 4.2524
+      },
+      {
+        "wallMs": 4519.199999988079,
+        "time": 4.5191
+      },
+      {
+        "wallMs": 4785.79999999702,
+        "time": 4.7857
+      },
+      {
+        "wallMs": 5052.399999991059,
+        "time": 5.0523
+      },
+      {
+        "wallMs": 5315,
+        "time": 5.3148
+      },
+      {
+        "wallMs": 5579.5999999940395,
+        "time": 5.5795
+      },
+      {
+        "wallMs": 5846.29999999702,
+        "time": 5.8461
+      },
+      {
+        "wallMs": 6112.79999999702,
+        "time": 6.1127
+      },
+      {
+        "wallMs": 6379.5,
+        "time": 6.3794
+      },
+      {
+        "wallMs": 6642.199999988079,
+        "time": 6.6421
+      },
+      {
+        "wallMs": 6906.79999999702,
+        "time": 6.9067
+      },
+      {
+        "wallMs": 7173.5,
+        "time": 7.1733
+      },
+      {
+        "wallMs": 7440.0999999940395,
+        "time": 7.44
+      },
+      {
+        "wallMs": 7706.79999999702,
+        "time": 7.7067
+      },
+      {
+        "wallMs": 7972,
+        "time": 7.9718
+      },
+      {
+        "wallMs": 8236.89999999106,
+        "time": 8.2367
+      },
+      {
+        "wallMs": 8500.79999999702,
+        "time": 8.5007
+      },
+      {
+        "wallMs": 8767.39999999106,
+        "time": 8.7672
+      },
+      {
+        "wallMs": 9034,
+        "time": 9.0338
+      },
+      {
+        "wallMs": 9300.59999999404,
+        "time": 9.3005
+      },
+      {
+        "wallMs": 9566.699999988079,
+        "time": 9.5665
+      },
+      {
+        "wallMs": 9833,
+        "time": 9.8328
+      },
+      {
+        "wallMs": 10094.699999988079,
+        "time": 10.0945
+      },
+      {
+        "wallMs": 10361.09999999404,
+        "time": 10.3609
+      },
+      {
+        "wallMs": 10625.39999999106,
+        "time": 10.6252
+      },
+      {
+        "wallMs": 10894.59999999404,
+        "time": 10.8944
+      },
+      {
+        "wallMs": 11161.199999988079,
+        "time": 11.161
+      },
+      {
+        "wallMs": 11421.79999999702,
+        "time": 11.4216
+      },
+      {
+        "wallMs": 11688.39999999106,
+        "time": 11.6882
+      },
+      {
+        "wallMs": 11955,
+        "time": 11.9549
+      },
+      {
+        "wallMs": 12003.59999999404,
+        "time": 12
+      }
+    ]
+  },
+  "shots": [
+    {
+      "target": 0.7,
+      "actual": 0.7026,
+      "file": "playback-00.png"
+    },
+    {
+      "target": 1.5,
+      "actual": 1.5024,
+      "file": "playback-01.png"
+    },
+    {
+      "target": 2.6,
+      "actual": 2.6055,
+      "file": "playback-02.png"
+    },
+    {
+      "target": 3.9,
+      "actual": 3.9022,
+      "file": "playback-03.png"
+    },
+    {
+      "target": 5.3,
+      "actual": 5.3017,
+      "file": "playback-04.png"
+    },
+    {
+      "target": 6.7,
+      "actual": 6.7019,
+      "file": "playback-05.png"
+    },
+    {
+      "target": 7.8,
+      "actual": 7.805,
+      "file": "playback-06.png"
+    },
+    {
+      "target": 8.9,
+      "actual": 8.9021,
+      "file": "playback-07.png"
+    },
+    {
+      "target": 9.7,
+      "actual": 9.7016,
+      "file": "playback-08.png"
+    },
+    {
+      "target": 10.7,
+      "actual": 10.7018,
+      "file": "playback-09.png"
+    },
+    {
+      "target": 11.8,
+      "actual": 11.8044,
+      "file": "playback-10.png"
+    }
+  ],
+  "errors": [],
+  "hashChecks": {
+    "outputMatches": true,
+    "allSourceFilesMatch": true,
+    "aggregateMatches": true
+  }
+}

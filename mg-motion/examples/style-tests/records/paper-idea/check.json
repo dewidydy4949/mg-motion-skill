@@ -1,0 +1,121 @@
+{
+  "artifact": "mg-style-02-paper-idea.mp4",
+  "references": [
+    "MG-015",
+    "MG-045"
+  ],
+  "referenceEvidence": "Viewed both static previews and cards; read MG-015 source. Did not watch original reference videos.",
+  "outputSha256": "7580db269e3fe57247dba857f03a80b2c7e7122119d167af0a9fe5045edb43d0",
+  "outputMatchesManifest": true,
+  "sourcesMatchManifest": {
+    "brief.md": true,
+    "project.json": true,
+    "public/.gitkeep": true,
+    "src/entry.tsx": true
+  },
+  "sourceAggregateMatchesManifest": true,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuvj420p",
+        "r_frame_rate": "30/1",
+        "duration": "12.000000",
+        "nb_frames": "360",
+        "side_data_list": [
+          {}
+        ]
+      }
+    ],
+    "format": {
+      "duration": "12.000000",
+      "size": "1497820"
+    }
+  },
+  "playback": {
+    "method": "Independent headless Chrome, seeked keyframes followed by page reload and complete 1x playback without seeking; screenshot samples, not continuous human viewing. Frame quality counters refer to the fresh playback.",
+    "keyframeSeconds": [
+      0.7,
+      1.7,
+      2.7,
+      3.8,
+      4.7,
+      5.5,
+      6.6,
+      7.5,
+      8.7,
+      9.5,
+      10.5,
+      11.9667
+    ],
+    "playback": {
+      "duration": 12,
+      "currentTime": 12,
+      "ended": true,
+      "rate": 1,
+      "elapsedMs": 12010.79999999702,
+      "videoFrames": 360,
+      "droppedFrames": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "samples": [
+      {
+        "target": 1,
+        "actual": 1.0052
+      },
+      {
+        "target": 2.5,
+        "actual": 2.5017
+      },
+      {
+        "target": 3.8,
+        "actual": 3.8047
+      },
+      {
+        "target": 5,
+        "actual": 5.0047
+      },
+      {
+        "target": 6.5,
+        "actual": 6.5019
+      },
+      {
+        "target": 7.5,
+        "actual": 7.5016
+      },
+      {
+        "target": 8.7,
+        "actual": 8.7016
+      },
+      {
+        "target": 9.6,
+        "actual": 9.6046
+      },
+      {
+        "target": 10.5,
+        "actual": 10.5012
+      },
+      {
+        "target": 11.8,
+        "actual": 11.8043
+      }
+    ]
+  },
+  "visualReview": {
+    "keyframeContact": "review.jpg",
+    "playbackContact": "playback-review.jpg",
+    "changes": [
+      "Moved first paper fully offscreen before its entrance to remove an unintended opening sliver.",
+      "Moved retained idea bulb farther left during final composition to avoid overlap with first paper.",
+      "Aligned pencil tip with cumulative path length during drawing."
+    ],
+    "scope": "Viewed 12 keyframe samples, the 6.6-second full-resolution frame, and 10 screenshots captured during complete normal-speed playback. Not a continuous human viewing or per-frame aesthetic acceptance.",
+    "sound": "silent",
+    "realNarrationAligned": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "mode": "project",
+  "operation": {
+    "command": "render"
+  },
+  "composition": "Supplement",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 360,
+  "seconds": 12,
+  "sourceSha256": "474ad4a6ea1d869fae5921dbfe55bb4082125d19e666eef6169b22922809a430",
+  "sources": {
+    "brief.md": "99a562487768ad4adf0db995ec116b84c1e4550e831c17e761c4f06960c5b706",
+    "project.json": "5fb78de57afca24cb0aad2ff21350cb221fe40832e7e9650a197431a8b76296b",
+    "public/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/Cache.tsx": "4439b3d18d46064a7c8b3d45e3321ad877d1137154f35e8ce24cdfddd3fffab3",
+    "src/entry.tsx": "5482650fd859f61ec29d6cd5e97b4b05956c12a72226b2c39010d23df59826bd"
+  },
+  "engineLockSha256": "09439876103076a232bcf47a96328840c07cc46ebac53d83bc29568e8dafb4cb",
+  "outputSha256": "f300510c3afd7417b89eb8179da54a97162ba74099ded72e783af54a8178b249",
+  "audio": "由项目源码决定，本工具不自动配音或配乐",
+  "visualReviewed": false,
+  "createdAt": "2026-10-27T12:39:58.361Z"
+}
